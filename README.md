@@ -1,1 +1,1 @@
-# sykhiv-gang
+# Military project (Sykhiv gang prod.)
