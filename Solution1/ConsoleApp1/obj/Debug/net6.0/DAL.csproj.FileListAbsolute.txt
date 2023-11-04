@@ -1,0 +1,14 @@
+D:\Study\Програмна інженерія\Solution1\ConsoleApp1\bin\Debug\net6.0\DAL.exe
+D:\Study\Програмна інженерія\Solution1\ConsoleApp1\bin\Debug\net6.0\DAL.deps.json
+D:\Study\Програмна інженерія\Solution1\ConsoleApp1\bin\Debug\net6.0\DAL.runtimeconfig.json
+D:\Study\Програмна інженерія\Solution1\ConsoleApp1\bin\Debug\net6.0\DAL.dll
+D:\Study\Програмна інженерія\Solution1\ConsoleApp1\bin\Debug\net6.0\DAL.pdb
+D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\DAL.dll
+D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\refint\DAL.dll
+D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\DAL.pdb
+D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\ref\DAL.dll
