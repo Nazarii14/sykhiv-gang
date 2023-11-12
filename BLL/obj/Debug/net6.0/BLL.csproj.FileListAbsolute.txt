@@ -1,0 +1,14 @@
+C:\Users\User\sykhiv project\sykhiv-gang\BLL\bin\Debug\net6.0\BLL.exe
+C:\Users\User\sykhiv project\sykhiv-gang\BLL\bin\Debug\net6.0\BLL.deps.json
+C:\Users\User\sykhiv project\sykhiv-gang\BLL\bin\Debug\net6.0\BLL.runtimeconfig.json
+C:\Users\User\sykhiv project\sykhiv-gang\BLL\bin\Debug\net6.0\BLL.dll
+C:\Users\User\sykhiv project\sykhiv-gang\BLL\bin\Debug\net6.0\BLL.pdb
+C:\Users\User\sykhiv project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\sykhiv project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
+C:\Users\User\sykhiv project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.AssemblyInfo.cs
+C:\Users\User\sykhiv project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.csproj.CoreCompileInputs.cache
+C:\Users\User\sykhiv project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.dll
+C:\Users\User\sykhiv project\sykhiv-gang\BLL\obj\Debug\net6.0\refint\BLL.dll
+C:\Users\User\sykhiv project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.pdb
+C:\Users\User\sykhiv project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.genruntimeconfig.cache
+C:\Users\User\sykhiv project\sykhiv-gang\BLL\obj\Debug\net6.0\ref\BLL.dll

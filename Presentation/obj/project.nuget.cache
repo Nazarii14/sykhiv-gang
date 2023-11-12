@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7QN/LuIGgx6d7lT9m8+hgXvqypDkBAnPzqcikveeA4h79SA5RmnLRiU+4+pBljOY1tm4UhTuhxSrC9dfTCvFSg==",
+  "dgSpecHash": "OhhWYd6s0oSXZaCpz56L4e6IZ76t524F1KM3TSoCgj+IsibDontBaUCCTPnHkX1nbiGaf/tSR2qM7t8+kvTMxQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Military Project\\sykhiv-gang\\Presentation\\Presentation.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\User\\sykhiv project\\sykhiv-gang\\Presentation\\Presentation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\User\\.nuget\\packages\\extended.wpf.toolkit\\4.5.1\\extended.wpf.toolkit.4.5.1.nupkg.sha512"
+  ],
   "logs": []
 }

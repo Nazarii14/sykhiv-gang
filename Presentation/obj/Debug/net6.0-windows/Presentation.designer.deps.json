@@ -6,23 +6,77 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "FontAwesome.WPF/4.7.0.9": {
+      "Extended.Wpf.Toolkit/4.5.1": {
         "runtime": {
-          "lib/net40/FontAwesome.WPF.dll": {
-            "assemblyVersion": "4.7.0.37774",
-            "fileVersion": "4.7.0.9"
+          "lib/net5.0/Xceed.Wpf.AvalonDock.NET5.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          },
+          "lib/net5.0/Xceed.Wpf.AvalonDock.Themes.Aero.NET5.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          },
+          "lib/net5.0/Xceed.Wpf.AvalonDock.Themes.Metro.NET5.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          },
+          "lib/net5.0/Xceed.Wpf.AvalonDock.Themes.VS2010.NET5.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          },
+          "lib/net5.0/Xceed.Wpf.Toolkit.NET5.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          }
+        },
+        "resources": {
+          "lib/net5.0/cs-CZ/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "cs-CZ"
+          },
+          "lib/net5.0/de/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net5.0/es/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "es"
+          },
+          "lib/net5.0/fr/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net5.0/hu/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "hu"
+          },
+          "lib/net5.0/it/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "it"
+          },
+          "lib/net5.0/ja-JP/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "ja-JP"
+          },
+          "lib/net5.0/pt-BR/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/net5.0/ro/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "ro"
+          },
+          "lib/net5.0/ru/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/net5.0/sv/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/net5.0/zh-Hans/Xceed.Wpf.AvalonDock.NET5.resources.dll": {
+            "locale": "zh-Hans"
           }
         }
       }
     }
   },
   "libraries": {
-    "FontAwesome.WPF/4.7.0.9": {
+    "Extended.Wpf.Toolkit/4.5.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-SXE080rnyWMm9Dt0BZzMxh89/o9teuSaqL1N+0O/XM/F/HU8JuZA4XaEKxjBigwZPHHU3/udTa0QMYCHkmH43Q==",
-      "path": "fontawesome.wpf/4.7.0.9",
-      "hashPath": "fontawesome.wpf.4.7.0.9.nupkg.sha512"
+      "sha512": "sha512-Z0AL4oOORLZsKUediAaXOVt+nQI8owUcv05RDuoup0JaS96cqN/2zeIVr2TLX5oDK6VOrm1NkJKV1zrQCj3Deg==",
+      "path": "extended.wpf.toolkit/4.5.1",
+      "hashPath": "extended.wpf.toolkit.4.5.1.nupkg.sha512"
     }
   }
 }

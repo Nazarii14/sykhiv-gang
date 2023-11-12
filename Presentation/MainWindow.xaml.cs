@@ -24,5 +24,18 @@ namespace Presentation
         {
             InitializeComponent();
         }
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 registartionwindow = new Window1();
+            registartionwindow.Show();
+        }
     }
+
 }
