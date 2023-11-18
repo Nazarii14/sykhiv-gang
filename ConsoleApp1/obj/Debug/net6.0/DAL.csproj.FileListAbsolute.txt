@@ -26,3 +26,18 @@ C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\refint\DAL
 C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.pdb
 C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.genruntimeconfig.cache
 C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\ref\DAL.dll
+H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.exe
+H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.deps.json
+H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.runtimeconfig.json
+H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.dll
+H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.pdb
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.dll
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\refint\DAL.dll
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.pdb
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\ref\DAL.dll
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache

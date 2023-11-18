@@ -63,3 +63,46 @@ C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\P
 C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Window1.baml
 C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\СhooseWindow.g.cs
 C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\СhooseWindow.baml
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation.exe
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation.deps.json
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation.runtimeconfig.json
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation.pdb
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Xceed.Wpf.AvalonDock.NET5.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Xceed.Wpf.AvalonDock.Themes.Aero.NET5.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Xceed.Wpf.AvalonDock.Themes.Metro.NET5.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Xceed.Wpf.AvalonDock.Themes.VS2010.NET5.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Xceed.Wpf.Toolkit.NET5.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\cs-CZ\Xceed.Wpf.AvalonDock.NET5.resources.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\de\Xceed.Wpf.AvalonDock.NET5.resources.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\es\Xceed.Wpf.AvalonDock.NET5.resources.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\fr\Xceed.Wpf.AvalonDock.NET5.resources.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\hu\Xceed.Wpf.AvalonDock.NET5.resources.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\it\Xceed.Wpf.AvalonDock.NET5.resources.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\ja-JP\Xceed.Wpf.AvalonDock.NET5.resources.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\pt-BR\Xceed.Wpf.AvalonDock.NET5.resources.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\ro\Xceed.Wpf.AvalonDock.NET5.resources.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\ru\Xceed.Wpf.AvalonDock.NET5.resources.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\sv\Xceed.Wpf.AvalonDock.NET5.resources.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\zh-Hans\Xceed.Wpf.AvalonDock.NET5.resources.dll
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.csproj.AssemblyReference.cache
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\MainWindow.baml
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\MainWindow.g.cs
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Window1.g.cs
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\СhooseWindow.g.cs
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\App.g.cs
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation_MarkupCompile.cache
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation_MarkupCompile.lref
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Window1.baml
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\СhooseWindow.baml
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.g.resources
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.GeneratedMSBuildEditorConfig.editorconfig
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.AssemblyInfoInputs.cache
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.AssemblyInfo.cs
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.csproj.CoreCompileInputs.cache
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.csproj.CopyComplete
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.dll
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\refint\Presentation.dll
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.pdb
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.genruntimeconfig.cache
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\ref\Presentation.dll

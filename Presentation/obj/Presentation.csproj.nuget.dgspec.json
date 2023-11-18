@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\sykhiv project\\sykhiv-gang\\Presentation\\Presentation.csproj": {}
+    "H:\\GitHub\\sykhiv-gang\\Presentation\\Presentation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\sykhiv project\\sykhiv-gang\\Presentation\\Presentation.csproj": {
+    "H:\\GitHub\\sykhiv-gang\\Presentation\\Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\sykhiv project\\sykhiv-gang\\Presentation\\Presentation.csproj",
+        "projectUniqueName": "H:\\GitHub\\sykhiv-gang\\Presentation\\Presentation.csproj",
         "projectName": "Presentation",
-        "projectPath": "C:\\Users\\User\\sykhiv project\\sykhiv-gang\\Presentation\\Presentation.csproj",
-        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\sykhiv project\\sykhiv-gang\\Presentation\\obj\\",
+        "projectPath": "H:\\GitHub\\sykhiv-gang\\Presentation\\Presentation.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "H:\\GitHub\\sykhiv-gang\\Presentation\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,6 +41,14 @@
             "Extended.Wpf.Toolkit": {
               "target": "Package",
               "version": "[4.5.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.25, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[6.0.22, )"
             }
           },
           "imports": [
@@ -64,7 +70,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
