@@ -63,7 +63,7 @@ namespace DAL.Data
         /// </summary>
         /// <param name="optionsBuilder">Будівельник, який використовується для створення або зміни параметрів для цього контексту.</param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseNpgsql("Host=localhost;Username=postgres;Password=rosaka1429;Database=\"sykhiv gang\";Pooling=true;");
+            => optionsBuilder.UseNpgsql("Host=localhost;Username=postgres;Password=;Database=\"sykhiv gang\";Pooling=true;");
 
 
         /// <summary>
