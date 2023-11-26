@@ -12,6 +12,9 @@ namespace Presentation
     using DAL.Data;
     using DAL.Models;
     using BLL;
+    using Microsoft.Extensions.Logging;
+    using DAL;
+    using System.IO;
 
     /// <summary>
     /// Interaction logic for Login.xaml
@@ -28,17 +31,26 @@ namespace Presentation
             using (MilitaryProjectContext context = new MilitaryProjectContext())
             {
                 Bll userService = new Bll(context);
+                string path = Directory.GetCurrentDirectory() + "\\logs.txt";
+                userService.LogToFile(path, $"User with name {name} trying to log in.");
 
                 if (userService.AuthenticateUser(name, password))
                 {
+                    userService.LogToFile(path, $"User is logged in!");
                     // Something has to be shown
                     this.Close();
                 }
                 else
                 {
+                    userService.LogToFile(path, $"User is not logged in!");
                     MessageBox.Show("Unsuccessful login!");
                 }
             }
+        }
+        private void Hyperlink_Click (object sender, RoutedEventArgs e)
+        {
+            Register registerwindow = new Register();
+            registerwindow.Show();
         }
     }
 }

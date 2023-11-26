@@ -1,9 +1,4 @@
-﻿using DAL.Data;
-//using DAL.GenericRepository;
-using DAL.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace DAL
+﻿namespace DAL
 {
     public class Program
     {

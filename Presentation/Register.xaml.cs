@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Presentation
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for Register.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Register : Window
     {
-        public Window1()
+        public Register()
         {
             InitializeComponent();
         }
@@ -34,7 +34,7 @@ namespace Presentation
         }
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow loginwindow = new MainWindow();
+            Login loginwindow = new Login();
             loginwindow.Show();
         }
     }

@@ -38,7 +38,7 @@
         /// <summary>
         /// Gets a user by their email.
         /// </summary>
-        /// <param name="email">The email of the user.</param>
+        /// <param name="name">The name of the user.</param>
         /// <returns>The user if found, null otherwise.</returns>
         public User? GetUserByName(string name)
         {
@@ -60,7 +60,7 @@
         /// <summary>
         /// Registers a new user.
         /// </summary>
-        /// <param name="email">The email of the user.</param>
+        /// <param name="name">The name of the user.</param>
         /// <param name="username">The username of the user.</param>
         /// <param name="password">The password of the user.</param>
         /// <param name="message">A message indicating the result of the registration.</param>
@@ -99,6 +99,14 @@
         private bool UserExists(string name)
         {
             return this.context.Set<User>().Any(u => u.FirstName == name);
+        }
+
+        public void LogToFile(string filePath, string message)
+        {
+            using (StreamWriter writer = new StreamWriter(filePath, true))
+            {
+                writer.WriteLine($"{DateTime.Now} - {message}");
+            }
         }
     }
 }

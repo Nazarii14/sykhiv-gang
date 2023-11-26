@@ -4,7 +4,7 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-        mc:Ignorable="d" Title="Login Window" Height="720" Width="1280" WindowStyle="None" Background="Transparent"
+        mc:Ignorable="d" Title="Login" Height="720" Width="1280" WindowStyle="None" Background="Transparent"
         WindowStartupLocation="CenterScreen" AllowsTransparency="True">
 
     <Grid>

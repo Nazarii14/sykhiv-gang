@@ -1,46 +1,8 @@
-D:\Study\Програмна інженерія\Solution1\ConsoleApp1\bin\Debug\net6.0\DAL.exe
-D:\Study\Програмна інженерія\Solution1\ConsoleApp1\bin\Debug\net6.0\DAL.deps.json
-D:\Study\Програмна інженерія\Solution1\ConsoleApp1\bin\Debug\net6.0\DAL.runtimeconfig.json
-D:\Study\Програмна інженерія\Solution1\ConsoleApp1\bin\Debug\net6.0\DAL.dll
-D:\Study\Програмна інженерія\Solution1\ConsoleApp1\bin\Debug\net6.0\DAL.pdb
-D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
-D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
-D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\DAL.AssemblyInfo.cs
-D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
-D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\DAL.dll
-D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\refint\DAL.dll
-D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\DAL.pdb
-D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\DAL.genruntimeconfig.cache
-D:\Study\Програмна інженерія\Solution1\ConsoleApp1\obj\Debug\net6.0\ref\DAL.dll
-C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.exe
-C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.deps.json
-C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.runtimeconfig.json
-C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.dll
-C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.pdb
-C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
-C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.AssemblyInfo.cs
-C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
-C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.dll
-C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\refint\DAL.dll
-C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.pdb
-C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.genruntimeconfig.cache
-C:\Users\User\sykhiv project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\ref\DAL.dll
+H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.dll
 H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.exe
 H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.deps.json
 H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.runtimeconfig.json
-H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.dll
 H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.pdb
-H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
-H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
-H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.AssemblyInfo.cs
-H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
-H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.dll
-H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\refint\DAL.dll
-H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.pdb
-H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.genruntimeconfig.cache
-H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\ref\DAL.dll
-H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
 H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Humanizer.dll
 H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -68,4 +30,14 @@ H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\System.Runtime.CompilerServic
 H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\System.Text.Json.dll
 H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
 H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.csproj.CopyComplete
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.dll
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\refint\DAL.dll
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.pdb
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\ref\DAL.dll

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 H:\GitHub\sykhiv-gang\Presentation\App.xaml
-3-1441083867
+3-288532476
 
-62084276348
-213-1692988156
-MainWindow.xaml;Window1.xaml;СhooseWindow.xaml;
+6349267627
+2211881819778
+Login.xaml;Register.xaml;Сhoose.xaml;
 
-True
+False
 

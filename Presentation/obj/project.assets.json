@@ -577,9 +577,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "DAL": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "6.0.25",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.22"
+          "DAL": "1.0.0"
         },
         "compile": {
           "bin/placeholder/BLL.dll": {}
@@ -592,7 +590,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.25",
           "Microsoft.Extensions.Configuration": "6.0.2-mauipre.1.22102.15",
           "Microsoft.Extensions.Configuration.Json": "6.0.2-mauipre.1.22102.15",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.22"
@@ -1330,7 +1327,6 @@
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
       "BLL >= 1.0.0",
-      "DAL >= 1.0.0",
       "Extended.Wpf.Toolkit >= 4.5.1",
       "Microsoft.EntityFrameworkCore >= 6.0.25",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.25",
@@ -1364,9 +1360,6 @@
           "projectReferences": {
             "H:\\GitHub\\sykhiv-gang\\BLL\\BLL.csproj": {
               "projectPath": "H:\\GitHub\\sykhiv-gang\\BLL\\BLL.csproj"
-            },
-            "H:\\GitHub\\sykhiv-gang\\ConsoleApp1\\DAL.csproj": {
-              "projectPath": "H:\\GitHub\\sykhiv-gang\\ConsoleApp1\\DAL.csproj"
             }
           }
         }

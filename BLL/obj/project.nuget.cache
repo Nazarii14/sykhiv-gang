@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KYexyBP5H8tPQG3y4n8sztxdXmOUsnXE7kZFReVVZOVhE+1ufwsSnrdYjRFsYtp/IBBD5bEnphsOdxqPgSdZLg==",
+  "dgSpecHash": "8AW5rS1C1/T+sInucTYRYK3MNIQTuLo8bZHkAEejxL4zTIU0hTSNBItRTt3lM//azfvw3cjl1bfvZ4l4WrRt/Q==",
   "success": true,
   "projectFilePath": "H:\\GitHub\\sykhiv-gang\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
@@ -10,7 +10,6 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.25\\microsoft.entityframeworkcore.analyzers.6.0.25.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.25\\microsoft.entityframeworkcore.design.6.0.25.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.25\\microsoft.entityframeworkcore.relational.6.0.25.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.25\\microsoft.entityframeworkcore.tools.6.0.25.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.2-mauipre.1.22102.15\\microsoft.extensions.configuration.6.0.2-mauipre.1.22102.15.nupkg.sha512",

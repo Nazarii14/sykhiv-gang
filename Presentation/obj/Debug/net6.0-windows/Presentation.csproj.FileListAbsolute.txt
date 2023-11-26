@@ -1,68 +1,14 @@
-D:\Study\Програмна інженерія\Solution1\Presentation\obj\Debug\net6.0-windows\Presentation.csproj.AssemblyReference.cache
-D:\Study\Програмна інженерія\Solution1\Presentation\obj\Debug\net6.0-windows\MainWindow.baml
-D:\Study\Програмна інженерія\Solution1\Presentation\obj\Debug\net6.0-windows\MainWindow.g.cs
-D:\Study\Програмна інженерія\Solution1\Presentation\obj\Debug\net6.0-windows\App.g.cs
-D:\Study\Програмна інженерія\Solution1\Presentation\obj\Debug\net6.0-windows\Presentation_MarkupCompile.cache
-D:\Study\Програмна інженерія\Solution1\Presentation\obj\Debug\net6.0-windows\Presentation.g.resources
-D:\Study\Програмна інженерія\Solution1\Presentation\obj\Debug\net6.0-windows\Presentation.GeneratedMSBuildEditorConfig.editorconfig
-D:\Study\Програмна інженерія\Solution1\Presentation\obj\Debug\net6.0-windows\Presentation.AssemblyInfoInputs.cache
-D:\Study\Програмна інженерія\Solution1\Presentation\obj\Debug\net6.0-windows\Presentation.AssemblyInfo.cs
-D:\Study\Програмна інженерія\Solution1\Presentation\obj\Debug\net6.0-windows\Presentation.csproj.CoreCompileInputs.cache
-D:\Study\Програмна інженерія\Solution1\Presentation\bin\Debug\net6.0-windows\Presentation.exe
-D:\Study\Програмна інженерія\Solution1\Presentation\bin\Debug\net6.0-windows\Presentation.deps.json
-D:\Study\Програмна інженерія\Solution1\Presentation\bin\Debug\net6.0-windows\Presentation.runtimeconfig.json
-D:\Study\Програмна інженерія\Solution1\Presentation\bin\Debug\net6.0-windows\Presentation.dll
-D:\Study\Програмна інженерія\Solution1\Presentation\bin\Debug\net6.0-windows\Presentation.pdb
-D:\Study\Програмна інженерія\Solution1\Presentation\bin\Debug\net6.0-windows\FontAwesome.WPF.dll
-D:\Study\Програмна інженерія\Solution1\Presentation\obj\Debug\net6.0-windows\Presentation.csproj.CopyComplete
-D:\Study\Програмна інженерія\Solution1\Presentation\obj\Debug\net6.0-windows\Presentation.dll
-D:\Study\Програмна інженерія\Solution1\Presentation\obj\Debug\net6.0-windows\refint\Presentation.dll
-D:\Study\Програмна інженерія\Solution1\Presentation\obj\Debug\net6.0-windows\Presentation.pdb
-D:\Study\Програмна інженерія\Solution1\Presentation\obj\Debug\net6.0-windows\Presentation.genruntimeconfig.cache
-D:\Study\Програмна інженерія\Solution1\Presentation\obj\Debug\net6.0-windows\ref\Presentation.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.csproj.AssemblyReference.cache
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\MainWindow.baml
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\MainWindow.g.cs
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\App.g.cs
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation_MarkupCompile.cache
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.g.resources
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.AssemblyInfoInputs.cache
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.AssemblyInfo.cs
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.csproj.CoreCompileInputs.cache
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\refint\Presentation.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.pdb
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation.exe
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation.deps.json
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation.runtimeconfig.json
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation.pdb
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.csproj.CopyComplete
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.genruntimeconfig.cache
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\ref\Presentation.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Xceed.Wpf.AvalonDock.NET5.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Xceed.Wpf.AvalonDock.Themes.Aero.NET5.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Xceed.Wpf.AvalonDock.Themes.Metro.NET5.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Xceed.Wpf.AvalonDock.Themes.VS2010.NET5.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Xceed.Wpf.Toolkit.NET5.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\cs-CZ\Xceed.Wpf.AvalonDock.NET5.resources.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\de\Xceed.Wpf.AvalonDock.NET5.resources.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\es\Xceed.Wpf.AvalonDock.NET5.resources.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\fr\Xceed.Wpf.AvalonDock.NET5.resources.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\hu\Xceed.Wpf.AvalonDock.NET5.resources.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\it\Xceed.Wpf.AvalonDock.NET5.resources.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\ja-JP\Xceed.Wpf.AvalonDock.NET5.resources.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\pt-BR\Xceed.Wpf.AvalonDock.NET5.resources.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\ro\Xceed.Wpf.AvalonDock.NET5.resources.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\ru\Xceed.Wpf.AvalonDock.NET5.resources.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\sv\Xceed.Wpf.AvalonDock.NET5.resources.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\zh-Hans\Xceed.Wpf.AvalonDock.NET5.resources.dll
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Window1.g.cs
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation_MarkupCompile.lref
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Window1.baml
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\СhooseWindow.g.cs
-C:\Users\User\sykhiv project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\СhooseWindow.baml
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.csproj.AssemblyReference.cache
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Login.baml
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Login.g.cs
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Register.g.cs
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Сhoose.g.cs
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\App.g.cs
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation_MarkupCompile.cache
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation_MarkupCompile.lref
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\DAL.deps.json
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\DAL.runtimeconfig.json
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\DAL.exe
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation.exe
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation.deps.json
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation.runtimeconfig.json
@@ -73,6 +19,32 @@ H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Xceed.Wpf.AvalonDock
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Xceed.Wpf.AvalonDock.Themes.Metro.NET5.dll
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Xceed.Wpf.AvalonDock.Themes.VS2010.NET5.dll
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Xceed.Wpf.Toolkit.NET5.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Humanizer.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Json.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Npgsql.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\System.Runtime.CompilerServices.Unsafe.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\System.Text.Json.dll
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\cs-CZ\Xceed.Wpf.AvalonDock.NET5.resources.dll
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\de\Xceed.Wpf.AvalonDock.NET5.resources.dll
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\es\Xceed.Wpf.AvalonDock.NET5.resources.dll
@@ -85,16 +57,13 @@ H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\ro\Xceed.Wpf.AvalonD
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\ru\Xceed.Wpf.AvalonDock.NET5.resources.dll
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\sv\Xceed.Wpf.AvalonDock.NET5.resources.dll
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\zh-Hans\Xceed.Wpf.AvalonDock.NET5.resources.dll
-H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.csproj.AssemblyReference.cache
-H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\MainWindow.baml
-H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\MainWindow.g.cs
-H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Window1.g.cs
-H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\СhooseWindow.g.cs
-H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\App.g.cs
-H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation_MarkupCompile.cache
-H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation_MarkupCompile.lref
-H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Window1.baml
-H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\СhooseWindow.baml
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\BLL.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\DAL.dll
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\BLL.pdb
+H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\DAL.pdb
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Register.baml
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Сhoose.baml
 H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.g.resources
 H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.GeneratedMSBuildEditorConfig.editorconfig
 H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.AssemblyInfoInputs.cache
@@ -106,20 +75,3 @@ H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\refint\Presentation.
 H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.pdb
 H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Presentation.genruntimeconfig.cache
 H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\ref\Presentation.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Humanizer.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Abstractions.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Design.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.EntityFrameworkCore.Relational.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Abstractions.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Caching.Memory.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Configuration.Abstractions.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Options.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Npgsql.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
