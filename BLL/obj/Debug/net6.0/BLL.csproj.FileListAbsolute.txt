@@ -12,3 +12,11 @@ C:\Users\User\sykhiv project\sykhiv-gang\BLL\obj\Debug\net6.0\refint\BLL.dll
 C:\Users\User\sykhiv project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.pdb
 C:\Users\User\sykhiv project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.genruntimeconfig.cache
 C:\Users\User\sykhiv project\sykhiv-gang\BLL\obj\Debug\net6.0\ref\BLL.dll
+H:\GitHub\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.csproj.AssemblyReference.cache
+H:\GitHub\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+H:\GitHub\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
+H:\GitHub\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.AssemblyInfo.cs
+H:\GitHub\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.csproj.CoreCompileInputs.cache
+H:\GitHub\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.dll
+H:\GitHub\sykhiv-gang\BLL\obj\Debug\net6.0\refint\BLL.dll
+H:\GitHub\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.pdb
