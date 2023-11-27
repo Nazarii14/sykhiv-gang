@@ -1,0 +1,3 @@
+26.11.2023 21:43:09 - User pressed Commander button.
+26.11.2023 21:43:15 - User with name name trying to log in.
+26.11.2023 21:43:16 - User is not logged in!
