@@ -41,3 +41,46 @@ H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\refint\DAL.dll
 H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.pdb
 H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.genruntimeconfig.cache
 H:\GitHub\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\ref\DAL.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.exe
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.deps.json
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.runtimeconfig.json
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\DAL.pdb
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Humanizer.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Npgsql.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.csproj.CopyComplete
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\refint\DAL.dll
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.pdb
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\ref\DAL.dll

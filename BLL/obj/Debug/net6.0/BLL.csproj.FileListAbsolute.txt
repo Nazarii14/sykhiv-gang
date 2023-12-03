@@ -18,3 +18,23 @@ H:\GitHub\sykhiv-gang\BLL\obj\Debug\net6.0\refint\BLL.dll
 H:\GitHub\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.pdb
 H:\GitHub\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.genruntimeconfig.cache
 H:\GitHub\sykhiv-gang\BLL\obj\Debug\net6.0\ref\BLL.dll
+C:\Users\User\Command Project\sykhiv-gang\BLL\bin\Debug\net6.0\DAL.deps.json
+C:\Users\User\Command Project\sykhiv-gang\BLL\bin\Debug\net6.0\DAL.runtimeconfig.json
+C:\Users\User\Command Project\sykhiv-gang\BLL\bin\Debug\net6.0\DAL.exe
+C:\Users\User\Command Project\sykhiv-gang\BLL\bin\Debug\net6.0\BLL.deps.json
+C:\Users\User\Command Project\sykhiv-gang\BLL\bin\Debug\net6.0\BLL.runtimeconfig.json
+C:\Users\User\Command Project\sykhiv-gang\BLL\bin\Debug\net6.0\BLL.dll
+C:\Users\User\Command Project\sykhiv-gang\BLL\bin\Debug\net6.0\BLL.pdb
+C:\Users\User\Command Project\sykhiv-gang\BLL\bin\Debug\net6.0\DAL.dll
+C:\Users\User\Command Project\sykhiv-gang\BLL\bin\Debug\net6.0\DAL.pdb
+C:\Users\User\Command Project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.csproj.AssemblyReference.cache
+C:\Users\User\Command Project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Command Project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.AssemblyInfoInputs.cache
+C:\Users\User\Command Project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.AssemblyInfo.cs
+C:\Users\User\Command Project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.csproj.CoreCompileInputs.cache
+C:\Users\User\Command Project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.csproj.CopyComplete
+C:\Users\User\Command Project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.dll
+C:\Users\User\Command Project\sykhiv-gang\BLL\obj\Debug\net6.0\refint\BLL.dll
+C:\Users\User\Command Project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.pdb
+C:\Users\User\Command Project\sykhiv-gang\BLL\obj\Debug\net6.0\BLL.genruntimeconfig.cache
+C:\Users\User\Command Project\sykhiv-gang\BLL\obj\Debug\net6.0\ref\BLL.dll

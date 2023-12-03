@@ -1,0 +1,169 @@
+﻿<Window x:Class="Presentation.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentation"
+        mc:Ignorable="d"
+        Title="Menu" Height="720" Width="1280">
+    
+    <!--Cтилі для кнопок на меню -->
+    <Window.Resources>
+        <Style x:Key="SideMenuButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" Background="#FCFBFB">
+                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#E8E8E8"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <!-- Фон вікна -->
+        <Rectangle Fill="#F2F2F2" />
+        <!-- Верхній прямокутник -->
+        <Border Background="#FCFBFB" Height="60" VerticalAlignment="Top">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
+            </Border.Effect>
+
+            <Grid>
+                <!-- Прямокутник з назвою бригади -->
+                <Border Background="#F2F2F2" Height="40" Width="250" VerticalAlignment="Center" CornerRadius="11 11 11 11">
+                    <Border.Effect>
+                        <DropShadowEffect ShadowDepth="2" Color="#333333" Opacity="0.3" BlurRadius="5" />
+                    </Border.Effect>
+                    <TextBlock Text="BRIGADE NAME" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#4E7E13" FontSize="20" FontWeight="DemiBold"/>
+                </Border>
+
+                <!-- Кнопка користувача з іконкою -->
+                <Button Style="{StaticResource SideMenuButtonStyle}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 10 45 0" Width="40" Height="40"  >
+                    <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\user.png" Width="40" Height="40" />
+                </Button>
+            </Grid>
+        </Border>
+
+        <!-- Бічне меню -->
+        <Border Background="#FCFBFB" CornerRadius="0 15 15 0" Width="260" Height="530" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0 15 0 0">
+
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
+            </Border.Effect>
+
+
+            <!-- Панель для кнопок -->
+            <StackPanel>
+
+                <!-- Кнопка зброя -->
+                <Button x:Name="WeaponButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 30 0 0">
+                    <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
+                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\weapon.png" Width="23" Height="23" Margin="8" />
+                        <TextBlock Text="Weapon" VerticalAlignment="Center" FontSize="14" />
+                    </StackPanel>
+                </Button>
+
+                <!-- Кнопка додавання зброї -->
+                <Button x:Name="AddWeaponButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0">
+                    <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
+                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\add.png" Width="23" Height="23" Margin="6"/>
+                        <TextBlock Text="Add Weapon" VerticalAlignment="Center" FontSize="14"/>
+                    </StackPanel>
+                </Button>
+
+
+                <!-- Кнопка Aмуніція -->
+                <Button x:Name="AmmunitionButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0">
+                    <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
+                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\ammunition.png" Width="23" Height="23" Margin="6"/>
+                        <TextBlock Text="Ammunition" VerticalAlignment="Center" FontSize="14"/>
+                    </StackPanel>
+                </Button>
+
+
+                <!-- Кнопка додавання Aмуніції -->
+                <Button x:Name="AddAmmunitionButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0">
+                    <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
+                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\add.png" Width="23" Height="23" Margin="6"/>
+                        <TextBlock Text="Add Ammunition" VerticalAlignment="Center" FontSize="14"/>
+                    </StackPanel>
+                </Button>
+
+
+                <!-- Кнопка Cолдати -->
+                <Button x:Name="SoldiersButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0">
+                    <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
+                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\soldiers.png" Width="28" Height="28" Margin="5"/>
+                        <TextBlock Text="Soldiers" VerticalAlignment="Center" FontSize="14"/>
+                    </StackPanel>
+                </Button>
+
+
+                <!-- Кнопка додавання солдата -->
+                <Button x:Name="AddSoldiersButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0">
+                    <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
+                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\addSoldier.png" Width="28" Height="28" Margin="5"/>
+                        <TextBlock Text="Add Soldier" VerticalAlignment="Center" FontSize="14"/>
+                    </StackPanel>
+                </Button>
+
+                <!-- лінія -->
+                <Border BorderBrush="#5E6269" BorderThickness="0 0 0 2"/>
+
+                <!-- Кнопка шляхи  -->
+                <Button x:Name="RoutesButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 20 0 0">
+                    <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
+                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\routes.png" Width="23" Height="23" Margin="5"/>
+                        <TextBlock Text="Routes" VerticalAlignment="Center" FontSize="14"/>
+                    </StackPanel>
+                </Button>
+
+                <!-- Кнопка аналітика -->
+                <Button x:Name="AnalyticsButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 0 0 0">
+                    <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
+                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\analytics.png" Width="23" Height="23" Margin="5"/>
+                        <TextBlock Text="Analytics" VerticalAlignment="Center" FontSize="14"/>
+                    </StackPanel>
+                </Button>
+
+                <!-- Кнопка вийти -->
+                <Button x:Name="OutButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 35 0 0">
+                    <StackPanel Orientation="Horizontal" Margin="140 0 0 0">
+                        <TextBlock Text="Log out" VerticalAlignment="Center" FontSize="17"/>
+                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\logOut.png" Width="42" Height="42" Margin="5"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+        </Border>
+
+        <!-- Загальне відображення об'єктів -->
+        <Border Background="#FCFBFB" CornerRadius="15 0 0 15" Width="970" Height="530" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 15 0 0" >
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
+            </Border.Effect>
+
+        </Border>
+
+
+        <!-- Прямокутник з тінню знизу -->
+        <Border Background="#FCFBFB" Height="40" VerticalAlignment="Bottom">
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="4" Direction="60" Color="#333333" Opacity="0.2" BlurRadius="15"/>
+            </Border.Effect>
+
+        </Border>
+
+    </Grid>
+</Window>

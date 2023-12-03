@@ -1,33 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "H:\\GitHub\\sykhiv-gang\\BLL\\BLL.csproj": {}
+    "C:\\Users\\User\\Command Project\\sykhiv-gang\\BLL\\BLL.csproj": {}
   },
   "projects": {
-    "H:\\GitHub\\sykhiv-gang\\BLL\\BLL.csproj": {
+    "C:\\Users\\User\\Command Project\\sykhiv-gang\\BLL\\BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\GitHub\\sykhiv-gang\\BLL\\BLL.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Command Project\\sykhiv-gang\\BLL\\BLL.csproj",
         "projectName": "BLL",
-        "projectPath": "H:\\GitHub\\sykhiv-gang\\BLL\\BLL.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "H:\\GitHub\\sykhiv-gang\\BLL\\obj\\",
+        "projectPath": "C:\\Users\\User\\Command Project\\sykhiv-gang\\BLL\\BLL.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Command Project\\sykhiv-gang\\BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "H:\\GitHub\\sykhiv-gang\\ConsoleApp1\\DAL.csproj": {
-                "projectPath": "H:\\GitHub\\sykhiv-gang\\ConsoleApp1\\DAL.csproj"
+              "C:\\Users\\User\\Command Project\\sykhiv-gang\\ConsoleApp1\\DAL.csproj": {
+                "projectPath": "C:\\Users\\User\\Command Project\\sykhiv-gang\\ConsoleApp1\\DAL.csproj"
               }
             }
           }
@@ -65,26 +67,28 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "H:\\GitHub\\sykhiv-gang\\ConsoleApp1\\DAL.csproj": {
+    "C:\\Users\\User\\Command Project\\sykhiv-gang\\ConsoleApp1\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\GitHub\\sykhiv-gang\\ConsoleApp1\\DAL.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Command Project\\sykhiv-gang\\ConsoleApp1\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "H:\\GitHub\\sykhiv-gang\\ConsoleApp1\\DAL.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "H:\\GitHub\\sykhiv-gang\\ConsoleApp1\\obj\\",
+        "projectPath": "C:\\Users\\User\\Command Project\\sykhiv-gang\\ConsoleApp1\\DAL.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Command Project\\sykhiv-gang\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -138,7 +142,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

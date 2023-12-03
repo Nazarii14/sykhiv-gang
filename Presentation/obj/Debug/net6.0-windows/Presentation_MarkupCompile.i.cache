@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\
+C:\Users\User\Command Project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\
 Presentation
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-H:\GitHub\sykhiv-gang\Presentation\App.xaml
-3-288532476
+C:\Users\User\Command Project\sykhiv-gang\Presentation\App.xaml
+4-503786126
 
-8-1915525189
-2211881819778
-Login.xaml;Register.xaml;Сhoose.xaml;
+9387612157
+2211662436635
+Login.xaml;Menu.xaml;Register.xaml;Сhoose.xaml;
 
 False
 
