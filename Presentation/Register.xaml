@@ -5,8 +5,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentation"
-        mc:Ignorable="d" Title="Registration Window" Height="720" Width="1280" WindowStyle="None" Background="Transparent"
-         WindowStartupLocation="CenterScreen" AllowsTransparency="True">
+        mc:Ignorable="d" Title="Registration Window" Height="720" Width="1280"
+         WindowStartupLocation="CenterScreen" AllowsTransparency="False">
     <Grid>
 
         <Rectangle Fill="#141414" Grid.ColumnSpan="3" />

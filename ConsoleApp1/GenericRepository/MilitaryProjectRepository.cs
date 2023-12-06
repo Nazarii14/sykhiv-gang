@@ -5,11 +5,11 @@ namespace DAL.GenerickRepository
 {
     public class MilitaryProjectRepository<T> : IGenericRepository<T> where T : class
     {
-        private MilitaryProjectContext context;
+        private sykhivgangContext context;
         private DbSet<T> table;
         public MilitaryProjectRepository()
         {
-            context = new MilitaryProjectContext();
+            context = new sykhivgangContext();
             table = context.Set<T>();
         }
         public async Task Create(T entity)

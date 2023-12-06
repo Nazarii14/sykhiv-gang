@@ -29,3 +29,39 @@
 06.12.2023 22:53:06 - User pressed Commander button.
 06.12.2023 22:53:09 - User with name qwewqeqeq trying to log in.
 06.12.2023 22:53:11 - User is not logged in!
+07.12.2023 0:23:26 - User pressed Commander button.
+07.12.2023 0:23:30 - User with name qeqwewqe trying to log in.
+07.12.2023 0:23:32 - User is not logged in!
+07.12.2023 0:25:58 - User pressed Commander button.
+07.12.2023 0:26:01 - User with name asdadsads trying to log in.
+07.12.2023 0:26:03 - User is not logged in!
+07.12.2023 0:26:26 - User with name asdadsads trying to log in.
+07.12.2023 0:26:26 - User is not logged in!
+07.12.2023 0:27:40 - User pressed Commander button.
+07.12.2023 0:27:55 - User pressed Commander button.
+07.12.2023 0:28:21 - User pressed Commander button.
+07.12.2023 0:28:28 - User with name asdadsda trying to log in.
+07.12.2023 0:28:30 - User is not logged in!
+07.12.2023 0:29:00 - User pressed Commander button.
+07.12.2023 0:29:07 - User with name qwerty trying to log in.
+07.12.2023 0:29:09 - User is not logged in!
+07.12.2023 0:29:43 - User pressed Commander button.
+07.12.2023 0:29:47 - User with name qweqerqrqwe trying to log in.
+07.12.2023 0:29:49 - User is not logged in!
+07.12.2023 0:30:15 - User with name Nazarii trying to log in.
+07.12.2023 0:30:15 - User is logged in!
+07.12.2023 0:32:05 - User pressed Commander button.
+07.12.2023 0:32:19 - User with name Nazarii trying to log in.
+07.12.2023 0:32:20 - User is logged in!
+07.12.2023 0:32:39 - User pressed Commander button.
+07.12.2023 0:33:18 - User with name Nazarii trying to log in.
+07.12.2023 0:33:24 - User is not logged in!
+07.12.2023 0:33:29 - User with name Nazarii trying to log in.
+07.12.2023 0:33:29 - User is logged in!
+07.12.2023 0:39:31 - User pressed Commander button.
+07.12.2023 0:39:41 - User with name Nazarii and surname Protskiv trying to log in.
+07.12.2023 0:39:43 - User is logged in!
+07.12.2023 0:39:51 - User pressed Commander button.
+07.12.2023 0:51:36 - User pressed Commander button.
+07.12.2023 0:51:55 - User with name Nazariii and surname Protskiv trying to register.
+07.12.2023 0:51:57 - User is not registered!

@@ -1,16 +1,29 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DAL.Models
 {
-    public class User
+    public partial class User
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string Lastname { get; set; }
-        public string Password { get; set; }
-        public string Role { get; set; }
+        public User()
+        {
+            Ammunitions = new HashSet<Ammunition>();
+            Requests = new HashSet<Request>();
+            SoldierAttrbs = new HashSet<SoldierAttrb>();
+            VolunteerAttrbs = new HashSet<VolunteerAttrb>();
+            Weapons = new HashSet<Weapon>();
+        }
 
-        public ICollection<Weapon> Weapons { get; set; }
-        public ICollection<Ammunition> Ammunitions { get; set; }
+        public int UserId { get; set; }
+        public string UserName { get; set; } = null!;
+        public string UserSurname { get; set; } = null!;
+        public string Password { get; set; } = null!;
+        public string Role { get; set; } = null!;
+
+        public virtual ICollection<Ammunition> Ammunitions { get; set; }
+        public virtual ICollection<Request> Requests { get; set; }
+        public virtual ICollection<SoldierAttrb> SoldierAttrbs { get; set; }
+        public virtual ICollection<VolunteerAttrb> VolunteerAttrbs { get; set; }
+        public virtual ICollection<Weapon> Weapons { get; set; }
     }
 }

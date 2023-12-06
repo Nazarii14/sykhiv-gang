@@ -1,14 +1,15 @@
 ﻿namespace BLL
 {
+    using System.Data;
     using System.Text.RegularExpressions;
     using DAL.Data;
     using DAL.Models;
 
     public class Bll
     {
-        private readonly MilitaryProjectContext context;
+        private readonly sykhivgangContext context;
 
-        public Bll(MilitaryProjectContext context)
+        public Bll(sykhivgangContext context)
         {
             this.context = context;
         }
@@ -40,9 +41,10 @@
         /// </summary>
         /// <param name="name">The name of the user.</param>
         /// <returns>The user if found, null otherwise.</returns>
-        public User? GetUserByName(string name)
+        public User? GetUserByNameAndSurname(string name, string surname)
         {
-            return this.context.Users.FirstOrDefault(u => u.FirstName == name);
+            return this.context.Users
+                .FirstOrDefault(u => u.UserName == name && u.UserSurname == surname);
         }
 
         /// <summary>
@@ -51,9 +53,9 @@
         /// <param name="name">The name of the user.</param>
         /// <param name="password">The password of the user.</param>
         /// <returns>True if the user is authenticated, false otherwise.</returns>
-        public bool AuthenticateUser(string name, string password)
+        public bool AuthenticateUser(string name, string surname, string password)
         {
-            var user = this.GetUserByName(name);
+            var user = this.GetUserByNameAndSurname(name, surname);
             return user != null && user.Password == password;
         }
 
@@ -65,29 +67,19 @@
         /// <param name="password">The password of the user.</param>
         /// <param name="message">A message indicating the result of the registration.</param>
         /// <returns>True if the user is registered successfully, false otherwise.</returns>
-        public bool RegisterUser(string name, string username, string password, ref string message)
+        public bool RegisterUser(string name, string surname, string role, string password, string confirmPassword)
         {
-            if (this.UserExists(name))
+            if (this.UserExists(name, surname) || !IsValidUsername(name) || !IsValidPassword(password) ||
+                password != confirmPassword)
             {
-                message = "Name must be unique!";
-                return false;
-            }
-
-            if (!IsValidUsername(username))
-            {
-                message = "Username must be correct!";
-                return false;
-            }
-
-            if (!IsValidPassword(password))
-            {
-                message = "Password must be correct!";
                 return false;
             }
 
             var newUser = new User
             {
-                FirstName = name,
+                UserName = name,
+                UserSurname = surname,
+                Role = role,
                 Password = password,
             };
             this.context.Set<User>().Add(newUser);
@@ -108,8 +100,8 @@
             {
                 User newUser = new User
                 {
-                    FirstName = firstName,
-                    Lastname = lastName,
+                    UserName = firstName,
+                    UserSurname = lastName,
                     Password = password,
                     Role = role
                 };
@@ -123,9 +115,9 @@
             }
         }
 
-        private bool UserExists(string name)
+        private bool UserExists(string name, string surname)
         {
-            return this.context.Set<User>().Any(u => u.FirstName == name);
+            return this.context.Set<User>().Any(u => u.UserName == name && u.UserSurname == surname);
         }
 
         public void LogToFile(string filePath, string message)

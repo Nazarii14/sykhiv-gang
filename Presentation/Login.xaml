@@ -4,8 +4,8 @@
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-        mc:Ignorable="d" Title="Login" Height="720" Width="1280" WindowStyle="None" Background="Transparent"
-        WindowStartupLocation="CenterScreen" AllowsTransparency="True">
+        mc:Ignorable="d" Title="Login" Height="720" Width="1280"
+        WindowStartupLocation="CenterScreen" AllowsTransparency="False">
 
     <Grid>
         <Rectangle Fill="#141414" Grid.ColumnSpan="2" />
@@ -32,6 +32,10 @@
                                        Watermark="Name" FontSize="16" FontFamily="Verdana"
                                        BorderBrush="#9D9D9D" BorderThickness="1.5" />
 
+                <xctk:WatermarkTextBox Width="400" Height="45" x:Name="SurnameTextBox" Padding="5" Margin="0 0 0 20"
+                       Watermark="Surname" FontSize="16" FontFamily="Verdana"
+                       BorderBrush="#9D9D9D" BorderThickness="1.5" />
+                
                 <!-- Section for entering the password -->
                 <xctk:WatermarkPasswordBox Width="400" Height="45" x:Name="PasswordBox" Padding="5" Margin="0 0 0 20"
                                            Watermark="Password" FontSize="16" FontFamily="Verdana"

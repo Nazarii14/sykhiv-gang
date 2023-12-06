@@ -1,20 +1,28 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DAL.Models
 {
-    public class Ammunition
+    public partial class Ammunition
     {
-        public int Id { get; set; }
+        public Ammunition()
+        {
+            InventoryAmmunitions = new HashSet<InventoryAmmunition>();
+            Requests = new HashSet<Request>();
+            Routes = new HashSet<Route>();
+        }
+
+        public int AmmunitionId { get; set; }
         public string Type { get; set; } = null!;
         public string Name { get; set; } = null!;
-        public double Price { get; set; }
+        public decimal Price { get; set; }
         public string Size { get; set; } = null!;
-        public string Gender { get; set; } = null!;
+        public string UsersGender { get; set; } = null!;
+        public int? UserId { get; set; }
 
-        // Owner of ammunition
-        public int UserId { get; set; }
-
-        [ForeignKey("UserId")]
-        public User User { get; set; }
+        public virtual User? User { get; set; }
+        public virtual ICollection<InventoryAmmunition> InventoryAmmunitions { get; set; }
+        public virtual ICollection<Request> Requests { get; set; }
+        public virtual ICollection<Route> Routes { get; set; }
     }
 }

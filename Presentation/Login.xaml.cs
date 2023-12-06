@@ -29,23 +29,19 @@ namespace Presentation
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             string name = this.UsernameTextBox.Text;
+            string surname = this.SurnameTextBox.Text;
             string password = this.PasswordBox.Password;
 
-            using (MilitaryProjectContext context = new MilitaryProjectContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
                 string path = Directory.GetCurrentDirectory() + "\\logs.txt";
-                userService.LogToFile(path, $"User with name {name} trying to log in.");
+                userService.LogToFile(path, $"User with name {name} and surname {surname} trying to log in.");
 
-                // Checking if is connected to db
-                // Create some user in db
-                userService.AddUser("Oleg", "Lozovyi", "123456789", "Commander");
-
-                if (userService.AuthenticateUser(name, password))
+                if (userService.AuthenticateUser(name, surname, password))
                 {
                     userService.LogToFile(path, $"User is logged in!");
-                    // Showing next window after login (menu)
                     Menu menuwindow = new Menu();
                     menuwindow.Show();
                     this.Close();

@@ -1,5 +1,8 @@
-﻿using System;
+﻿using BLL;
+using DAL.Data;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +33,32 @@ namespace Presentation
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Account created!");
+            string name = this.NameTextBox.Text;
+            string surname = this.SurnameTextBox.Text;
+            string role = this.PositionTextBox.Text;
+            string password = this.SignUpPasswordBox.Password;
+            string confirmPassword = this.ConfirmPasswordBox.Password;
+
+            using (sykhivgangContext context = new sykhivgangContext())
+            {
+                Bll userService = new Bll(context);
+
+                string path = Directory.GetCurrentDirectory() + "\\logs.txt";
+                userService.LogToFile(path, $"User with name {name} and surname {surname} trying to register.");
+
+                if (userService.RegisterUser(name, surname, role, password, confirmPassword))
+                {
+                    userService.LogToFile(path, $"User is registered!");
+                    Menu menuwindow = new Menu();
+                    menuwindow.Show();
+                    this.Close();
+                }
+                else
+                {
+                    userService.LogToFile(path, $"User is not registered!");
+                    MessageBox.Show("Unsuccessful register!");
+                }
+            }
         }
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
