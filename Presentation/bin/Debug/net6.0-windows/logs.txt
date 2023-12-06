@@ -65,3 +65,13 @@
 07.12.2023 0:51:36 - User pressed Commander button.
 07.12.2023 0:51:55 - User with name Nazariii and surname Protskiv trying to register.
 07.12.2023 0:51:57 - User is not registered!
+07.12.2023 0:59:47 - User pressed Commander button.
+07.12.2023 1:00:16 - User with name Nazariii and surname Protskiv trying to register.
+07.12.2023 1:00:17 - Invalid credentials!
+07.12.2023 1:00:17 - User is not registered!
+07.12.2023 1:06:51 - User pressed Commander button.
+07.12.2023 1:07:11 - User with name Nazariii and surname Protskiv trying to register.
+07.12.2023 1:07:13 - Invalid password!
+07.12.2023 1:07:13 - User is not registered!
+07.12.2023 1:11:42 - User with name Nazariii and surname Protskiv trying to register.
+07.12.2023 1:11:47 - User is registered!

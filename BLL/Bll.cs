@@ -69,9 +69,29 @@
         /// <returns>True if the user is registered successfully, false otherwise.</returns>
         public bool RegisterUser(string name, string surname, string role, string password, string confirmPassword)
         {
-            if (this.UserExists(name, surname) || !IsValidUsername(name) || !IsValidPassword(password) ||
-                password != confirmPassword)
+            if (this.UserExists(name, surname)) { 
+                LogToFile(Directory.GetCurrentDirectory() + "\\logs.txt", 
+                    "User with that name and surname exists!");
+                return false;
+            }
+
+            if (!IsValidUsername(name))
             {
+                LogToFile(Directory.GetCurrentDirectory() + "\\logs.txt", 
+                    "Invalid username!");
+                return false;
+            }
+
+            if (!IsValidPassword(password)) {
+                LogToFile(Directory.GetCurrentDirectory() + "\\logs.txt", 
+                    "Invalid password!");
+                return false;
+            }
+
+            if (password != confirmPassword)
+            {
+                LogToFile(Directory.GetCurrentDirectory() + "\\logs.txt", 
+                    "Passwords does not match!");
                 return false;
             }
 
@@ -82,6 +102,7 @@
                 Role = role,
                 Password = password,
             };
+
             this.context.Set<User>().Add(newUser);
             this.context.SaveChanges();
 
