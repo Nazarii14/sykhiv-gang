@@ -96,6 +96,33 @@
             return true;
         }
 
+        /// <summary>
+        /// Adds a new recipe.
+        /// </summary>
+        /// <param name="name">The name of the recipe.</param>
+        /// <param name="ingredients">The ingredients of the recipe.</param>
+        /// <param name="process">The process of the recipe.</param>
+        public void AddUser(string firstName, string lastName, string password, string role)
+        {
+            try
+            {
+                User newUser = new User
+                {
+                    FirstName = firstName,
+                    Lastname = lastName,
+                    Password = password,
+                    Role = role
+                };
+
+                this.context.Set<User>().Add(newUser);
+                this.context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error adding user: {ex.Message}");
+            }
+        }
+
         private bool UserExists(string name)
         {
             return this.context.Set<User>().Any(u => u.FirstName == name);

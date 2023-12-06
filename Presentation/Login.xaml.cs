@@ -21,7 +21,10 @@ namespace Presentation
     /// </summary>
     public partial class Login : Window
     {
-        public Login() => this.InitializeComponent();
+        public Login()
+        {
+            this.InitializeComponent();
+        }
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
@@ -31,13 +34,20 @@ namespace Presentation
             using (MilitaryProjectContext context = new MilitaryProjectContext())
             {
                 Bll userService = new Bll(context);
+
                 string path = Directory.GetCurrentDirectory() + "\\logs.txt";
                 userService.LogToFile(path, $"User with name {name} trying to log in.");
+
+                // Checking if is connected to db
+                // Create some user in db
+                userService.AddUser("Oleg", "Lozovyi", "123456789", "Commander");
 
                 if (userService.AuthenticateUser(name, password))
                 {
                     userService.LogToFile(path, $"User is logged in!");
-                    // Something has to be shown
+                    // Showing next window after login (menu)
+                    Menu menuwindow = new Menu();
+                    menuwindow.Show();
                     this.Close();
                 }
                 else
@@ -50,6 +60,7 @@ namespace Presentation
         private void Hyperlink_Click (object sender, RoutedEventArgs e)
         {
             Register registerwindow = new Register();
+            this.Close();
             registerwindow.Show();
         }
     }

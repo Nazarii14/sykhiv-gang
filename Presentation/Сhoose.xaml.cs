@@ -38,6 +38,7 @@ namespace Presentation
             }
 
             Login loginwindow = new Login();
+            this.Close();
             loginwindow.Show();
         }
         private void SoldierButton_Click(object sender, RoutedEventArgs e)
@@ -50,6 +51,7 @@ namespace Presentation
             }
 
             Login loginwindow = new Login();
+            this.Close();
             loginwindow.Show();
         }
 

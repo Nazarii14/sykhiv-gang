@@ -6,10 +6,8 @@
 
 namespace DAL.Data
 {
-    using System;
     using DAL.Models;
     using Microsoft.EntityFrameworkCore;
-    using System.Collections.Generic;
 
     /// <summary>
     /// This is a description of what the partial class does.
@@ -30,7 +28,6 @@ namespace DAL.Data
         public MilitaryProjectContext(DbContextOptions<MilitaryProjectContext> options)
             : base(options)
         {
-
         }
 
         /// <summary>
@@ -63,7 +60,7 @@ namespace DAL.Data
         /// </summary>
         /// <param name="optionsBuilder">Будівельник, який використовується для створення або зміни параметрів для цього контексту.</param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-            => optionsBuilder.UseNpgsql("Host=localhost;Username=postgres;Password=;Database=\"sykhiv gang\";Pooling=true;");
+            => optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=sykhivgang;User Id=postgres;Password=YourPassword;");
 
 
         /// <summary>
@@ -75,42 +72,31 @@ namespace DAL.Data
             modelBuilder.Entity<User>(entity =>
             {
                 entity.HasKey(e => e.Id).HasName("users_pkey");
-
                 entity.ToTable("users");
-
                 entity.Property(e => e.Id)
                     .HasColumnName("user_id")
-                    .IsRequired();
+                    .IsRequired()
+                    .UseIdentityColumn();
 
                 entity.Property(e => e.FirstName)
                     .HasColumnName("user_name")
                     .IsRequired()
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .HasMaxLength(255);
 
                 entity.Property(e => e.Lastname)
                     .HasColumnName("user_surname")
                     .IsRequired()
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .HasMaxLength(255);
 
                 entity.Property(e => e.Password)
                     .HasColumnName("password")
                     .IsRequired()
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
-
-                entity.Property(e => e.Email)
-                    .HasColumnName("email")
-                    .IsRequired()
-                    .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .HasMaxLength(255);
 
                 entity.Property(e => e.Role)
                     .HasColumnName("role")
                     .IsRequired()
-                    .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .HasMaxLength(50);
             });
         }
     }

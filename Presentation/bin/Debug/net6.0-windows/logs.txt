@@ -3,3 +3,29 @@
 26.11.2023 21:43:16 - User is not logged in!
 03.12.2023 13:17:15 - User pressed Commander button.
 03.12.2023 13:30:35 - User pressed Commander button.
+03.12.2023 14:38:50 - User pressed Commander button.
+03.12.2023 14:38:54 - User with name qweqweq trying to log in.
+03.12.2023 14:38:57 - User is not logged in!
+03.12.2023 14:39:09 - User with name qwewq trying to log in.
+03.12.2023 14:39:09 - User is not logged in!
+03.12.2023 14:40:25 - User pressed Commander button.
+05.12.2023 17:00:05 - User pressed Commander button.
+05.12.2023 17:00:09 - User with name  trying to log in.
+05.12.2023 17:00:12 - User is not logged in!
+06.12.2023 22:26:26 - User pressed Commander button.
+06.12.2023 22:26:32 - User with name qwewqewq trying to log in.
+06.12.2023 22:39:46 - User pressed Commander button.
+06.12.2023 22:39:50 - User with name asdasdsad trying to log in.
+06.12.2023 22:40:18 - User pressed Commander button.
+06.12.2023 22:40:20 - User with name adasdsa trying to log in.
+06.12.2023 22:41:48 - User pressed Commander button.
+06.12.2023 22:41:50 - User with name qweqweqw trying to log in.
+06.12.2023 22:42:47 - User pressed Commander button.
+06.12.2023 22:42:51 - User with name eqwweqwewqeqw trying to log in.
+06.12.2023 22:42:52 - User is not logged in!
+06.12.2023 22:50:58 - User pressed Commander button.
+06.12.2023 22:51:03 - User with name qeqeqwewqewqe trying to log in.
+06.12.2023 22:51:05 - User is not logged in!
+06.12.2023 22:53:06 - User pressed Commander button.
+06.12.2023 22:53:09 - User with name qwewqeqeq trying to log in.
+06.12.2023 22:53:11 - User is not logged in!
