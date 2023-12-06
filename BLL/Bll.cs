@@ -69,29 +69,27 @@
         /// <returns>True if the user is registered successfully, false otherwise.</returns>
         public bool RegisterUser(string name, string surname, string role, string password, string confirmPassword)
         {
-            if (this.UserExists(name, surname)) { 
-                LogToFile(Directory.GetCurrentDirectory() + "\\logs.txt", 
-                    "User with that name and surname exists!");
+            string path = Directory.GetCurrentDirectory() + "\\logs.txt";
+
+            if (UserExists(name, surname)) {
+                LogToFile(path, "User with that name and surname exists!");
                 return false;
             }
 
             if (!IsValidUsername(name))
             {
-                LogToFile(Directory.GetCurrentDirectory() + "\\logs.txt", 
-                    "Invalid username!");
+                LogToFile(path, "Invalid username!");
                 return false;
             }
 
             if (!IsValidPassword(password)) {
-                LogToFile(Directory.GetCurrentDirectory() + "\\logs.txt", 
-                    "Invalid password!");
+                LogToFile(path, "Invalid password!");
                 return false;
             }
 
             if (password != confirmPassword)
             {
-                LogToFile(Directory.GetCurrentDirectory() + "\\logs.txt", 
-                    "Passwords does not match!");
+                LogToFile(path, "Passwords does not match!");
                 return false;
             }
 
