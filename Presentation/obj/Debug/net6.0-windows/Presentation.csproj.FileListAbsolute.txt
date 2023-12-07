@@ -156,3 +156,11 @@ C:\Users\User\Command Project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\
 C:\Users\User\Command Project\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\ref\Presentation.dll
 H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Menu.g.cs
 H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\Menu.baml
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\AddAmmunition.g.cs
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\AddAmmunition.baml
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\AddWeapon.g.cs
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\AddWeapon.baml
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\AddSoldier.g.cs
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\AddSoldier.baml
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\ChangeBrigadeName.g.cs
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\ChangeBrigadeName.baml

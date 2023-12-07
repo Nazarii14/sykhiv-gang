@@ -1,0 +1,28 @@
+﻿<Window x:Class="Presentation.ChangeBrigadeName"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentation"
+        mc:Ignorable="d"
+        Title="ChangeBrigadeName" Height="450" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Edit Info" FontSize="20" Margin="0 0 0 20" />
+
+            <TextBlock Text="Brigade name:" />
+            <TextBox x:Name="BrigadeNameBox" Width="250" Height="25" Margin="0 0 0 5" />
+
+            <TextBlock Text="Established date:" />
+            <TextBox x:Name="EstablishedDateBox" Width="250" Height="25" Margin="0 0 0 5" />
+
+            <TextBlock Text="Commander name:" />
+            <TextBox x:Name="CommanderNameBox" Width="250" Height="25" Margin="0 0 0 5" />
+
+            <TextBlock Text="Location:" />
+            <TextBox x:Name="LocationBox" Width="250" Height="25" Margin="0 0 0 5" />
+
+            <Button Content="Save" Click="ChangeBrigadeInfoButton_Click" Width="150" Height="43" Margin="0 10 0 0" />
+        </StackPanel>
+    </Grid>
+</Window>

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 H:\GitHub\sykhiv-gang\Presentation\App.xaml
-4-503786126
+8-1469883916
 
-9387612157
+13-442961238
 2211881819778
-Login.xaml;Menu.xaml;Register.xaml;Сhoose.xaml;
+AddAmmunition.xaml;AddSoldier.xaml;AddWeapon.xaml;ChangeBrigadeName.xaml;Login.xaml;Menu.xaml;Register.xaml;Сhoose.xaml;
 
-True
+False
 

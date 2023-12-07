@@ -1,0 +1,22 @@
+﻿<Window x:Class="Presentation.AddSoldier"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Presentation"
+        mc:Ignorable="d"
+        Title="AddSoldier" Height="450" Width="500">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Add Soldier" FontSize="20" Margin="0 0 0 20" />
+
+            <TextBlock Text="Callsign:" />
+            <TextBox x:Name="CallsignBox" Width="250" Height="25" Margin="0 0 0 5" />
+
+            <TextBlock Text="UserId:" />
+            <TextBox x:Name="UserIdBox" Width="250" Height="25" Margin="0 0 0 5" />
+
+            <Button Content="Add" Click="AddSoldierButton_Click" Width="150" Height="43" Margin="0 10 0 0" />
+        </StackPanel>
+    </Grid>
+</Window>

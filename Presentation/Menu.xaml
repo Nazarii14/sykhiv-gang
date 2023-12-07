@@ -41,11 +41,16 @@
 
             <Grid>
                 <!-- Прямокутник з назвою бригади -->
+                
                 <Border Background="#F2F2F2" Height="40" Width="250" VerticalAlignment="Center" CornerRadius="11 11 11 11">
                     <Border.Effect>
                         <DropShadowEffect ShadowDepth="2" Color="#333333" Opacity="0.3" BlurRadius="5" />
                     </Border.Effect>
-                    <TextBlock Text="BRIGADE NAME" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#4E7E13" FontSize="20" FontWeight="DemiBold"/>
+                    
+                    <Button Click="BrigadeName_Button_Click">
+                        <TextBlock x:Name="BrigadeName" Text="BRIGADE NAME" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#4E7E13" FontSize="20" FontWeight="DemiBold"/>
+                    </Button>
+
                 </Border>
 
                 <!-- Кнопка користувача з іконкою -->
@@ -67,7 +72,7 @@
             <StackPanel>
 
                 <!-- Кнопка зброя -->
-                <Button x:Name="WeaponButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 30 0 0">
+                <Button x:Name="WeaponButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 30 0 0" Click="WeaponButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
                         <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\weapon.png" Width="23" Height="23" Margin="8" />
                         <TextBlock Text="Weapon" VerticalAlignment="Center" FontSize="14" />
@@ -75,7 +80,7 @@
                 </Button>
 
                 <!-- Кнопка додавання зброї -->
-                <Button x:Name="AddWeaponButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0">
+                <Button x:Name="AddWeaponButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0" Click="AddWeaponButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
                         <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\add.png" Width="23" Height="23" Margin="6"/>
                         <TextBlock Text="Add Weapon" VerticalAlignment="Center" FontSize="14"/>
@@ -84,7 +89,7 @@
 
 
                 <!-- Кнопка Aмуніція -->
-                <Button x:Name="AmmunitionButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0">
+                <Button x:Name="AmmunitionButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0" Click="AmmunitionButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
                         <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\ammunition.png" Width="23" Height="23" Margin="6"/>
                         <TextBlock Text="Ammunition" VerticalAlignment="Center" FontSize="14"/>
@@ -93,7 +98,7 @@
 
 
                 <!-- Кнопка додавання Aмуніції -->
-                <Button x:Name="AddAmmunitionButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0">
+                <Button x:Name="AddAmmunitionButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0" Click="AddAmmunitionButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
                         <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\add.png" Width="23" Height="23" Margin="6"/>
                         <TextBlock Text="Add Ammunition" VerticalAlignment="Center" FontSize="14"/>
@@ -102,7 +107,7 @@
 
 
                 <!-- Кнопка Cолдати -->
-                <Button x:Name="SoldiersButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0">
+                <Button x:Name="SoldiersButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0" Click="SoldierButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
                         <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\soldiers.png" Width="28" Height="28" Margin="5"/>
                         <TextBlock Text="Soldiers" VerticalAlignment="Center" FontSize="14"/>
@@ -111,7 +116,7 @@
 
 
                 <!-- Кнопка додавання солдата -->
-                <Button x:Name="AddSoldiersButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0">
+                <Button x:Name="AddSoldiersButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0" Click="AddSoldierButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
                         <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\addSoldier.png" Width="28" Height="28" Margin="5"/>
                         <TextBlock Text="Add Soldier" VerticalAlignment="Center" FontSize="14"/>
@@ -122,7 +127,7 @@
                 <Border BorderBrush="#5E6269" BorderThickness="0 0 0 2"/>
 
                 <!-- Кнопка шляхи  -->
-                <Button x:Name="RoutesButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 20 0 0">
+                <Button x:Name="RoutesButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 20 0 0" Click="RoutesButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
                         <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\routes.png" Width="23" Height="23" Margin="5"/>
                         <TextBlock Text="Routes" VerticalAlignment="Center" FontSize="14"/>
@@ -138,10 +143,10 @@
                 </Button>
 
                 <!-- Кнопка вийти -->
-                <Button x:Name="OutButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 35 0 0">
+                <Button x:Name="OutButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 35 0 0" Click="LogoutButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="140 0 0 0">
                         <TextBlock Text="Log out" VerticalAlignment="Center" FontSize="17"/>
-                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\logOut.png" Width="42" Height="42" Margin="5"/>
+                        <Image x:Name="logoutImage" Width="42" Height="42" Margin="5"/>
                     </StackPanel>
                 </Button>
 
@@ -153,6 +158,20 @@
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
             </Border.Effect>
+
+            <ListView Name="WeaponListView" Margin="10,10,10,300" Grid.Row="1" Visibility="Visible">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="150" />
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150" />
+                        <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="150" />
+                        <GridViewColumn Header="Weight" DisplayMemberBinding="{Binding Weight}" Width="150" />
+                        <GridViewColumn Header="UserId" DisplayMemberBinding="{Binding UserId}" Width="150" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+
 
         </Border>
 

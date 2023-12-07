@@ -7,6 +7,18 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="AddAmmunition.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddSoldier.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddWeapon.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ChangeBrigadeName.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Menu.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -18,6 +30,18 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="AddAmmunition.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddSoldier.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddWeapon.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ChangeBrigadeName.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Login.xaml">
       <SubType>Designer</SubType>
     </Page>

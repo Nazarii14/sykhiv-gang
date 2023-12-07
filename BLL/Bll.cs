@@ -139,6 +139,151 @@
             return this.context.Set<User>().Any(u => u.UserName == name && u.UserSurname == surname);
         }
 
+        public void AddAmmunition(string type, string name,
+            decimal price, string size, 
+            string gender, int user_id)
+        {
+            try
+            {
+                Ammunition newAmmunition = new Ammunition
+                {
+                    Type = type,
+                    Name = name,
+                    Price = price,
+                    Size = size,
+                    UsersGender = gender,
+                    UserId = user_id
+                };
+
+                this.context.Set<Ammunition>().Add(newAmmunition);
+                this.context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error adding ammunition: {ex.Message}");
+            }
+        }
+
+        public void AddWeapon(string type, string name, 
+            decimal price, decimal weight, 
+            int user_id)
+        {
+            try
+            {
+                Weapon newWeapon = new Weapon
+                {
+                    Type = type,
+                    Name = name,
+                    Price = price,
+                    Weight = weight,
+                    UserId = user_id
+                };
+
+                this.context.Set<Weapon>().Add(newWeapon);
+                this.context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error adding weapon: {ex.Message}");
+            }
+        }
+
+        public List<Weapon> GetWeapons()
+        {
+            try
+            {
+                return this.context.Set<Weapon>().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting weapons: {ex.Message}");
+                return null;
+            }
+        }
+
+        public List<Ammunition> GetAmmunitions()
+        {
+            try
+            {
+                return this.context.Set<Ammunition>().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting ammunitions: {ex.Message}");
+                return null;
+            }
+        }
+
+        public void AddSoldier(string callsign, int user_id)
+        {
+            try
+            {
+                SoldierAttrb newSoldier = new SoldierAttrb
+                {
+                    Callsign = callsign,
+                    UserId = user_id
+                };
+
+                this.context.Set<SoldierAttrb>().Add(newSoldier);
+                this.context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error adding soldier: {ex.Message}");
+            }
+        }
+
+        public void ChangeBrigadeInfo(string name, string commanderName, string establishmentDate, string location)
+        {
+            try
+            {
+                var brigade = context.Set<Brigade>().FirstOrDefault();
+
+                if (brigade != null)
+                {
+                    brigade.Name = name;
+                    brigade.EstablishmentDate = DateOnly.Parse(establishmentDate);
+                    brigade.CommanderName = commanderName;
+                    brigade.Location = location;
+
+                    this.context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error changing brigade: {ex.Message}");
+            }
+        }
+
+        public string GetBrigadeName()
+        {
+            try
+            {
+                Brigade brigade = context.Set<Brigade>().FirstOrDefault();
+                return brigade?.Name;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting brigade name: {ex.Message}");
+                return null;
+            }
+
+        }
+
+        public string[] GetBrigadeInfo()
+        {
+            try
+            {
+                Brigade brigade = context.Set<Brigade>().FirstOrDefault();
+                return new string[] { brigade?.Name, brigade?.CommanderName, brigade?.EstablishmentDate.ToString(), brigade?.Location };
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting brigade attributes: {ex.Message}");
+                return null;
+            }
+        }   
+
         public void LogToFile(string filePath, string message)
         {
             using (StreamWriter writer = new StreamWriter(filePath, true))

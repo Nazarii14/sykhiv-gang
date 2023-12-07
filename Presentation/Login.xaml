@@ -30,16 +30,16 @@
                 <!-- Section for entering the username -->
                 <xctk:WatermarkTextBox Width="400" Height="45" x:Name="UsernameTextBox" Margin="0 0 0 20"
                                        Watermark="Name" FontSize="16" FontFamily="Verdana"
-                                       BorderBrush="#9D9D9D" BorderThickness="1.5" />
+                                       BorderBrush="#9D9D9D" BorderThickness="1.5" Text="Nazarii" />
 
                 <xctk:WatermarkTextBox Width="400" Height="45" x:Name="SurnameTextBox" Padding="5" Margin="0 0 0 20"
                        Watermark="Surname" FontSize="16" FontFamily="Verdana"
-                       BorderBrush="#9D9D9D" BorderThickness="1.5" />
+                       BorderBrush="#9D9D9D" BorderThickness="1.5" Text="Protskiv"/>
                 
                 <!-- Section for entering the password -->
                 <xctk:WatermarkPasswordBox Width="400" Height="45" x:Name="PasswordBox" Padding="5" Margin="0 0 0 20"
                                            Watermark="Password" FontSize="16" FontFamily="Verdana"
-                                           BorderBrush="#9D9D9D" BorderThickness="1.5" />
+                                           BorderBrush="#9D9D9D" BorderThickness="1.5" Password="123456789" />
 
                 <Button Content="Log In" Width="400" Height="45" FontSize="20" Foreground="#FFFFFF" Margin="0 5 0 5" FontFamily="Roboto" Click="LoginButton_Click">
                     <Button.Template>
