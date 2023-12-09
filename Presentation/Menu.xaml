@@ -154,14 +154,12 @@
         </Border>
 
         <!-- Загальне відображення об'єктів -->
-        <Border Background="#FCFBFB" CornerRadius="15 0 0 15" Width="970" Height="530" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 15 0 0" >
+        <Border x:Name="WeaponBorder" Background="#FCFBFB" CornerRadius="15 0 0 15" Visibility="Visible" Width="970" Height="530" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 15 0 0" >
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
-            
-            
             </Border.Effect>
 
-            <ListView Name="WeaponListView" Margin="10,72,10,238" Grid.Row="3" Visibility="Visible" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListView Name="WeaponListView" Margin="10,72,10,238" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="150" />
@@ -185,19 +183,25 @@
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        
+
                     </GridView>
                 </ListView.View>
             </ListView>
+        </Border>
 
-            <ListView Name="AmmunitionListView" Margin="10,72,10,238" Grid.Row="3" Visibility="Hidden" d:ItemsSource="{d:SampleData ItemCount=5}">
+        <Border x:Name="AmmunitionBorder" Background="#FCFBFB" CornerRadius="15 0 0 15" Visibility="Collapsed" Width="970" Height="530" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 15 0 0" >
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
+            </Border.Effect>
+
+            <ListView Name="AmmunitionListView" Margin="10,72,10,238" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="150" />
                         <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150" />
                         <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="150" />
-                        <GridViewColumn Header="Size" DisplayMemberBinding="{Binding Weight}" Width="150" />
-                        <GridViewColumn Header="UsersGender" DisplayMemberBinding="{Binding UserId}" Width="150" />
+                        <GridViewColumn Header="Size" DisplayMemberBinding="{Binding Size}" Width="150" />
+                        <GridViewColumn Header="UsersGender" DisplayMemberBinding="{Binding UsersGender}" Width="150" />
                         <GridViewColumn Header="UserId" DisplayMemberBinding="{Binding UserId}" Width="150" />
 
                         <GridViewColumn Header="Delete">
@@ -219,17 +223,23 @@
                     </GridView>
                 </ListView.View>
             </ListView>
+        </Border>
 
-            <ListView Name="SoldierListView" Margin="10,72,10,238" Grid.Row="3" Visibility="Hidden" d:ItemsSource="{d:SampleData ItemCount=5}">
+        <Border x:Name="SoldierBorder" Background="#FCFBFB" Visibility="Collapsed" CornerRadius="15 0 0 15" Width="970" Height="530" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 15 0 0" >
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
+            </Border.Effect>
+
+            <ListView Name="SoldierListView" Margin="10,72,10,238" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Callsign" DisplayMemberBinding="{Binding Type}" Width="150" />
+                        <GridViewColumn Header="Callsign" DisplayMemberBinding="{Binding Callsign}" Width="150" />
                         <GridViewColumn Header="UserId" DisplayMemberBinding="{Binding UserId}" Width="150" />
 
                         <GridViewColumn Header="Delete">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button Content="Delete" Click="DeleteSoldierButton_Click" CommandParameter="{Binding WeaponId}" />
+                                    <Button Content="Delete" Click="DeleteSoldierButton_Click" CommandParameter="{Binding SoldierAttrbId}" />
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
@@ -237,7 +247,7 @@
                         <GridViewColumn Header="Edit">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button Content="Edit" Click="EditSoldierButton_Click" CommandParameter="{Binding WeaponId}" />
+                                    <Button Content="Edit" Click="EditSoldierButton_Click" CommandParameter="{Binding SoldierAttrbId}" />
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
@@ -245,8 +255,6 @@
                     </GridView>
                 </ListView.View>
             </ListView>
-
-
         </Border>
 
 
@@ -255,7 +263,6 @@
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="4" Direction="60" Color="#333333" Opacity="0.2" BlurRadius="15"/>
             </Border.Effect>
-
         </Border>
 
     </Grid>

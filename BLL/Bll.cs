@@ -63,8 +63,8 @@
         /// Registers a new user.
         /// </summary>
         /// <param name="name">The name of the user.</param>
-        /// <param name="username">The username of the user.</param>
-        /// <param name="password">The password of the user.</param>
+        /// <param name="username">The username of user.</param>
+        /// <param name="password">The password of user.</param>
         /// <param name="message">A message indicating the result of the registration.</param>
         /// <returns>True if the user is registered successfully, false otherwise.</returns>
         public bool RegisterUser(string name, string surname, string role, string password, string confirmPassword)
@@ -108,11 +108,11 @@
         }
 
         /// <summary>
-        /// Adds a new recipe.
+        /// Adds a new User.
         /// </summary>
-        /// <param name="name">The name of the recipe.</param>
-        /// <param name="ingredients">The ingredients of the recipe.</param>
-        /// <param name="process">The process of the recipe.</param>
+        /// <param name="firstName">The firstname of user.</param>
+        /// <param name="lastname">The lastname of user.</param>
+        /// <param name="password">The password of user.</param>
         public void AddUser(string firstName, string lastName, string password, string role)
         {
             try
@@ -138,6 +138,7 @@
         {
             return this.context.Set<User>().Any(u => u.UserName == name && u.UserSurname == surname);
         }
+
 
         public void AddAmmunition(string type, string name,
             decimal price, string size, 
@@ -188,6 +189,25 @@
             }
         }
 
+        public void AddSoldier(string callsign, int user_id)
+        {
+            try
+            {
+                SoldierAttrb newSoldier = new SoldierAttrb
+                {
+                    Callsign = callsign,
+                    UserId = user_id
+                };
+
+                this.context.Set<SoldierAttrb>().Add(newSoldier);
+                this.context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error adding soldier: {ex.Message}");
+            }
+        }
+
         public void DeleteWeapon(int id)
         {
             try
@@ -206,6 +226,42 @@
             }
         }
 
+        public void DeleteAmmunition(int id)
+        {
+            try
+            {
+                var ammunition = context.Set<Ammunition>().FirstOrDefault(a => a.AmmunitionId == id);
+
+                if (ammunition != null)
+                {
+                    this.context.Set<Ammunition>().Remove(ammunition);
+                    this.context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error deleting ammunition: {ex.Message}");
+            }
+        }
+
+        public void DeleteSoldier(int id)
+        {
+            try
+            {
+                var soldier = context.Set<SoldierAttrb>().FirstOrDefault(s => s.SoldierAttrbId == id);
+
+                if (soldier != null)
+                {
+                    this.context.Set<SoldierAttrb>().Remove(soldier);
+                    this.context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error deleting soldier: {ex.Message}");
+            }
+        }
+
         public Weapon GetWeaponById(int id)
         {
             try
@@ -215,6 +271,32 @@
             catch (Exception ex)
             {
                 Console.WriteLine($"Error getting weapon by id: {ex.Message}");
+                return null;
+            }
+        }
+
+        public Ammunition GetAmmunitionById(int id)
+        {
+            try
+            {
+                return context.Set<Ammunition>().FirstOrDefault(a => a.AmmunitionId == id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting ammunition by id: {ex.Message}");
+                return null;
+            }
+        }
+
+        public SoldierAttrb GetSoldierById(int id)
+        {
+            try
+            {
+                return context.Set<SoldierAttrb>().FirstOrDefault(s => s.SoldierAttrbId == id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting soldier by id: {ex.Message}");
                 return null;
             }
         }
@@ -242,21 +324,47 @@
             }
         }
 
-        public void DeleteAmmunition(int id)
+        public void EditAmmunition(int ammunitionId, string type, string name, decimal price, string size, string usersGender, int userId) 
         {
             try
             {
-                var ammunition = context.Set<Ammunition>().FirstOrDefault(a => a.AmmunitionId == id);
+                var ammunition = context.Set<Ammunition>().FirstOrDefault(a => a.AmmunitionId == ammunitionId);
 
                 if (ammunition != null)
                 {
-                    this.context.Set<Ammunition>().Remove(ammunition);
+                    ammunition.Type = type;
+                    ammunition.Name = name;
+                    ammunition.Price = price;
+                    ammunition.Size = size;
+                    ammunition.UsersGender = usersGender;
+                    ammunition.UserId = userId;
+
                     this.context.SaveChanges();
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error deleting ammunition: {ex.Message}");
+                Console.WriteLine($"Error editing ammunition: {ex.Message}");
+            }
+        }
+
+        public void EditSoldier(int soldierId, string callsign, int userId)
+        {
+            try
+            {
+                var soldier = context.Set<SoldierAttrb>().FirstOrDefault(s => s.SoldierAttrbId == soldierId);
+
+                if (soldier != null)
+                {
+                    soldier.Callsign = callsign;
+                    soldier.UserId = userId;
+
+                    this.context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error editing soldier: {ex.Message}");
             }
         }
 
@@ -296,25 +404,6 @@
             {
                 Console.WriteLine($"Error getting soldiers: {ex.Message}");
                 return null;
-            }
-        }
-
-        public void AddSoldier(string callsign, int user_id)
-        {
-            try
-            {
-                SoldierAttrb newSoldier = new SoldierAttrb
-                {
-                    Callsign = callsign,
-                    UserId = user_id
-                };
-
-                this.context.Set<SoldierAttrb>().Add(newSoldier);
-                this.context.SaveChanges();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error adding soldier: {ex.Message}");
             }
         }
 

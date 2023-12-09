@@ -56,8 +56,8 @@ namespace Presentation
         private void Hyperlink_Click (object sender, RoutedEventArgs e)
         {
             Register registerwindow = new Register();
-            this.Close();
             registerwindow.Show();
+            this.Close();
         }
     }
 }

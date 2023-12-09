@@ -30,6 +30,8 @@ namespace Presentation
         {
             InitializeComponent();
             Weapon_Loaded();
+            WeaponButton.Background = Brushes.LightGray;
+
             BrigadeName.Text = BrigadeName_Loaded();
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string presentationFolderPath = System.IO.Path.Combine(baseDirectory, "Presentation");
@@ -42,9 +44,45 @@ namespace Presentation
                 userService.LogToFile(path, presentationFolderPath);
 
             }
+        }
 
-            //logoutImage.Source = new BitmapImage(new Uri(presentationFolderPath + "\\Icons\\logOut.png", 
-            //    UriKind.RelativeOrAbsolute));
+        private void WeaponButton_Click(object sender, RoutedEventArgs e)
+        {
+            WeaponButton.Background = Brushes.LightGray;
+            AmmunitionButton.Background = Brushes.Transparent;
+            SoldiersButton.Background = Brushes.Transparent;
+
+            WeaponBorder.Visibility = Visibility.Visible;
+            AmmunitionBorder.Visibility = Visibility.Collapsed; 
+            SoldierBorder.Visibility = Visibility.Collapsed;
+            WeaponListView.ItemsSource = null;
+            Weapon_Loaded();
+        }
+
+        private void AmmunitionButton_Click(object sender, RoutedEventArgs e)
+        {
+            WeaponButton.Background = Brushes.Transparent;
+            AmmunitionButton.Background = Brushes.LightGray;
+            SoldiersButton.Background = Brushes.Transparent;
+
+            WeaponBorder.Visibility = Visibility.Collapsed;
+            AmmunitionBorder.Visibility = Visibility.Visible;
+            SoldierBorder.Visibility = Visibility.Collapsed;
+            AmmunitionListView.ItemsSource = null;
+            Ammunition_Loaded();
+        }
+
+        private void SoldierButton_Click(object sender, RoutedEventArgs e)
+        {
+            WeaponButton.Background = Brushes.Transparent;
+            AmmunitionButton.Background = Brushes.Transparent;
+            SoldiersButton.Background = Brushes.LightGray;
+
+            WeaponBorder.Visibility = Visibility.Collapsed;
+            AmmunitionBorder.Visibility = Visibility.Collapsed;
+            SoldierBorder.Visibility = Visibility.Visible;
+            SoldierListView.ItemsSource = null;
+            Soldiers_Loaded();
         }
 
         private void DeleteWeaponButton_Click(object sender, RoutedEventArgs e)
@@ -60,6 +98,22 @@ namespace Presentation
 
                 WeaponListView.ItemsSource = null;
                 WeaponListView.ItemsSource = userService.GetWeapons();
+            }
+        }
+
+        private void DeleteSoldierButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (sykhivgangContext context = new sykhivgangContext())
+            {
+                Bll userService = new Bll(context);
+
+                Button button = (Button)sender;
+                var itemId = (int)button.CommandParameter;
+
+                userService.DeleteSoldier(itemId);
+
+                SoldierListView.ItemsSource = null;
+                SoldierListView.ItemsSource = userService.GetSoldiers();
             }
         }
 
@@ -84,6 +138,48 @@ namespace Presentation
             }
         }
 
+        private void EditAmmunitionButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (sykhivgangContext context = new sykhivgangContext())
+            {
+                Bll userService = new Bll(context);
+
+                Button button = (Button)sender;
+                var itemId = (int)button.CommandParameter;
+
+                EditSoldier editAmmunition = new EditSoldier(itemId);
+
+                editAmmunition.Closed += (s, args) =>
+                {
+                    AmmunitionListView.ItemsSource = null;
+                    AmmunitionListView.ItemsSource = userService.GetAmmunitions();
+                };
+
+                editAmmunition.Show();
+            }
+        }
+
+        private void EditSoldierButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (sykhivgangContext context = new sykhivgangContext())
+            {
+                Bll userService = new Bll(context);
+
+                Button button = (Button)sender;
+                var itemId = (int)button.CommandParameter;
+
+                EditSoldier editSoldier = new EditSoldier(itemId);
+
+                editSoldier.Closed += (s, args) =>
+                {
+                    SoldierListView.ItemsSource = null;
+                    SoldierListView.ItemsSource = userService.GetSoldiers();
+                };
+
+                editSoldier.Show();
+            }
+        }
+
         private void DeleteAmmunitionButton_Click(object sender, RoutedEventArgs e)
         {
             using (sykhivgangContext context = new sykhivgangContext())
@@ -95,8 +191,8 @@ namespace Presentation
 
                 userService.DeleteAmmunition(itemId);
 
-                WeaponListView.ItemsSource = null;
-                WeaponListView.ItemsSource = userService.GetAmmunitions();
+                AmmunitionListView.ItemsSource = null;
+                AmmunitionListView.ItemsSource = userService.GetAmmunitions();
             }
         }
 
@@ -116,12 +212,6 @@ namespace Presentation
             Close();
         }
 
-
-        private void WeaponButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Weapon_Loaded()
         {
             using sykhivgangContext context = new();
@@ -131,35 +221,34 @@ namespace Presentation
             this.WeaponListView.ItemsSource = weapons;
         }
 
-        private void AddWeaponButton_Click(object sender, RoutedEventArgs e)
-        {
-            AddWeapon addWeaponWindow = new AddWeapon();
-            addWeaponWindow.Show();
-        }
-
-        private void AmmunitionButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Ammunition_Loaded()
         {
             using sykhivgangContext context = new();
             Bll bll = new(context);
             List<Ammunition> ammunitions = bll.GetAmmunitions();
 
-            //this.AmmunitionListView.ItemsSource = ammunitions;
+            this.AmmunitionListView.ItemsSource = ammunitions;
+        }
+
+        private void Soldiers_Loaded()
+        {
+            using sykhivgangContext context = new();
+            Bll bll = new(context);
+            List<SoldierAttrb> soldiers = bll.GetSoldiers();
+
+            this.SoldierListView.ItemsSource = soldiers;
+        }
+
+        private void AddWeaponButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddWeapon addWeaponWindow = new AddWeapon();
+            addWeaponWindow.Show();
         }
 
         private void AddAmmunitionButton_Click(object sender, RoutedEventArgs e)
         {
             AddAmmunition addAmmunitionWindow = new AddAmmunition();
             addAmmunitionWindow.Show();
-        }
-
-        private void SoldierButton_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
         
         private void AddSoldierButton_Click(object sender, RoutedEventArgs e)

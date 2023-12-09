@@ -234,3 +234,78 @@
 08.12.2023 21:52:43 - User is logged in!
 08.12.2023 21:52:43 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
 08.12.2023 21:52:51 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 13:22:09 - User pressed Commander button.
+09.12.2023 13:22:16 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 13:22:19 - User is logged in!
+09.12.2023 13:22:19 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 13:22:46 - User pressed Commander button.
+09.12.2023 13:24:09 - User pressed Commander button.
+09.12.2023 13:24:48 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 13:24:53 - User is logged in!
+09.12.2023 13:24:53 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 13:25:56 - User pressed Commander button.
+09.12.2023 13:26:14 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 13:26:16 - User is logged in!
+09.12.2023 13:26:16 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 13:28:05 - User pressed Commander button.
+09.12.2023 13:28:06 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 13:28:08 - User is logged in!
+09.12.2023 13:28:08 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 13:28:27 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 14:16:21 - User pressed Commander button.
+09.12.2023 14:16:22 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 14:16:23 - User is logged in!
+09.12.2023 14:16:23 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 21:59:46 - User pressed Commander button.
+09.12.2023 21:59:48 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 21:59:50 - User is logged in!
+09.12.2023 21:59:51 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 22:03:02 - User pressed Commander button.
+09.12.2023 22:03:03 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 22:03:05 - User is logged in!
+09.12.2023 22:03:05 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 22:12:20 - User pressed Commander button.
+09.12.2023 22:12:22 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 22:12:23 - User is logged in!
+09.12.2023 22:12:23 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 22:17:47 - User pressed Commander button.
+09.12.2023 22:17:48 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 22:17:49 - User is logged in!
+09.12.2023 22:17:49 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 22:21:21 - User pressed Commander button.
+09.12.2023 22:21:22 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 22:21:24 - User is logged in!
+09.12.2023 22:21:24 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 22:29:50 - User pressed Commander button.
+09.12.2023 22:29:51 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 22:29:53 - User is logged in!
+09.12.2023 22:29:53 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 22:31:04 - User pressed Commander button.
+09.12.2023 22:31:05 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 22:31:06 - User is logged in!
+09.12.2023 22:31:06 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 23:11:34 - User pressed Commander button.
+09.12.2023 23:11:35 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 23:11:36 - User is logged in!
+09.12.2023 23:11:36 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 23:12:25 - User pressed Commander button.
+09.12.2023 23:12:27 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 23:12:28 - User is logged in!
+09.12.2023 23:12:29 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 23:12:34 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 23:13:25 - User pressed Commander button.
+09.12.2023 23:13:27 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 23:13:28 - User is logged in!
+09.12.2023 23:13:28 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 23:15:19 - User pressed Commander button.
+09.12.2023 23:15:20 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 23:15:21 - User is logged in!
+09.12.2023 23:15:21 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 23:16:21 - User pressed Commander button.
+09.12.2023 23:16:22 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 23:16:24 - User is logged in!
+09.12.2023 23:16:24 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+09.12.2023 23:18:36 - User pressed Commander button.
+09.12.2023 23:18:38 - User with name Nazarii and surname Protskiv trying to log in.
+09.12.2023 23:18:39 - User is logged in!
+09.12.2023 23:18:39 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation

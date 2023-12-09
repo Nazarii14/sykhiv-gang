@@ -64,6 +64,7 @@ namespace Presentation
         {
             Login loginwindow = new Login();
             loginwindow.Show();
+            Close();
         }
     }
 }

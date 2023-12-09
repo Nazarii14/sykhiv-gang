@@ -19,6 +19,12 @@
     <Compile Update="ChangeBrigadeName.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="EditAmmunition.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditSoldier.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="EditWeapon.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +49,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ChangeBrigadeName.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditAmmunition.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditSoldier.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="EditWeapon.xaml">

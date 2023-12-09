@@ -166,3 +166,7 @@ H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\ChangeBrigadeName.g.
 H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\ChangeBrigadeName.baml
 H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\EditWeapon.g.cs
 H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\EditWeapon.baml
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\EditAmmunition.g.cs
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\EditSoldier.g.cs
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\EditAmmunition.baml
+H:\GitHub\sykhiv-gang\Presentation\obj\Debug\net6.0-windows\EditSoldier.baml
