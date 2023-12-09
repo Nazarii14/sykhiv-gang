@@ -69,7 +69,7 @@ namespace Presentation {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Presentation;component/%d0%a1hoose.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Presentation;V1.0.0.0;component/%d0%a1hoose.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Сhoose.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

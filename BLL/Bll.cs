@@ -188,6 +188,78 @@
             }
         }
 
+        public void DeleteWeapon(int id)
+        {
+            try
+            {
+                var weapon = context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == id);
+
+                if (weapon != null)
+                {
+                    this.context.Set<Weapon>().Remove(weapon);
+                    this.context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error deleting weapon: {ex.Message}");
+            }
+        }
+
+        public Weapon GetWeaponById(int id)
+        {
+            try
+            {
+                return context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == id);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting weapon by id: {ex.Message}");
+                return null;
+            }
+        }
+
+        public void EditWeapon(int weaponId, string type, string name, decimal price, decimal weight, int userId)
+        {
+            try
+            {
+                var weapon = context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == weaponId);
+
+                if (weapon != null)
+                {
+                    weapon.Type = type;
+                    weapon.Name = name;
+                    weapon.Price = price;
+                    weapon.Weight = weight;
+                    weapon.UserId = userId;
+
+                    this.context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error editing weapon: {ex.Message}");
+            }
+        }
+
+        public void DeleteAmmunition(int id)
+        {
+            try
+            {
+                var ammunition = context.Set<Ammunition>().FirstOrDefault(a => a.AmmunitionId == id);
+
+                if (ammunition != null)
+                {
+                    this.context.Set<Ammunition>().Remove(ammunition);
+                    this.context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error deleting ammunition: {ex.Message}");
+            }
+        }
+
         public List<Weapon> GetWeapons()
         {
             try
@@ -210,6 +282,19 @@
             catch (Exception ex)
             {
                 Console.WriteLine($"Error getting ammunitions: {ex.Message}");
+                return null;
+            }
+        }
+
+        public List<SoldierAttrb> GetSoldiers()
+        {
+            try
+            {
+                return this.context.Set<SoldierAttrb>().ToList();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting soldiers: {ex.Message}");
                 return null;
             }
         }

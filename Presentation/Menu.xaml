@@ -157,9 +157,11 @@
         <Border Background="#FCFBFB" CornerRadius="15 0 0 15" Width="970" Height="530" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 15 0 0" >
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
+            
+            
             </Border.Effect>
 
-            <ListView Name="WeaponListView" Margin="10,10,10,300" Grid.Row="1" Visibility="Visible">
+            <ListView Name="WeaponListView" Margin="10,72,10,238" Grid.Row="3" Visibility="Visible" d:ItemsSource="{d:SampleData ItemCount=5}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="150" />
@@ -167,10 +169,82 @@
                         <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="150" />
                         <GridViewColumn Header="Weight" DisplayMemberBinding="{Binding Weight}" Width="150" />
                         <GridViewColumn Header="UserId" DisplayMemberBinding="{Binding UserId}" Width="150" />
+
+                        <GridViewColumn Header="Delete">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Delete" Click="DeleteWeaponButton_Click" CommandParameter="{Binding WeaponId}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Edit">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Edit" Click="EditWeaponButton_Click" CommandParameter="{Binding WeaponId}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        
                     </GridView>
                 </ListView.View>
             </ListView>
 
+            <ListView Name="AmmunitionListView" Margin="10,72,10,238" Grid.Row="3" Visibility="Hidden" d:ItemsSource="{d:SampleData ItemCount=5}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="150" />
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150" />
+                        <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="150" />
+                        <GridViewColumn Header="Size" DisplayMemberBinding="{Binding Weight}" Width="150" />
+                        <GridViewColumn Header="UsersGender" DisplayMemberBinding="{Binding UserId}" Width="150" />
+                        <GridViewColumn Header="UserId" DisplayMemberBinding="{Binding UserId}" Width="150" />
+
+                        <GridViewColumn Header="Delete">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Delete" Click="DeleteAmmunitionButton_Click" CommandParameter="{Binding AmmunitionId}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Edit">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Edit" Click="EditAmmunitionButton_Click" CommandParameter="{Binding AmmunitionId}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            <ListView Name="SoldierListView" Margin="10,72,10,238" Grid.Row="3" Visibility="Hidden" d:ItemsSource="{d:SampleData ItemCount=5}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Callsign" DisplayMemberBinding="{Binding Type}" Width="150" />
+                        <GridViewColumn Header="UserId" DisplayMemberBinding="{Binding UserId}" Width="150" />
+
+                        <GridViewColumn Header="Delete">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Delete" Click="DeleteSoldierButton_Click" CommandParameter="{Binding WeaponId}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Edit">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="Edit" Click="EditSoldierButton_Click" CommandParameter="{Binding WeaponId}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                    </GridView>
+                </ListView.View>
+            </ListView>
 
 
         </Border>

@@ -47,6 +47,59 @@ namespace Presentation
             //    UriKind.RelativeOrAbsolute));
         }
 
+        private void DeleteWeaponButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (sykhivgangContext context = new sykhivgangContext())
+            {
+                Bll userService = new Bll(context);
+
+                Button button = (Button)sender;
+                var itemId = (int)button.CommandParameter;
+
+                userService.DeleteWeapon(itemId);
+
+                WeaponListView.ItemsSource = null;
+                WeaponListView.ItemsSource = userService.GetWeapons();
+            }
+        }
+
+        private void EditWeaponButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (sykhivgangContext context = new sykhivgangContext())
+            {
+                Bll userService = new Bll(context);
+
+                Button button = (Button)sender;
+                var itemId = (int)button.CommandParameter;
+
+                EditWeapon editWeapon = new EditWeapon(itemId);
+
+                editWeapon.Closed += (s, args) =>
+                {
+                    WeaponListView.ItemsSource = null;
+                    WeaponListView.ItemsSource = userService.GetWeapons();
+                };
+
+                editWeapon.Show();
+            }
+        }
+
+        private void DeleteAmmunitionButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (sykhivgangContext context = new sykhivgangContext())
+            {
+                Bll userService = new Bll(context);
+
+                Button button = (Button)sender;
+                var itemId = (int)button.CommandParameter;
+
+                userService.DeleteAmmunition(itemId);
+
+                WeaponListView.ItemsSource = null;
+                WeaponListView.ItemsSource = userService.GetAmmunitions();
+            }
+        }
+
         private string BrigadeName_Loaded()
         {
             using (sykhivgangContext context = new sykhivgangContext())
