@@ -117,3 +117,11 @@
 10.12.2023 21:23:51 - User with name Emily and surname Williams trying to log in.
 10.12.2023 21:23:52 - User is logged in!
 10.12.2023 21:23:53 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+10.12.2023 21:27:33 - User pressed Commander button.
+10.12.2023 21:27:34 - User with name Emily and surname Williams trying to log in.
+10.12.2023 21:27:35 - User is logged in!
+10.12.2023 21:27:35 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
+10.12.2023 21:28:18 - User pressed Commander button.
+10.12.2023 21:28:20 - User with name Emily and surname Williams trying to log in.
+10.12.2023 21:28:21 - User is logged in!
+10.12.2023 21:28:21 - H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Presentation
