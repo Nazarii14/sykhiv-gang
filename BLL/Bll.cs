@@ -37,9 +37,10 @@
         }
 
         /// <summary>
-        /// Gets a user by their email.
+        /// Gets a user by their name and surname.
         /// </summary>
         /// <param name="name">The name of the user.</param>
+        /// <param name="surname">The surname of the user.</param>
         /// <returns>The user if found, null otherwise.</returns>
         public User? GetUserByNameAndSurname(string name, string surname)
         {
@@ -113,6 +114,7 @@
         /// <param name="firstName">The firstname of user.</param>
         /// <param name="lastname">The lastname of user.</param>
         /// <param name="password">The password of user.</param>
+        /// <param name="role">The role of user.</param>
         public void AddUser(string firstName, string lastName, string password, string role)
         {
             try
@@ -141,7 +143,8 @@
 
 
         public void AddAmmunition(string type, string name,
-            decimal price, string size, 
+            decimal price, string size,
+            int neededAmount, int availableAmount,
             string gender, int user_id)
         {
             try
@@ -331,7 +334,10 @@
             }
         }
 
-        public void EditAmmunition(int ammunitionId, string type, string name, decimal price, string size, string usersGender, int userId) 
+        public void EditAmmunition(int ammunitionId, string type, 
+            string name, decimal price, 
+            string size, string usersGender, int userId, 
+            int neededAmount, int availableAmount) 
         {
             try
             {
@@ -345,6 +351,8 @@
                     ammunition.Size = size;
                     ammunition.UsersGender = usersGender;
                     ammunition.UserId = userId;
+                    ammunition.NeededAmount = neededAmount;
+                    ammunition.AvailableAmount = availableAmount;
 
                     this.context.SaveChanges();
                 }
@@ -447,6 +455,82 @@
             }
         }
 
+
+
+        public void DecrementNeededAmountOfAmmunitionById(int ammunitionId)
+        {
+            try
+            {
+                var ammunition = context.Set<Ammunition>().FirstOrDefault(w => w.AmmunitionId == ammunitionId);
+
+                if (ammunition != null)
+                {
+                    ammunition.NeededAmount -= 1;
+                    this.context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error decrementing ammunition: {ex.Message}");
+            }
+        }
+
+        public void IncrementNeededAmountOfAmmunitionById(int ammunitionId)
+        {
+            try
+            {
+                var ammunition = context.Set<Ammunition>().FirstOrDefault(w => w.AmmunitionId == ammunitionId);
+
+                if (ammunition != null)
+                {
+                    ammunition.NeededAmount += 1;
+                    this.context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error Incrementing ammunition: {ex.Message}");
+            }
+        }
+
+        public void DecrementAvailableAmountOfAmmunitionById(int ammunitionId)
+        {
+            try
+            {
+                var ammunition = context.Set<Ammunition>().FirstOrDefault(w => w.AmmunitionId == ammunitionId);
+
+                if (ammunition != null)
+                {
+                    ammunition.AvailableAmount -= 1;
+                    this.context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error decrementing ammunition: {ex.Message}");
+            }
+        }
+
+        public void IncrementAvailableAmountOfAmmunitionById(int ammunitionId)
+        {
+            try
+            {
+                var ammunition = context.Set<Ammunition>().FirstOrDefault(w => w.AmmunitionId == ammunitionId);
+
+                if (ammunition != null)
+                {
+                    ammunition.AvailableAmount += 1;
+                    this.context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error Incrementing ammunition: {ex.Message}");
+            }
+        }
+
+
+
         public List<Weapon> GetWeapons()
         {
             try
@@ -464,7 +548,7 @@
         {
             try
             {
-                return this.context.Set<Ammunition>().ToList();
+                return this.context.Set<Ammunition>().OrderBy(e => e.Name).ToList();
             }
             catch (Exception ex)
             {
@@ -477,7 +561,7 @@
         {
             try
             {
-                return this.context.Set<SoldierAttrb>().ToList();
+                return this.context.Set<SoldierAttrb>().OrderBy(e => e.Callsign).ToList();
             }
             catch (Exception ex)
             {
@@ -537,9 +621,9 @@
             }
         }   
 
-        public void LogToFile(string filePath, string message)
+        public void LogToFile(string path, string message)
         {
-            using (StreamWriter writer = new StreamWriter(filePath, true))
+            using (StreamWriter writer = new StreamWriter("logs.txt", true))
             {
                 writer.WriteLine($"{DateTime.Now} - {message}");
             }

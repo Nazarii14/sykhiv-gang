@@ -27,7 +27,7 @@ namespace Presentation
             get { return itemId; }
             set { itemId = value; }
         }
-        public EditAmmunition()
+        public EditAmmunition(int itemId)
         {
             InitializeComponent();
             EditInfo_Loaded(itemId);
@@ -40,8 +40,9 @@ namespace Presentation
             {
                 Bll userService = new Bll(context);
                 userService.EditAmmunition(itemId, TypeBox.Text, NameBox.Text, 
-                    decimal.Parse(PriceBox.Text), SizeBox.Text, 
-                    UsersGenderBox.Text, int.Parse(UserIdBox.Text));
+                    decimal.Parse(PriceBox.Text), SizeBox.Text,
+                    UsersGenderBox.Text, int.Parse(UserIdBox.Text), 
+                    int.Parse(NeededAmountBox.Text), int.Parse(AvailableAmountBox.Text));
             }
 
             this.Close();
@@ -59,6 +60,8 @@ namespace Presentation
                 NameBox.Text = ammunition.Name;
                 PriceBox.Text = ammunition.Price.ToString();
                 SizeBox.Text = ammunition.Size;
+                NeededAmountBox.Text = ammunition.NeededAmount.ToString();
+                AvailableAmountBox.Text = ammunition.AvailableAmount.ToString();
                 UsersGenderBox.Text = ammunition.UsersGender;
                 UserIdBox.Text = ammunition.UserId.ToString();
             }

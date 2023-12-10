@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentation"
         mc:Ignorable="d"
-        Title="AddAmmunition" Height="450" Width="500">
+        Title="AddAmmunition" Height="500" Width="500">
     <Grid>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="Add Ammunition" FontSize="20" Margin="0 0 0 20" />
@@ -21,6 +21,12 @@
 
             <TextBlock Text="Size:" />
             <TextBox x:Name="SizeBox" Width="250" Height="25" Margin="0 0 0 5" />
+
+            <TextBlock Text="Needed Amount:" />
+            <TextBox x:Name="NeededAmountBox" Width="250" Height="25" Margin="0 0 0 5" />
+
+            <TextBlock Text="AvailableAmount:" />
+            <TextBox x:Name="AvailableAmountBox" Width="250" Height="25" Margin="0 0 0 5" />
 
             <TextBlock Text="User Gender:" />
             <TextBox x:Name="UserGenderBox" Width="250" Height="25" Margin="0 0 0 5" />

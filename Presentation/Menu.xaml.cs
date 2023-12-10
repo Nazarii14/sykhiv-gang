@@ -147,15 +147,15 @@ namespace Presentation
                 Button button = (Button)sender;
                 var itemId = (int)button.CommandParameter;
 
-                EditSoldier editAmmunition = new EditSoldier(itemId);
+                EditAmmunition editAmmunition = new EditAmmunition(itemId);
+                
+                editAmmunition.Show();
 
                 editAmmunition.Closed += (s, args) =>
                 {
                     AmmunitionListView.ItemsSource = null;
                     AmmunitionListView.ItemsSource = userService.GetAmmunitions();
                 };
-
-                editAmmunition.Show();
             }
         }
 
@@ -212,7 +212,9 @@ namespace Presentation
             Close();
         }
 
-        private void DecrementNeededAmountButton_Click(object sender, RoutedEventArgs e)
+
+
+        private void DecrementNeededAmountOfWeaponButton_Click(object sender, RoutedEventArgs e)
         {
             using (sykhivgangContext context = new sykhivgangContext())
             {
@@ -228,7 +230,7 @@ namespace Presentation
             }
         }
 
-        private void IncrementNeededAmountButton_Click(object sender, RoutedEventArgs e)
+        private void IncrementNeededAmountOfWeaponButton_Click(object sender, RoutedEventArgs e)
         {
             using (sykhivgangContext context = new sykhivgangContext())
             {
@@ -243,6 +245,105 @@ namespace Presentation
                 WeaponListView.ItemsSource = userService.GetWeapons();
             }
         }
+
+        private void DecrementAvailableAmountOfWeaponButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (sykhivgangContext context = new sykhivgangContext())
+            {
+                Bll userService = new Bll(context);
+
+                Button button = (Button)sender;
+                var itemId = (int)button.CommandParameter;
+
+                userService.DecrementAvailableAmountOfWeaponById(itemId);
+
+                WeaponListView.ItemsSource = null;
+                WeaponListView.ItemsSource = userService.GetWeapons();
+            }
+        }
+
+        private void IncrementAvailableAmountOfWeaponButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (sykhivgangContext context = new sykhivgangContext())
+            {
+                Bll userService = new Bll(context);
+
+                Button button = (Button)sender;
+                var itemId = (int)button.CommandParameter;
+
+                userService.IncrementAvailableAmountOfWeaponById(itemId);
+
+                WeaponListView.ItemsSource = null;
+                WeaponListView.ItemsSource = userService.GetWeapons();
+            }
+        }
+
+
+
+        private void DecrementNeededAmountOfAmmunitionButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (sykhivgangContext context = new sykhivgangContext())
+            {
+                Bll userService = new Bll(context);
+
+                Button button = (Button)sender;
+                var itemId = (int)button.CommandParameter;
+
+                userService.DecrementNeededAmountOfAmmunitionById(itemId);
+
+                AmmunitionListView.ItemsSource = null;
+                AmmunitionListView.ItemsSource = userService.GetAmmunitions();
+            }
+        }
+
+        private void IncrementNeededAmountOfAmmunitionButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (sykhivgangContext context = new sykhivgangContext())
+            {
+                Bll userService = new Bll(context);
+
+                Button button = (Button)sender;
+                var itemId = (int)button.CommandParameter;
+
+                userService.IncrementNeededAmountOfAmmunitionById(itemId);
+
+                AmmunitionListView.ItemsSource = null;
+                AmmunitionListView.ItemsSource = userService.GetAmmunitions();
+            }
+        }
+
+        private void DecrementAvailableAmountOfAmmunitionButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (sykhivgangContext context = new sykhivgangContext())
+            {
+                Bll userService = new Bll(context);
+
+                Button button = (Button)sender;
+                var itemId = (int)button.CommandParameter;
+
+                userService.DecrementAvailableAmountOfAmmunitionById(itemId);
+
+                AmmunitionListView.ItemsSource = null;
+                AmmunitionListView.ItemsSource = userService.GetAmmunitions();
+            }
+        }
+
+        private void IncrementAvailableAmountOfAmmunitionButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (sykhivgangContext context = new sykhivgangContext())
+            {
+                Bll userService = new Bll(context);
+
+                Button button = (Button)sender;
+                var itemId = (int)button.CommandParameter;
+
+                userService.IncrementAvailableAmountOfAmmunitionById(itemId);
+
+                AmmunitionListView.ItemsSource = null;
+                AmmunitionListView.ItemsSource = userService.GetAmmunitions();
+            }
+        }
+
 
         private void Weapon_Loaded()
         {

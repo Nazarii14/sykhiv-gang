@@ -32,7 +32,8 @@ namespace Presentation
             {
                 Bll userService = new Bll(context);
                 userService.AddAmmunition(TypeBox.Text, NameBox.Text, 
-                    decimal.Parse(PriceBox.Text), SizeBox.Text, 
+                    decimal.Parse(PriceBox.Text), SizeBox.Text,
+                    int.Parse(NeededAmountBox.Text), int.Parse(AvailableAmountBox.Text),
                     UserGenderBox.Text, int.Parse(UserIdBox.Text));
             }
 

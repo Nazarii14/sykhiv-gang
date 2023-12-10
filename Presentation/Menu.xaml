@@ -159,19 +159,16 @@
                 <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
             </Border.Effect>
 
-            <ListView Name="WeaponListView" Margin="10,72,10,238" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListView Name="WeaponListView" Margin="10,10,10,70" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="150" />
                         <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150" />
-                        <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="150" />
-                        <GridViewColumn Header="Weight" DisplayMemberBinding="{Binding Weight}" Width="150" />
-                        <GridViewColumn Header="UserId" DisplayMemberBinding="{Binding UserId}" Width="150" />
+                        <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="50" />
+                        <GridViewColumn Header="Weight" DisplayMemberBinding="{Binding Weight}" Width="50" />
+                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding UserId}" Width="50" />
 
-
-
-
-                        <GridViewColumn Header="NeededAmount" Width="250">
+                        <GridViewColumn Header="NeededAmount" Width="100">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <Grid>
@@ -181,37 +178,34 @@
                                             <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
 
-                                        <Button Grid.Column="0" Content="-" Click="DecrementNeededAmountButton_Click" CommandParameter="{Binding WeaponId}" />
+                                        <Button Grid.Column="0" Content="-" Click="DecrementNeededAmountOfWeaponButton_Click" CommandParameter="{Binding WeaponId}" />
                                         <TextBlock Grid.Column="1" Text="{Binding NeededAmount}" />
-                                        <Button Grid.Column="2" Content="+" Click="IncrementNeededAmountButton_Click" CommandParameter="{Binding WeaponId}" />
+                                        <Button Grid.Column="2" Content="+" Click="IncrementNeededAmountOfWeaponButton_Click" CommandParameter="{Binding WeaponId}" />
 
                                     </Grid>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
 
-                        <!--<GridViewColumn Header="NeededAmount" DisplayMemberBinding="{Binding NeededAmount}" Width="150">
-                            
+                        <GridViewColumn Header="AvailableAmount" Width="100">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button Content="-" Click="DeleteWeaponButton_Click" CommandParameter="{Binding WeaponId}" />
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Button Grid.Column="0" Content="-" Click="DecrementAvailableAmountOfWeaponButton_Click" CommandParameter="{Binding WeaponId}" />
+                                        <TextBlock Grid.Column="1" Text="{Binding AvailableAmount}" />
+                                        <Button Grid.Column="2" Content="+" Click="IncrementAvailableAmountOfWeaponButton_Click" CommandParameter="{Binding WeaponId}" />
+
+                                    </Grid>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
-                            
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Button Content="+" Click="DeleteWeaponButton_Click" CommandParameter="{Binding WeaponId}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                            
-                        </GridViewColumn>-->
+                        </GridViewColumn>
 
-                       
-                        
-                        
-
-                        <GridViewColumn Header="AvailableAmount" DisplayMemberBinding="{Binding AvailableAmount}" Width="150" />
-                        
                         <GridViewColumn Header="Delete">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
@@ -238,15 +232,53 @@
                 <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
             </Border.Effect>
 
-            <ListView Name="AmmunitionListView" Margin="10,72,10,238" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListView Name="AmmunitionListView" Margin="10,10,10,70" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="150" />
                         <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150" />
-                        <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="150" />
-                        <GridViewColumn Header="Size" DisplayMemberBinding="{Binding Size}" Width="150" />
-                        <GridViewColumn Header="UsersGender" DisplayMemberBinding="{Binding UsersGender}" Width="150" />
-                        <GridViewColumn Header="UserId" DisplayMemberBinding="{Binding UserId}" Width="150" />
+                        <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="50" />
+                        <GridViewColumn Header="Size" DisplayMemberBinding="{Binding Size}" Width="25" />
+                        <GridViewColumn Header="Gender" DisplayMemberBinding="{Binding UsersGender}" Width="50" />
+                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding UserId}" Width="25" />
+
+                        <GridViewColumn Header="NeededAmount" Width="100">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Button Grid.Column="0" Content="-" Click="DecrementNeededAmountOfAmmunitionButton_Click" CommandParameter="{Binding AmmunitionId}" />
+                                        <TextBlock Grid.Column="1" Text="{Binding NeededAmount}" />
+                                        <Button Grid.Column="2" Content="+" Click="IncrementNeededAmountOfAmmunitionButton_Click" CommandParameter="{Binding AmmunitionId}" />
+
+                                    </Grid>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="AvailableAmount" Width="100">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Button Grid.Column="0" Content="-" Click="DecrementAvailableAmountOfAmmunitionButton_Click" CommandParameter="{Binding AmmunitionId}" />
+                                        <TextBlock Grid.Column="1" Text="{Binding AvailableAmount}" />
+                                        <Button Grid.Column="2" Content="+" Click="IncrementAvailableAmountOfAmmunitionButton_Click" CommandParameter="{Binding AmmunitionId}" />
+
+                                    </Grid>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
 
                         <GridViewColumn Header="Delete">
                             <GridViewColumn.CellTemplate>
@@ -274,7 +306,7 @@
                 <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
             </Border.Effect>
 
-            <ListView Name="SoldierListView" Margin="10,72,10,238" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListView Name="SoldierListView" Margin="10,10,10,70" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Callsign" DisplayMemberBinding="{Binding Callsign}" Width="150" />
