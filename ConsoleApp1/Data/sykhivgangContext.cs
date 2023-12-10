@@ -1,33 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using DAL.Models;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
+﻿// <copyright file="sykhivgangContext.cs" company="SykhivGang">
+// Copyright (c) SykhivGang. All rights reserved.
+// </copyright>
 
 namespace DAL
 {
-    public partial class sykhivgangContext : DbContext
+    using System;
+    using System.Collections.Generic;
+    using DAL.Models;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Metadata;
+
+    public partial class SykhivgangContext : DbContext
     {
-        public sykhivgangContext()
+        public SykhivgangContext()
         {
         }
 
-        public sykhivgangContext(DbContextOptions<sykhivgangContext> options)
+        public SykhivgangContext(DbContextOptions<SykhivgangContext> options)
             : base(options)
         {
         }
 
         public virtual DbSet<Ammunition> Ammunitions { get; set; } = null!;
+
         public virtual DbSet<Brigade> Brigades { get; set; } = null!;
+
         public virtual DbSet<InventoryAmmunition> InventoryAmmunitions { get; set; } = null!;
+
         public virtual DbSet<InventoryWeapon> InventoryWeapons { get; set; } = null!;
+
         public virtual DbSet<Request> Requests { get; set; } = null!;
+
         public virtual DbSet<Route> Routes { get; set; } = null!;
+
         public virtual DbSet<SoldierAttrb> SoldierAttrbs { get; set; } = null!;
+
         public virtual DbSet<User> Users { get; set; } = null!;
+
         public virtual DbSet<VolunteerAttrb> VolunteerAttrbs { get; set; } = null!;
+
         public virtual DbSet<Weapon> Weapons { get; set; } = null!;
 
+        /// <inheritdoc/>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -37,6 +51,7 @@ namespace DAL
             }
         }
 
+        /// <inheritdoc/>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Ammunition>(entity =>
@@ -325,7 +340,7 @@ namespace DAL
                     .HasConstraintName("weapon_user_id_fkey");
             });
 
-            OnModelCreatingPartial(modelBuilder);
+            this.OnModelCreatingPartial(modelBuilder);
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

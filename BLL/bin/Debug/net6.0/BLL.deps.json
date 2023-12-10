@@ -9,7 +9,8 @@
       "BLL/1.0.0": {
         "dependencies": {
           "DAL": "1.0.0",
-          "Microsoft.EntityFrameworkCore.Design": "6.0.25"
+          "Microsoft.EntityFrameworkCore.Design": "6.0.25",
+          "StyleCop.Analyzers": "1.2.0-beta.507"
         },
         "runtime": {
           "BLL.dll": {}
@@ -275,6 +276,12 @@
           }
         }
       },
+      "StyleCop.Analyzers/1.2.0-beta.507": {
+        "dependencies": {
+          "StyleCop.Analyzers.Unstable": "1.2.0.507"
+        }
+      },
+      "StyleCop.Analyzers.Unstable/1.2.0.507": {},
       "System.Collections.Immutable/6.0.0": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.2-mauipre.1.22102.15"
@@ -508,6 +515,20 @@
       "sha512": "sha512-iD0X/yef9KBsCBMDT1ZytW3pPYeYHeceUuiznaeGfkltvluG7O25aG2fwv2sO6icESL0CLNwNAF1Mu4cFrKmaA==",
       "path": "npgsql.entityframeworkcore.postgresql/6.0.22",
       "hashPath": "npgsql.entityframeworkcore.postgresql.6.0.22.nupkg.sha512"
+    },
+    "StyleCop.Analyzers/1.2.0-beta.507": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/FtugDT66cKJJ+GGH7rNpG6UDrT4iIWz45M6lrXXHobDUFDHw+q5VgkbiR+6ffTO564ge7w6fQh/eoQhVdJO8Q==",
+      "path": "stylecop.analyzers/1.2.0-beta.507",
+      "hashPath": "stylecop.analyzers.1.2.0-beta.507.nupkg.sha512"
+    },
+    "StyleCop.Analyzers.Unstable/1.2.0.507": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gTY3IQdRqDJ4hbhSA3e/R48oE8b/OiKfvwkt1QdNVfrJK2gMHBV8ldaHJ885jxWZfllK66soa/sdcjh9bX49Tw==",
+      "path": "stylecop.analyzers.unstable/1.2.0.507",
+      "hashPath": "stylecop.analyzers.unstable.1.2.0.507.nupkg.sha512"
     },
     "System.Collections.Immutable/6.0.0": {
       "type": "package",

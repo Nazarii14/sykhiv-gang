@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8AW5rS1C1/T+sInucTYRYK3MNIQTuLo8bZHkAEejxL4zTIU0hTSNBItRTt3lM//azfvw3cjl1bfvZ4l4WrRt/Q==",
+  "dgSpecHash": "YNGsmZC9E1Sxtr7hX+6oo7QeAxcRS7PUcYp2IiLZukJE1Tyjq6WcSCIrK/EWHKkqXqLOSxHpkOL4ChFW83PyvQ==",
   "success": true,
   "projectFilePath": "H:\\GitHub\\sykhiv-gang\\BLL\\BLL.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,8 @@
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.2-mauipre.1.22102.15\\microsoft.extensions.primitives.6.0.2-mauipre.1.22102.15.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\npgsql\\6.0.10\\npgsql.6.0.10.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\6.0.22\\npgsql.entityframeworkcore.postgresql.6.0.22.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.507\\stylecop.analyzers.1.2.0-beta.507.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.507\\stylecop.analyzers.unstable.1.2.0.507.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.2-mauipre.1.22102.15\\system.runtime.compilerservices.unsafe.6.0.2-mauipre.1.22102.15.nupkg.sha512",

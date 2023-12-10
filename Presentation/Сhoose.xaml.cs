@@ -30,7 +30,7 @@ namespace Presentation
 
         private void CommanderButton_Click(object sender, RoutedEventArgs e)
         {
-            using (sykhivgangContext context = new sykhivgangContext())
+            using (SykhivgangContext context = new SykhivgangContext())
             {
                 Bll userService = new Bll(context);
                 string path = Directory.GetCurrentDirectory() + "\\logs.txt";
@@ -43,7 +43,7 @@ namespace Presentation
         }
         private void SoldierButton_Click(object sender, RoutedEventArgs e)
         {
-            using (sykhivgangContext context = new sykhivgangContext())
+            using (SykhivgangContext context = new SykhivgangContext())
             {
                 Bll userService = new Bll(context);
                 string path = Directory.GetCurrentDirectory() + "\\logs.txt";

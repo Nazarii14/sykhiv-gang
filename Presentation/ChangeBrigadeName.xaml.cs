@@ -37,7 +37,7 @@ namespace Presentation
         }
         private string[] BrigadeAttributesLoaded()
         {
-            using (sykhivgangContext context = new sykhivgangContext())
+            using (SykhivgangContext context = new SykhivgangContext())
             {
                 Bll userService = new Bll(context);
                 return userService.GetBrigadeInfo();
@@ -46,7 +46,7 @@ namespace Presentation
 
         private void ChangeBrigadeInfoButton_Click(object sender, RoutedEventArgs e)
         {
-            using (sykhivgangContext context = new sykhivgangContext())
+            using (SykhivgangContext context = new SykhivgangContext())
             {
                 Bll userService = new Bll(context);
                 userService.ChangeBrigadeInfo(BrigadeNameBox.Text, CommanderNameBox.Text, EstablishedDateBox.Text, LocationBox.Text);

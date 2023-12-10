@@ -11,7 +11,8 @@
           "Microsoft.EntityFrameworkCore.Tools": "6.0.25",
           "Microsoft.Extensions.Configuration": "6.0.2-mauipre.1.22102.15",
           "Microsoft.Extensions.Configuration.Json": "6.0.2-mauipre.1.22102.15",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.22"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.22",
+          "StyleCop.Analyzers": "1.1.118"
         },
         "runtime": {
           "DAL.dll": {}
@@ -282,6 +283,7 @@
           }
         }
       },
+      "StyleCop.Analyzers/1.1.118": {},
       "System.Collections.Immutable/6.0.0": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.2-mauipre.1.22102.15"
@@ -512,6 +514,13 @@
       "sha512": "sha512-iD0X/yef9KBsCBMDT1ZytW3pPYeYHeceUuiznaeGfkltvluG7O25aG2fwv2sO6icESL0CLNwNAF1Mu4cFrKmaA==",
       "path": "npgsql.entityframeworkcore.postgresql/6.0.22",
       "hashPath": "npgsql.entityframeworkcore.postgresql.6.0.22.nupkg.sha512"
+    },
+    "StyleCop.Analyzers/1.1.118": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Onx6ovGSqXSK07n/0eM3ZusiNdB6cIlJdabQhWGgJp3Vooy9AaLS/tigeybOJAobqbtggTamoWndz72JscZBvw==",
+      "path": "stylecop.analyzers/1.1.118",
+      "hashPath": "stylecop.analyzers.1.1.118.nupkg.sha512"
     },
     "System.Collections.Immutable/6.0.0": {
       "type": "package",
