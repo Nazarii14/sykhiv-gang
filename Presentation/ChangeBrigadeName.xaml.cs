@@ -57,5 +57,13 @@ namespace Presentation
             
             Close();
         }
+
+        private void Cancel_ChangeBrigadeInfoButton_Click(object sender, RoutedEventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+
+            Close();
+        }
     }
 }

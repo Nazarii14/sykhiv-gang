@@ -70,5 +70,10 @@ namespace Presentation
                 UserIdBox.Text = weapon.UserId.ToString();
             }
         }
+
+        private void Cancel_EditWeaponButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

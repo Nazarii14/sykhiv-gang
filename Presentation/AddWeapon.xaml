@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentation"
         mc:Ignorable="d"
-        Title="AddWeapon" Height="650" Width="500">
+        Title="AddWeapon" Height="575" Width="500">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="16"/>
@@ -41,29 +41,56 @@
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="Add Weapon" FontSize="25" HorizontalAlignment="Center" Margin="0 0 0 20" />
 
-            <TextBlock Text="Type:" />
-            <TextBox x:Name="TypeBox" Width="250" Height="25" Margin="0 0 0 5" />
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="Type:" />
+                    <TextBox x:Name="TypeBox" Width="200" Height="35" />
+                </StackPanel>
 
-            <TextBlock Text="Name:" />
-            <TextBox x:Name="NameBox" Width="250" Height="25" Margin="0 0 0 5" />
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="Name:" />
+                    <TextBox x:Name="NameBox" Width="200" Height="35" />
+                </StackPanel>
+            </StackPanel>
 
-            <TextBlock Text="Price:" />
-            <TextBox x:Name="PriceBox" Width="250" Height="25" Margin="0 0 0 5" />
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="Price:" />
+                    <TextBox x:Name="PriceBox" Width="200" Height="35" />
+                </StackPanel>
 
-            <TextBlock Text="Weight:" />
-            <TextBox x:Name="WeightBox" Width="250" Height="25" Margin="0 0 0 5" />
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="Weight:" />
+                    <TextBox x:Name="WeightBox" Width="200" Height="35" />
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="Needed Amount:" />
+                    <TextBox x:Name="NeededAmountBox" Width="200" Height="35" Margin="0 0 0 5" />
+
+                    
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="Available amount:" />
+                    <TextBox x:Name="AvailableAmountBox" Width="200" Height="35" Margin="0 0 0 5" />
+                </StackPanel>
+            </StackPanel>
             
-            <TextBlock Text="Needed Amount:" />
-            <TextBox x:Name="NeededAmountBox" Width="250" Height="25" Margin="0 0 0 5" />
-            
-            <TextBlock Text="Available amount:" />
-            <TextBox x:Name="AvailableAmountBox" Width="250" Height="25" Margin="0 0 0 5" />
+            <StackPanel Orientation="Horizontal" Margin="0 5" HorizontalAlignment="Center">
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="UserId:" />
+                    <TextBox x:Name="UserIdBox" Width="200" Height="35" />
+                </StackPanel>
 
-            <TextBlock Text="UserId:" />
-            <TextBox x:Name="UserIdBox" Width="250" Height="25" Margin="0 0 0 5" />
+                <!-- Add the last textbox here -->
+            </StackPanel>
+
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button Content="Cancel" Click="Cancel_AddWeaponButton_Click" Width="120" Height="43" Margin="5"/>
-                <Button Content="Add" Click="AddWeaponButton_Click" Width="120" Height="43" Margin="5"/>
+                <Button Content="Cancel" Click="Cancel_AddWeaponButton_Click" Margin="5"/>
+                <Button Content="Add" Click="AddWeaponButton_Click" Margin="5"/>
             </StackPanel>
         </StackPanel>
     </Grid>

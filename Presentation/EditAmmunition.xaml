@@ -5,36 +5,93 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentation"
         mc:Ignorable="d"
-        Title="EditAmmunition" Height="500" Width="500">
+        Title="EditAmmunition" Height="575" Width="500">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="0 5"/>
+            <Setter Property="Foreground" Value="#333"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="250"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Margin" Value="0 5"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#999"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+
+        <!-- Style for Button -->
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="43"/>
+            <Setter Property="Margin" Value="0 10 0 0"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Background" Value="#008500"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="8"/>
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+    </Window.Resources>
     <Grid>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Text="Edit Ammunition" FontSize="20" Margin="0 0 0 20" />
+            <TextBlock Text="Edit Ammunition" HorizontalAlignment="Center" FontSize="25" Margin="0 0 0 20" />
 
-            <TextBlock Text="Type:" />
-            <TextBox x:Name="TypeBox" Width="250" Height="25" Margin="0 0 0 5" />
+            <!-- First pair -->
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="Type:" />
+                    <TextBox x:Name="TypeBox" Width="200" Height="35" />
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="Name:" />
+                    <TextBox x:Name="NameBox" Width="200" Height="35" />
+                </StackPanel>
+            </StackPanel>
 
-            <TextBlock Text="Name:" />
-            <TextBox x:Name="NameBox" Width="250" Height="25" Margin="0 0 0 5" />
+            <!-- Second pair -->
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="Price:" />
+                    <TextBox x:Name="PriceBox" Width="200" Height="35" />
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="Size:" />
+                    <TextBox x:Name="SizeBox" Width="200" Height="35" />
+                </StackPanel>
+            </StackPanel>
 
-            <TextBlock Text="Price:" />
-            <TextBox x:Name="PriceBox" Width="250" Height="25" Margin="0 0 0 5" />
+            <!-- Third pair -->
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="Needed Amount:" />
+                    <TextBox x:Name="NeededAmountBox" Width="200" Height="35" />
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="Available Amount:" />
+                    <TextBox x:Name="AvailableAmountBox" Width="200" Height="35" />
+                </StackPanel>
+            </StackPanel>
 
-            <TextBlock Text="Size:" />
-            <TextBox x:Name="SizeBox" Width="250" Height="25" Margin="0 0 0 5" />
+            <!-- Fourth pair -->
+            <StackPanel Orientation="Horizontal" Margin="0 5">
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="User's Gender:" />
+                    <TextBox x:Name="UsersGenderBox" Width="200" Height="35" />
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="UserId:" />
+                    <TextBox x:Name="UserIdBox" Width="200" Height="35" />
+                </StackPanel>
+            </StackPanel>
 
-            <TextBlock Text="Needed Amount:" />
-            <TextBox x:Name="NeededAmountBox" Width="250" Height="25" Margin="0 0 0 5" />
-
-            <TextBlock Text="Available Amount:" />
-            <TextBox x:Name="AvailableAmountBox" Width="250" Height="25" Margin="0 0 0 5" />
-
-            <TextBlock Text="User's Gender:" />
-            <TextBox x:Name="UsersGenderBox" Width="250" Height="25" Margin="0 0 0 5" />
-
-            <TextBlock Text="UserId:" />
-            <TextBox x:Name="UserIdBox" Width="250" Height="25" Margin="0 0 0 5" />
-
-            <Button Content="Save" Click="EditAmmunitionButton_Click" Width="150" Height="43" Margin="0 10 0 0" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Cancel" Click="Cancel_EditAmmunitionButton_Click" Width="150" Height="43" Margin="5" />
+                <Button Content="Save" Click="EditAmmunitionButton_Click" Width="150" Height="43" Margin="5" />
+            </StackPanel>
         </StackPanel>
     </Grid>
 </Window>

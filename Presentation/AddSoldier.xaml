@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentation"
         mc:Ignorable="d"
-        Title="AddSoldier" Height="450" Width="500">
+        Title="AddSoldier" Height="320" Width="350">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="FontSize" Value="16"/>
@@ -36,22 +36,22 @@
             <Setter Property="Cursor" Value="Hand"/>
         </Style>
     </Window.Resources>
-    
+
     <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,19,0,0">
             <TextBlock Text="Add Soldier" FontSize="25" HorizontalAlignment="Center" Margin="0 0 0 20" />
 
-            <TextBlock Text="Callsign:" />
-            <TextBox x:Name="CallsignBox" Width="250" Height="25" Margin="0 0 0 5" />
+            <TextBlock Text="Callsign:" Width="250" />
+            <TextBox x:Name="CallsignBox" Width="250" Height="35" Margin="0 0 0 5" />
 
-            <TextBlock Text="UserId:" />
-            <TextBox x:Name="UserIdBox" Width="250" Height="25" Margin="0 0 0 5" />
+            <TextBlock Text="UserId:" Width="250" />
+            <TextBox x:Name="UserIdBox" Width="250" Height="35" Margin="0 0 0 5" />
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Button Content="Cancel" Click="Cancel_AddWeaponButton_Click" Width="120" Height="43" Margin="5"/>
+                <Button Content="Cancel" Click="Cancel_AddSoldierButton_Click" Width="120" Height="43" Margin="5"/>
                 <Button Content="Add" Click="AddSoldierButton_Click" Width="120" Height="43" Margin="5" />
             </StackPanel>
-            
+
         </StackPanel>
     </Grid>
 </Window>

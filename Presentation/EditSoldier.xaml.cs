@@ -58,5 +58,10 @@ namespace Presentation
                 UserIdBox.Text = soldier.UserId.ToString();
             }
         }
+
+        private void Cancel_EditSoldierButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

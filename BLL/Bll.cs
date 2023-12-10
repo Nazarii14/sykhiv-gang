@@ -157,6 +157,8 @@
                     Price = price,
                     Size = size,
                     UsersGender = gender,
+                    NeededAmount = neededAmount,
+                    AvailableAmount = availableAmount,
                     UserId = user_id,
                 };
 

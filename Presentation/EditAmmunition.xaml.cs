@@ -66,5 +66,10 @@ namespace Presentation
                 UserIdBox.Text = ammunition.UserId.ToString();
             }
         }
+
+        private void Cancel_EditAmmunitionButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
