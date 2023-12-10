@@ -1,5 +1,5 @@
 ﻿using BLL;
-using DAL.Data;
+using DAL;
 using DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -210,6 +210,38 @@ namespace Presentation
             ChangeBrigadeName changeBrigadeName = new ChangeBrigadeName();
             changeBrigadeName.Show();
             Close();
+        }
+
+        private void DecrementNeededAmountButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (sykhivgangContext context = new sykhivgangContext())
+            {
+                Bll userService = new Bll(context);
+
+                Button button = (Button)sender;
+                var itemId = (int)button.CommandParameter;
+
+                userService.DecrementNeededAmountOfWeaponById(itemId);
+
+                WeaponListView.ItemsSource = null;
+                WeaponListView.ItemsSource = userService.GetWeapons();
+            }
+        }
+
+        private void IncrementNeededAmountButton_Click(object sender, RoutedEventArgs e)
+        {
+            using (sykhivgangContext context = new sykhivgangContext())
+            {
+                Bll userService = new Bll(context);
+
+                Button button = (Button)sender;
+                var itemId = (int)button.CommandParameter;
+
+                userService.IncrementNeededAmountOfWeaponById(itemId);
+
+                WeaponListView.ItemsSource = null;
+                WeaponListView.ItemsSource = userService.GetWeapons();
+            }
         }
 
         private void Weapon_Loaded()

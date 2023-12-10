@@ -1,5 +1,5 @@
 ﻿using BLL;
-using DAL.Data;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +32,7 @@ namespace Presentation
                 Bll userService = new Bll(context);
                 userService.AddWeapon(TypeBox.Text, NameBox.Text, 
                                        decimal.Parse(PriceBox.Text), decimal.Parse(WeightBox.Text), 
+                                       int.Parse(NeededAmountBox.Text), int.Parse(AvailableAmountBox.Text),
                                        int.Parse(UserIdBox.Text));
             }
 

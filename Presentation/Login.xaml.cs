@@ -9,12 +9,12 @@ namespace Presentation
     using System.Linq;
     using System.Text;
     using System.Windows;
-    using DAL.Data;
+    using DAL;
     using DAL.Models;
     using BLL;
     using Microsoft.Extensions.Logging;
-    using DAL;
     using System.IO;
+    using DAL;
 
     /// <summary>
     /// Interaction logic for Login.xaml

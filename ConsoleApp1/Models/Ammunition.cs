@@ -19,6 +19,8 @@ namespace DAL.Models
         public string Size { get; set; } = null!;
         public string UsersGender { get; set; } = null!;
         public int? UserId { get; set; }
+        public int? NeededAmount { get; set; }
+        public int? AvailableAmount { get; set; }
 
         public virtual User? User { get; set; }
         public virtual ICollection<InventoryAmmunition> InventoryAmmunitions { get; set; }

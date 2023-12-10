@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentation"
         mc:Ignorable="d"
-        Title="EditWeapon" Height="450" Width="500">
+        Title="EditWeapon" Height="500" Width="500">
     <Grid>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Text="Edit Weapon" FontSize="20" Margin="0 0 0 20" />
@@ -21,6 +21,12 @@
 
             <TextBlock Text="Weight:" />
             <TextBox x:Name="WeightBox" Width="250" Height="25" Margin="0 0 0 5" />
+
+            <TextBlock Text="Needed Amount:" />
+            <TextBox x:Name="NeededAmountBox" Width="250" Height="25" Margin="0 0 0 5" />
+
+            <TextBlock Text="Available Amount:" />
+            <TextBox x:Name="AvailableAmountBox" Width="250" Height="25" Margin="0 0 0 5" />
 
             <TextBlock Text="UserId:" />
             <TextBox x:Name="UserIdBox" Width="250" Height="25" Margin="0 0 0 5" />

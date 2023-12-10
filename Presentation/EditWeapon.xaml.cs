@@ -1,5 +1,5 @@
 ﻿using BLL;
-using DAL.Data;
+using DAL;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using System;
 using System.Collections.Generic;
@@ -43,7 +43,11 @@ namespace Presentation
             {
                 Bll userService = new Bll(context);
                 userService.EditWeapon(ItemId, TypeBox.Text, NameBox.Text,
-                                       decimal.Parse(PriceBox.Text), decimal.Parse(WeightBox.Text), int.Parse(UserIdBox.Text));
+                                       decimal.Parse(PriceBox.Text), 
+                                       decimal.Parse(WeightBox.Text), 
+                                       int.Parse(NeededAmountBox.Text),
+                                       int.Parse(AvailableAmountBox.Text),
+                                       int.Parse(UserIdBox.Text));
             }
 
             this.Close();
@@ -61,6 +65,8 @@ namespace Presentation
                 NameBox.Text = weapon.Name;
                 PriceBox.Text = weapon.Price.ToString();
                 WeightBox.Text = weapon.Weight.ToString();
+                NeededAmountBox.Text = weapon.NeededAmount.ToString();
+                AvailableAmountBox.Text = weapon.AvailableAmount.ToString();
                 UserIdBox.Text = weapon.UserId.ToString();
             }
         }

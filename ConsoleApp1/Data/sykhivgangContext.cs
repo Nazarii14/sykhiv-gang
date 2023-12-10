@@ -4,7 +4,7 @@ using DAL.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
-namespace DAL.Data
+namespace DAL
 {
     public partial class sykhivgangContext : DbContext
     {
@@ -32,7 +32,8 @@ namespace DAL.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=sykhivgang;Username=postgres;Password=rosaka1429");
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+                optionsBuilder.UseNpgsql("Host=localhost;Database=sykhivgang;Username=postgres;Password=rosaka1429;");
             }
         }
 
@@ -44,9 +45,13 @@ namespace DAL.Data
 
                 entity.Property(e => e.AmmunitionId).HasColumnName("ammunition_id");
 
+                entity.Property(e => e.AvailableAmount).HasColumnName("available_amount");
+
                 entity.Property(e => e.Name)
                     .HasMaxLength(255)
                     .HasColumnName("name");
+
+                entity.Property(e => e.NeededAmount).HasColumnName("needed_amount");
 
                 entity.Property(e => e.Price)
                     .HasPrecision(10, 2)
@@ -291,9 +296,13 @@ namespace DAL.Data
 
                 entity.Property(e => e.WeaponId).HasColumnName("weapon_id");
 
+                entity.Property(e => e.AvailableAmount).HasColumnName("available_amount");
+
                 entity.Property(e => e.Name)
                     .HasMaxLength(255)
                     .HasColumnName("name");
+
+                entity.Property(e => e.NeededAmount).HasColumnName("needed_amount");
 
                 entity.Property(e => e.Price)
                     .HasPrecision(10, 2)

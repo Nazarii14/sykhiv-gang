@@ -168,6 +168,50 @@
                         <GridViewColumn Header="Weight" DisplayMemberBinding="{Binding Weight}" Width="150" />
                         <GridViewColumn Header="UserId" DisplayMemberBinding="{Binding UserId}" Width="150" />
 
+
+
+
+                        <GridViewColumn Header="NeededAmount" Width="250">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Button Grid.Column="0" Content="-" Click="DecrementNeededAmountButton_Click" CommandParameter="{Binding WeaponId}" />
+                                        <TextBlock Grid.Column="1" Text="{Binding NeededAmount}" />
+                                        <Button Grid.Column="2" Content="+" Click="IncrementNeededAmountButton_Click" CommandParameter="{Binding WeaponId}" />
+
+                                    </Grid>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <!--<GridViewColumn Header="NeededAmount" DisplayMemberBinding="{Binding NeededAmount}" Width="150">
+                            
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="-" Click="DeleteWeaponButton_Click" CommandParameter="{Binding WeaponId}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                            
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Content="+" Click="DeleteWeaponButton_Click" CommandParameter="{Binding WeaponId}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                            
+                        </GridViewColumn>-->
+
+                       
+                        
+                        
+
+                        <GridViewColumn Header="AvailableAmount" DisplayMemberBinding="{Binding AvailableAmount}" Width="150" />
+                        
                         <GridViewColumn Header="Delete">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>

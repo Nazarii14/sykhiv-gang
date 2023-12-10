@@ -1,5 +1,4 @@
-﻿using DAL.Data;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace DAL.GenerickRepository
 {

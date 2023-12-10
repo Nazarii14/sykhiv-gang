@@ -1,5 +1,5 @@
 ﻿using BLL;
-using DAL.Data;
+using DAL;
 using System;
 using System.Collections.Generic;
 using System.IO;

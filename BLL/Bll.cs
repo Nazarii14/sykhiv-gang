@@ -2,7 +2,7 @@
 {
     using System.Data;
     using System.Text.RegularExpressions;
-    using DAL.Data;
+    using DAL;
     using DAL.Models;
 
     public class Bll
@@ -166,7 +166,7 @@
         }
 
         public void AddWeapon(string type, string name, 
-            decimal price, decimal weight, 
+            decimal price, decimal weight, int neededAmount, int availableAmount,
             int user_id)
         {
             try
@@ -177,6 +177,8 @@
                     Name = name,
                     Price = price,
                     Weight = weight,
+                    NeededAmount = neededAmount,
+                    AvailableAmount = availableAmount,
                     UserId = user_id
                 };
 
@@ -301,7 +303,10 @@
             }
         }
 
-        public void EditWeapon(int weaponId, string type, string name, decimal price, decimal weight, int userId)
+        public void EditWeapon(int weaponId, string type, 
+            string name, decimal price, 
+            decimal weight, int neededAmount, 
+            int availableAmount, int userId)
         {
             try
             {
@@ -313,6 +318,8 @@
                     weapon.Name = name;
                     weapon.Price = price;
                     weapon.Weight = weight;
+                    weapon.NeededAmount = neededAmount;
+                    weapon.AvailableAmount = availableAmount;
                     weapon.UserId = userId;
 
                     this.context.SaveChanges();
@@ -368,11 +375,83 @@
             }
         }
 
+        public void DecrementNeededAmountOfWeaponById(int weaponId)
+        {
+            try
+            {
+                var weapon = context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == weaponId);
+
+                if (weapon != null)
+                {
+                    weapon.NeededAmount -= 1;
+                    this.context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error decrementing weapon: {ex.Message}");
+            }
+        }
+
+        public void IncrementNeededAmountOfWeaponById(int weaponId)
+        {
+            try
+            {
+                var weapon = context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == weaponId);
+
+                if (weapon != null)
+                {
+                    weapon.NeededAmount += 1;
+                    this.context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error decrementing weapon: {ex.Message}");
+            }
+        }
+
+        public void DecrementAvailableAmountOfWeaponById(int weaponId)
+        {
+            try
+            {
+                var weapon = context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == weaponId);
+
+                if (weapon != null)
+                {
+                    weapon.AvailableAmount -= 1;
+                    this.context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error decrementing weapon: {ex.Message}");
+            }
+        }
+
+        public void IncrementAvailableAmountOfWeaponById(int weaponId)
+        {
+            try
+            {
+                var weapon = context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == weaponId);
+
+                if (weapon != null)
+                {
+                    weapon.AvailableAmount += 1;
+                    this.context.SaveChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error Incrementing weapon: {ex.Message}");
+            }
+        }
+
         public List<Weapon> GetWeapons()
         {
             try
             {
-                return this.context.Set<Weapon>().ToList();
+                return this.context.Set<Weapon>().OrderBy(e => e.Name).ToList();
             }
             catch (Exception ex)
             {

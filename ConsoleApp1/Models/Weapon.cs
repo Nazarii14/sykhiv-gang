@@ -18,6 +18,8 @@ namespace DAL.Models
         public decimal Price { get; set; }
         public decimal Weight { get; set; }
         public int? UserId { get; set; }
+        public int? NeededAmount { get; set; }
+        public int? AvailableAmount { get; set; }
 
         public virtual User? User { get; set; }
         public virtual ICollection<InventoryWeapon> InventoryWeapons { get; set; }
