@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="AddAmmunition" Height="500" Width="500">
     <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="23*"/>
+            <ColumnDefinition Width="227*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="1" Margin="79,0,0,0">
             <TextBlock Text="Add Ammunition" FontSize="20" Margin="0 0 0 20" />
 
             <TextBlock Text="Type:" />

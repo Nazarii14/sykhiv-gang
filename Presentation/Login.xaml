@@ -44,12 +44,22 @@
                 <Button Content="Log In" Width="400" Height="45" FontSize="20" Foreground="#FFFFFF" Margin="0 5 0 5" FontFamily="Roboto" Click="LoginButton_Click">
                     <Button.Template>
                         <ControlTemplate TargetType="{x:Type Button}">
-                            <Border Background="#4E7E13" CornerRadius="8">
+                            <Border x:Name="border" Background="#4E7E13" CornerRadius="8">
                                 <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                             </Border>
+                            <ControlTemplate.Triggers>
+                                <!-- Hover effect -->
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter TargetName="border" Property="Background" Value="#3A6F0B" />
+                                    <Setter Property="Cursor" Value="Hand" />
+                                </Trigger>
+                                <!-- Clicked effect -->
+                                <Trigger Property="IsPressed" Value="True">
+                                    <Setter TargetName="border" Property="Background" Value="#295709" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Button.Template>
-                    <!-- Adding Shadow Effect to the Button -->
                     <Button.Effect>
                         <DropShadowEffect Color="#333333" Direction="300" ShadowDepth="5" Opacity="0.3" BlurRadius="10"/>
                     </Button.Effect>
