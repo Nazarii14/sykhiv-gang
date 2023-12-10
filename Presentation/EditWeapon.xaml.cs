@@ -39,7 +39,7 @@ namespace Presentation
 
         private void EditWeaponButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
                 userService.EditWeapon(ItemId, TypeBox.Text, NameBox.Text,
@@ -55,7 +55,7 @@ namespace Presentation
 
         private void EditInfo_Loaded(int itemId)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 

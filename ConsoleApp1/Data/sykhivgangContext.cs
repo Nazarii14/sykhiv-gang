@@ -10,35 +10,26 @@ namespace DAL
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata;
 
-    public partial class SykhivgangContext : DbContext
+    public partial class sykhivgangContext : DbContext
     {
-        public SykhivgangContext()
+        public sykhivgangContext()
         {
         }
 
-        public SykhivgangContext(DbContextOptions<SykhivgangContext> options)
+        public sykhivgangContext(DbContextOptions<sykhivgangContext> options)
             : base(options)
         {
         }
 
         public virtual DbSet<Ammunition> Ammunitions { get; set; } = null!;
-
         public virtual DbSet<Brigade> Brigades { get; set; } = null!;
-
         public virtual DbSet<InventoryAmmunition> InventoryAmmunitions { get; set; } = null!;
-
         public virtual DbSet<InventoryWeapon> InventoryWeapons { get; set; } = null!;
-
         public virtual DbSet<Request> Requests { get; set; } = null!;
-
         public virtual DbSet<Route> Routes { get; set; } = null!;
-
         public virtual DbSet<SoldierAttrb> SoldierAttrbs { get; set; } = null!;
-
         public virtual DbSet<User> Users { get; set; } = null!;
-
         public virtual DbSet<VolunteerAttrb> VolunteerAttrbs { get; set; } = null!;
-
         public virtual DbSet<Weapon> Weapons { get; set; } = null!;
 
         /// <inheritdoc/>
@@ -340,7 +331,7 @@ namespace DAL
                     .HasConstraintName("weapon_user_id_fkey");
             });
 
-            this.OnModelCreatingPartial(modelBuilder);
+            OnModelCreatingPartial(modelBuilder);
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

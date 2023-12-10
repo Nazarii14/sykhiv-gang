@@ -28,7 +28,7 @@ namespace Presentation
 
         private void AddAmmunitionButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
                 userService.AddAmmunition(TypeBox.Text, NameBox.Text, 

@@ -9,6 +9,31 @@
     
     <!--Cтилі для кнопок на меню -->
     <Window.Resources>
+        <Style x:Key="NumberButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="25"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" BorderThickness="1" BorderBrush="#4E7E13" Background="#FCFBFB" CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#E8E8E8"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#C8C8C8"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style x:Key="SideMenuButtonStyle" TargetType="{x:Type Button}">
             <Setter Property="Height" Value="45"/>
             <Setter Property="Margin" Value="3"/>
@@ -182,10 +207,9 @@
                                             <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
 
-                                        <Button Grid.Column="0" Content="-" Click="DecrementNeededAmountOfWeaponButton_Click" CommandParameter="{Binding WeaponId}" />
-                                        <TextBlock Grid.Column="1" Text="{Binding NeededAmount}" />
-                                        <Button Grid.Column="2" Content="+" Click="IncrementNeededAmountOfWeaponButton_Click" CommandParameter="{Binding WeaponId}" />
-
+                                        <Button Grid.Column="0" Content="-" Click="DecrementNeededAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />
+                                        <TextBlock Grid.Column="1" Text="{Binding NeededAmount}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        <Button Grid.Column="2" Content="+" Click="IncrementNeededAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />
                                     </Grid>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
@@ -201,10 +225,9 @@
                                             <ColumnDefinition Width="Auto" />
                                         </Grid.ColumnDefinitions>
 
-                                        <Button Grid.Column="0" Content="-" Click="DecrementAvailableAmountOfWeaponButton_Click" CommandParameter="{Binding WeaponId}" />
-                                        <TextBlock Grid.Column="1" Text="{Binding AvailableAmount}" />
-                                        <Button Grid.Column="2" Content="+" Click="IncrementAvailableAmountOfWeaponButton_Click" CommandParameter="{Binding WeaponId}" />
-
+                                        <Button Grid.Column="0" Content="-" Click="DecrementAvailableAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />
+                                        <TextBlock Grid.Column="1" Text="{Binding AvailableAmount}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                        <Button Grid.Column="2" Content="+" Click="IncrementAvailableAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />
                                     </Grid>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>

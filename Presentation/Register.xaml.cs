@@ -39,7 +39,7 @@ namespace Presentation
             string password = this.SignUpPasswordBox.Password;
             string confirmPassword = this.ConfirmPasswordBox.Password;
 
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 

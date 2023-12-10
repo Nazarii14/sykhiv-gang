@@ -32,7 +32,7 @@ namespace Presentation
             string surname = this.SurnameTextBox.Text;
             string password = this.PasswordBox.Password;
 
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 

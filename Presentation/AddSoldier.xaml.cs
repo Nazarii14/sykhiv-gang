@@ -27,7 +27,7 @@ namespace Presentation
         }
         private void AddSoldierButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
                 userService.AddSoldier(CallsignBox.Text, int.Parse(UserIdBox.Text));

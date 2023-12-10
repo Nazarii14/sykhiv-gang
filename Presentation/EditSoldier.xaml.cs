@@ -37,7 +37,7 @@ namespace Presentation
 
         private void EditSoldierButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
                 userService.EditSoldier(itemId, CallSignBox.Text, int.Parse(UserIdBox.Text));
@@ -48,7 +48,7 @@ namespace Presentation
 
         private void EditInfo_Loaded(int itemId)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 

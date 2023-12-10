@@ -7,9 +7,9 @@
 
     public class Bll
     {
-        private readonly SykhivgangContext context;
+        private readonly sykhivgangContext context;
 
-        public Bll(SykhivgangContext context)
+        public Bll(sykhivgangContext context)
         {
             this.context = context;
         }
@@ -72,25 +72,25 @@
         {
             string path = Directory.GetCurrentDirectory() + "\\logs.txt";
 
-            if (this.UserExists(name, surname)) {
-                this.LogToFile(path, "User with that name and surname exists!");
+            if (UserExists(name, surname)) {
+                LogToFile(path, "User with that name and surname exists!");
                 return false;
             }
 
             if (!IsValidUsername(name))
             {
-                this.LogToFile(path, "Invalid username!");
+                LogToFile(path, "Invalid username!");
                 return false;
             }
 
             if (!IsValidPassword(password)) {
-                this.LogToFile(path, "Invalid password!");
+                LogToFile(path, "Invalid password!");
                 return false;
             }
 
             if (password != confirmPassword)
             {
-                this.LogToFile(path, "Passwords does not match!");
+                LogToFile(path, "Passwords does not match!");
                 return false;
             }
 
@@ -220,7 +220,7 @@
         {
             try
             {
-                var weapon = this.context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == id);
+                var weapon = context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == id);
 
                 if (weapon != null)
                 {
@@ -238,7 +238,7 @@
         {
             try
             {
-                var ammunition = this.context.Set<Ammunition>().FirstOrDefault(a => a.AmmunitionId == id);
+                var ammunition = context.Set<Ammunition>().FirstOrDefault(a => a.AmmunitionId == id);
 
                 if (ammunition != null)
                 {
@@ -256,7 +256,7 @@
         {
             try
             {
-                var soldier = this.context.Set<SoldierAttrb>().FirstOrDefault(s => s.SoldierAttrbId == id);
+                var soldier = context.Set<SoldierAttrb>().FirstOrDefault(s => s.SoldierAttrbId == id);
 
                 if (soldier != null)
                 {
@@ -274,7 +274,7 @@
         {
             try
             {
-                return this.context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == id);
+                return context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == id);
             }
             catch (Exception ex)
             {
@@ -287,7 +287,7 @@
         {
             try
             {
-                return this.context.Set<Ammunition>().FirstOrDefault(a => a.AmmunitionId == id);
+                return context.Set<Ammunition>().FirstOrDefault(a => a.AmmunitionId == id);
             }
             catch (Exception ex)
             {
@@ -300,7 +300,7 @@
         {
             try
             {
-                return this.context.Set<SoldierAttrb>().FirstOrDefault(s => s.SoldierAttrbId == id);
+                return context.Set<SoldierAttrb>().FirstOrDefault(s => s.SoldierAttrbId == id);
             }
             catch (Exception ex)
             {
@@ -316,7 +316,7 @@
         {
             try
             {
-                var weapon = this.context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == weaponId);
+                var weapon = context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == weaponId);
 
                 if (weapon != null)
                 {
@@ -344,7 +344,7 @@
         {
             try
             {
-                var ammunition = this.context.Set<Ammunition>().FirstOrDefault(a => a.AmmunitionId == ammunitionId);
+                var ammunition = context.Set<Ammunition>().FirstOrDefault(a => a.AmmunitionId == ammunitionId);
 
                 if (ammunition != null)
                 {
@@ -370,7 +370,7 @@
         {
             try
             {
-                var soldier = this.context.Set<SoldierAttrb>().FirstOrDefault(s => s.SoldierAttrbId == soldierId);
+                var soldier = context.Set<SoldierAttrb>().FirstOrDefault(s => s.SoldierAttrbId == soldierId);
 
                 if (soldier != null)
                 {
@@ -390,7 +390,7 @@
         {
             try
             {
-                var weapon = this.context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == weaponId);
+                var weapon = context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == weaponId);
 
                 if (weapon != null)
                 {
@@ -408,7 +408,7 @@
         {
             try
             {
-                var weapon = this.context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == weaponId);
+                var weapon = context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == weaponId);
 
                 if (weapon != null)
                 {
@@ -426,7 +426,7 @@
         {
             try
             {
-                var weapon = this.context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == weaponId);
+                var weapon = context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == weaponId);
 
                 if (weapon != null)
                 {
@@ -444,7 +444,7 @@
         {
             try
             {
-                var weapon = this.context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == weaponId);
+                var weapon = context.Set<Weapon>().FirstOrDefault(w => w.WeaponId == weaponId);
 
                 if (weapon != null)
                 {
@@ -464,7 +464,7 @@
         {
             try
             {
-                var ammunition = this.context.Set<Ammunition>().FirstOrDefault(w => w.AmmunitionId == ammunitionId);
+                var ammunition = context.Set<Ammunition>().FirstOrDefault(w => w.AmmunitionId == ammunitionId);
 
                 if (ammunition != null)
                 {
@@ -482,7 +482,7 @@
         {
             try
             {
-                var ammunition = this.context.Set<Ammunition>().FirstOrDefault(w => w.AmmunitionId == ammunitionId);
+                var ammunition = context.Set<Ammunition>().FirstOrDefault(w => w.AmmunitionId == ammunitionId);
 
                 if (ammunition != null)
                 {
@@ -500,7 +500,7 @@
         {
             try
             {
-                var ammunition = this.context.Set<Ammunition>().FirstOrDefault(w => w.AmmunitionId == ammunitionId);
+                var ammunition = context.Set<Ammunition>().FirstOrDefault(w => w.AmmunitionId == ammunitionId);
 
                 if (ammunition != null)
                 {
@@ -518,7 +518,7 @@
         {
             try
             {
-                var ammunition = this.context.Set<Ammunition>().FirstOrDefault(w => w.AmmunitionId == ammunitionId);
+                var ammunition = context.Set<Ammunition>().FirstOrDefault(w => w.AmmunitionId == ammunitionId);
 
                 if (ammunition != null)
                 {
@@ -577,7 +577,7 @@
         {
             try
             {
-                var brigade = this.context.Set<Brigade>().FirstOrDefault();
+                var brigade = context.Set<Brigade>().FirstOrDefault();
 
                 if (brigade != null)
                 {
@@ -599,7 +599,7 @@
         {
             try
             {
-                Brigade brigade = this.context.Set<Brigade>().FirstOrDefault();
+                Brigade brigade = context.Set<Brigade>().FirstOrDefault();
                 return brigade?.Name;
             }
             catch (Exception ex)
@@ -614,7 +614,7 @@
         {
             try
             {
-                Brigade brigade = this.context.Set<Brigade>().FirstOrDefault();
+                Brigade brigade = context.Set<Brigade>().FirstOrDefault();
                 return new string[] { brigade?.Name, brigade?.CommanderName, brigade?.EstablishmentDate.ToString(), brigade?.Location };
             }
             catch (Exception ex)

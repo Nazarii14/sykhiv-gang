@@ -36,7 +36,7 @@ namespace Presentation
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string presentationFolderPath = System.IO.Path.Combine(baseDirectory, "Presentation");
 
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -87,7 +87,7 @@ namespace Presentation
 
         private void DeleteWeaponButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -103,7 +103,7 @@ namespace Presentation
 
         private void DeleteSoldierButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -119,7 +119,7 @@ namespace Presentation
 
         private void EditWeaponButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -140,7 +140,7 @@ namespace Presentation
 
         private void EditAmmunitionButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -161,7 +161,7 @@ namespace Presentation
 
         private void EditSoldierButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -182,7 +182,7 @@ namespace Presentation
 
         private void DeleteAmmunitionButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -198,7 +198,7 @@ namespace Presentation
 
         private string BrigadeName_Loaded()
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
                 return userService.GetBrigadeName();
@@ -216,7 +216,7 @@ namespace Presentation
 
         private void DecrementNeededAmountOfWeaponButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -232,7 +232,7 @@ namespace Presentation
 
         private void IncrementNeededAmountOfWeaponButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -248,7 +248,7 @@ namespace Presentation
 
         private void DecrementAvailableAmountOfWeaponButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -264,7 +264,7 @@ namespace Presentation
 
         private void IncrementAvailableAmountOfWeaponButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -282,7 +282,7 @@ namespace Presentation
 
         private void DecrementNeededAmountOfAmmunitionButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -298,7 +298,7 @@ namespace Presentation
 
         private void IncrementNeededAmountOfAmmunitionButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -314,7 +314,7 @@ namespace Presentation
 
         private void DecrementAvailableAmountOfAmmunitionButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -330,7 +330,7 @@ namespace Presentation
 
         private void IncrementAvailableAmountOfAmmunitionButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -347,7 +347,7 @@ namespace Presentation
 
         private void Weapon_Loaded()
         {
-            using SykhivgangContext context = new();
+            using sykhivgangContext context = new();
             Bll bll = new(context);
             List<Weapon> weapons = bll.GetWeapons();
 
@@ -356,7 +356,7 @@ namespace Presentation
 
         private void Ammunition_Loaded()
         {
-            using SykhivgangContext context = new();
+            using sykhivgangContext context = new();
             Bll bll = new(context);
             List<Ammunition> ammunitions = bll.GetAmmunitions();
 
@@ -365,7 +365,7 @@ namespace Presentation
 
         private void Soldiers_Loaded()
         {
-            using SykhivgangContext context = new();
+            using sykhivgangContext context = new();
             Bll bll = new(context);
             List<SoldierAttrb> soldiers = bll.GetSoldiers();
 

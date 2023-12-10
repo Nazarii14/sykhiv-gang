@@ -27,7 +27,7 @@ namespace Presentation
         }
         private void AddWeaponButton_Click(object sender, RoutedEventArgs e)
         {
-            using (SykhivgangContext context = new SykhivgangContext())
+            using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
                 userService.AddWeapon(TypeBox.Text, NameBox.Text, 
