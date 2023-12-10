@@ -9,6 +9,70 @@
     
     <!--Cтилі для кнопок на меню -->
     <Window.Resources>
+        <Style x:Key="GridViewColumnTextStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Foreground" Value="#4E7E13"/>
+        </Style>
+        
+        <Style x:Key="DeleteButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="60"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Background" Value="#FCFBFB"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#4E7E13"/>
+            <Setter Property="Foreground" Value="#4E7E13"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#E8E8E8"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#C8C8C8"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="EditButtonStyle" TargetType="Button">
+            <Setter Property="Width" Value="60"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Background" Value="#FCFBFB"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#4E7E13"/>
+            <Setter Property="Foreground" Value="#4E7E13"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#E8E8E8"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#C8C8C8"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style x:Key="NumberButtonStyle" TargetType="Button">
             <Setter Property="Width" Value="25"/>
             <Setter Property="Height" Value="25"/>
@@ -191,11 +255,42 @@
             <ListView Name="WeaponListView" Margin="10,10,10,70" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="150" />
+                        <!--<GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="150" />
                         <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150" />
                         <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="50" />
                         <GridViewColumn Header="Weight" DisplayMemberBinding="{Binding Weight}" Width="50" />
-                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding UserId}" Width="50" />
+                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding UserId}" Width="50" />-->
+                        <GridViewColumn Header="Type" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Type}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Name" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Name}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Price" Width="50">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Price}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Weight" Width="50">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Weight}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
 
                         <GridViewColumn Header="NeededAmount" Width="100">
                             <GridViewColumn.CellTemplate>
@@ -236,7 +331,7 @@
                         <GridViewColumn Header="Delete">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button Content="Delete" Click="DeleteWeaponButton_Click" CommandParameter="{Binding WeaponId}" />
+                                    <Button Content="Delete" Click="DeleteWeaponButton_Click" CommandParameter="{Binding WeaponId}" Style="{StaticResource DeleteButtonStyle}" />
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
@@ -244,7 +339,7 @@
                         <GridViewColumn Header="Edit">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <Button Content="Edit" Click="EditWeaponButton_Click" CommandParameter="{Binding WeaponId}" />
+                                    <Button Content="Edit" Click="EditWeaponButton_Click" CommandParameter="{Binding WeaponId}" Style="{StaticResource EditButtonStyle}" />
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
