@@ -8,6 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.25">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
