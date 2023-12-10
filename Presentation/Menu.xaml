@@ -148,7 +148,7 @@
 
                 <!-- Кнопка користувача з іконкою -->
                 <Button Style="{StaticResource SideMenuButtonStyle}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 10 45 0" Width="40" Height="40"  >
-                    <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\user.png" Width="40" Height="40" />
+                    <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\user.png" Width="40" Height="40" />
                 </Button>
             </Grid>
         </Border>
@@ -166,7 +166,7 @@
                 <!-- Кнопка зброя -->
                 <Button x:Name="WeaponButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 30 0 0" Click="WeaponButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\weapon.png" Width="23" Height="23" Margin="8" />
+                        <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\weapon.png" Width="23" Height="23" Margin="8" />
                         <TextBlock Text="Weapon" VerticalAlignment="Center" FontSize="14" RenderTransformOrigin="6.088,-0.143" />
                     </StackPanel>
                 </Button>
@@ -174,7 +174,7 @@
                 <!-- Кнопка додавання зброї -->
                 <Button x:Name="AddWeaponButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0" Click="AddWeaponButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\add.png" Width="23" Height="23" Margin="6"/>
+                        <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\add.png" Width="23" Height="23" Margin="6"/>
                         <TextBlock Text="Add Weapon" VerticalAlignment="Center" FontSize="14"/>
                     </StackPanel>
                 </Button>
@@ -183,7 +183,7 @@
                 <!-- Кнопка Aмуніція -->
                 <Button x:Name="AmmunitionButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0" Click="AmmunitionButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\ammunition.png" Width="23" Height="23" Margin="6"/>
+                        <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\ammunition.png" Width="23" Height="23" Margin="6"/>
                         <TextBlock Text="Ammunition" VerticalAlignment="Center" FontSize="14"/>
                     </StackPanel>
                 </Button>
@@ -192,7 +192,7 @@
                 <!-- Кнопка додавання Aмуніції -->
                 <Button x:Name="AddAmmunitionButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0" Click="AddAmmunitionButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\add.png" Width="23" Height="23" Margin="6"/>
+                        <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\add.png" Width="23" Height="23" Margin="6"/>
                         <TextBlock Text="Add Ammunition" VerticalAlignment="Center" FontSize="14"/>
                     </StackPanel>
                 </Button>
@@ -201,7 +201,7 @@
                 <!-- Кнопка Cолдати -->
                 <Button x:Name="SoldiersButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0" Click="SoldierButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\soldiers.png" Width="28" Height="28" Margin="5"/>
+                        <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\soldiers.png" Width="28" Height="28" Margin="5"/>
                         <TextBlock Text="Soldiers" VerticalAlignment="Center" FontSize="14"/>
                     </StackPanel>
                 </Button>
@@ -210,7 +210,7 @@
                 <!-- Кнопка додавання солдата -->
                 <Button x:Name="AddSoldiersButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0" Click="AddSoldierButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\addSoldier.png" Width="28" Height="28" Margin="5"/>
+                        <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\addSoldier.png" Width="28" Height="28" Margin="5"/>
                         <TextBlock Text="Add Soldier" VerticalAlignment="Center" FontSize="14"/>
                     </StackPanel>
                 </Button>
@@ -221,7 +221,7 @@
                 <!-- Кнопка шляхи  -->
                 <Button x:Name="RoutesButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 20 0 0" Click="RoutesButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\routes.png" Width="23" Height="23" Margin="5"/>
+                        <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\routes.png" Width="23" Height="23" Margin="5"/>
                         <TextBlock Text="Routes" VerticalAlignment="Center" FontSize="14"/>
                     </StackPanel>
                 </Button>
@@ -229,7 +229,7 @@
                 <!-- Кнопка аналітика -->
                 <Button x:Name="AnalyticsButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 0 0 0">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                        <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\analytics.png" Width="23" Height="23" Margin="5"/>
+                        <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\analytics.png" Width="23" Height="23" Margin="5"/>
                         <TextBlock Text="Analytics" VerticalAlignment="Center" FontSize="14"/>
                     </StackPanel>
                 </Button>
