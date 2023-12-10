@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Presentation"
         mc:Ignorable="d"
         Title="Menu" Height="720" Width="1280">
-    
+
     <!--Cтилі для кнопок на меню -->
     <Window.Resources>
         <Style x:Key="GridViewColumnTextStyle" TargetType="TextBlock">
@@ -122,7 +122,7 @@
         </Style>
 
     </Window.Resources>
-    
+
     <Grid>
         <!-- Фон вікна -->
         <Rectangle Fill="#F2F2F2" />
@@ -134,12 +134,12 @@
 
             <Grid>
                 <!-- Прямокутник з назвою бригади -->
-                
+
                 <Border Background="#F2F2F2" Height="40" Width="250" VerticalAlignment="Center" CornerRadius="11 11 11 11">
                     <Border.Effect>
                         <DropShadowEffect ShadowDepth="2" Color="#333333" Opacity="0.3" BlurRadius="5" />
                     </Border.Effect>
-                    
+
                     <Button Click="BrigadeName_Button_Click">
                         <TextBlock x:Name="BrigadeName" Text="BRIGADE NAME" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#4E7E13" FontSize="20" FontWeight="DemiBold"/>
                     </Button>
@@ -163,12 +163,11 @@
 
             <!-- Панель для кнопок -->
             <StackPanel>
-
                 <!-- Кнопка зброя -->
                 <Button x:Name="WeaponButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 30 0 0" Click="WeaponButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
                         <Image Source="C:\Users\User\Command Project\sykhiv-gang\Presentation\Icons\weapon.png" Width="23" Height="23" Margin="8" />
-                        <TextBlock Text="Weapon" VerticalAlignment="Center" FontSize="14" />
+                        <TextBlock Text="Weapon" VerticalAlignment="Center" FontSize="14" RenderTransformOrigin="6.088,-0.143" />
                     </StackPanel>
                 </Button>
 
@@ -252,101 +251,104 @@
                 <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
             </Border.Effect>
 
-            <ListView Name="WeaponListView" Margin="10,10,10,70" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
-                <ListView.View>
-                    <GridView>
-                        <!--<GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="150" />
-                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150" />
-                        <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="50" />
-                        <GridViewColumn Header="Weight" DisplayMemberBinding="{Binding Weight}" Width="50" />
-                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding UserId}" Width="50" />-->
-                        <GridViewColumn Header="Type" Width="150">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Type}" Style="{StaticResource GridViewColumnTextStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-                        <GridViewColumn Header="Name" Width="150">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Name}" Style="{StaticResource GridViewColumnTextStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                <TextBlock x:Name="Header" Height="30" FontSize="25" TextAlignment="Center" Margin="326,10,326,10" Text="Weapon" Grid.Row="0" />
 
-                        <GridViewColumn Header="Price" Width="50">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Price}" Style="{StaticResource GridViewColumnTextStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                <ListView Name="WeaponListView" Margin="10,10,10,70" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Type" Width="150">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Type}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                        <GridViewColumn Header="Weight" Width="50">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Weight}" Style="{StaticResource GridViewColumnTextStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                            <GridViewColumn Header="Name" Width="150">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Name}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                        <GridViewColumn Header="NeededAmount" Width="100">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto" />
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="Auto" />
-                                        </Grid.ColumnDefinitions>
+                            <GridViewColumn Header="Price" Width="50">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Price}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                                        <Button Grid.Column="0" Content="-" Click="DecrementNeededAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />
-                                        <TextBlock Grid.Column="1" Text="{Binding NeededAmount}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                        <Button Grid.Column="2" Content="+" Click="IncrementNeededAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />
-                                    </Grid>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                            <GridViewColumn Header="Weight" Width="50">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Weight}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                        <GridViewColumn Header="AvailableAmount" Width="100">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto" />
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="Auto" />
-                                        </Grid.ColumnDefinitions>
+                            <GridViewColumn Header="NeededAmount" Width="100">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
 
-                                        <Button Grid.Column="0" Content="-" Click="DecrementAvailableAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />
-                                        <TextBlock Grid.Column="1" Text="{Binding AvailableAmount}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                        <Button Grid.Column="2" Content="+" Click="IncrementAvailableAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />
-                                    </Grid>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                                            <Button Grid.Column="0" Content="-" Click="DecrementNeededAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />
+                                            <TextBlock Grid.Column="1" Text="{Binding NeededAmount}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            <Button Grid.Column="2" Content="+" Click="IncrementNeededAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                        <GridViewColumn Header="Delete">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Button Content="Delete" Click="DeleteWeaponButton_Click" CommandParameter="{Binding WeaponId}" Style="{StaticResource DeleteButtonStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                            <GridViewColumn Header="AvailableAmount" Width="100">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
 
-                        <GridViewColumn Header="Edit">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Button Content="Edit" Click="EditWeaponButton_Click" CommandParameter="{Binding WeaponId}" Style="{StaticResource EditButtonStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                                            <Button Grid.Column="0" Content="-" Click="DecrementAvailableAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />
+                                            <TextBlock Grid.Column="1" Text="{Binding AvailableAmount}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            <Button Grid.Column="2" Content="+" Click="IncrementAvailableAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                    </GridView>
-                </ListView.View>
-            </ListView>
+                            <GridViewColumn Header="Delete">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Delete" Click="DeleteWeaponButton_Click" CommandParameter="{Binding WeaponId}" Style="{StaticResource DeleteButtonStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn Header="Edit">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Edit" Click="EditWeaponButton_Click" CommandParameter="{Binding WeaponId}" Style="{StaticResource EditButtonStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
         </Border>
 
         <Border x:Name="AmmunitionBorder" Background="#FCFBFB" CornerRadius="15 0 0 15" Visibility="Collapsed" Width="970" Height="530" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 15 0 0" >
@@ -354,112 +356,113 @@
                 <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
             </Border.Effect>
 
-            <ListView Name="AmmunitionListView" Margin="10,10,10,70" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
-                <ListView.View>
-                    <GridView>
-                        <!--<GridViewColumn Header="Type" DisplayMemberBinding="{Binding Type}" Width="150" />
-                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}" Width="150" />
-                        <GridViewColumn Header="Price" DisplayMemberBinding="{Binding Price}" Width="50" />
-                        <GridViewColumn Header="Size" DisplayMemberBinding="{Binding Size}" Width="25" />
-                        <GridViewColumn Header="Gender" DisplayMemberBinding="{Binding UsersGender}" Width="50" />-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-                        <GridViewColumn Header="Type" Width="150">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Type}" Style="{StaticResource GridViewColumnTextStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                <TextBlock Height="30" FontSize="25" TextAlignment="Center" Margin="326,10,326,10" Text="Ammunition" Grid.Row="0" />
 
-                        <GridViewColumn Header="Name" Width="150">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Name}" Style="{StaticResource GridViewColumnTextStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                <ListView Name="AmmunitionListView" Margin="10,10,10,70" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Type" Width="150">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Type}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                        <GridViewColumn Header="Price" Width="50">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Price}" Style="{StaticResource GridViewColumnTextStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                            <GridViewColumn Header="Name" Width="150">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Name}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                        <GridViewColumn Header="Size" Width="25">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Size}" Style="{StaticResource GridViewColumnTextStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                            <GridViewColumn Header="Price" Width="50">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Price}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                        <GridViewColumn Header="Gender" Width="50">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding UsersGender}" Style="{StaticResource GridViewColumnTextStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                            <GridViewColumn Header="Size" Width="25">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Size}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                        <GridViewColumn Header="NeededAmount" Width="100">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto" />
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="Auto" />
-                                        </Grid.ColumnDefinitions>
+                            <GridViewColumn Header="Gender" Width="50">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding UsersGender}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                                        <Button Grid.Column="0" Content="-" Click="DecrementNeededAmountOfAmmunitionButton_Click" CommandParameter="{Binding AmmunitionId}" />
-                                        <TextBlock Grid.Column="1" Text="{Binding NeededAmount}" />
-                                        <Button Grid.Column="2" Content="+" Click="IncrementNeededAmountOfAmmunitionButton_Click" CommandParameter="{Binding AmmunitionId}" />
+                            <GridViewColumn Header="NeededAmount" Width="100">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
 
-                                    </Grid>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                                            <Button Grid.Column="0" Content="-" Click="DecrementNeededAmountOfAmmunitionButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding AmmunitionId}" />
+                                            <TextBlock Grid.Column="1" Text="{Binding NeededAmount}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            <Button Grid.Column="2" Content="+" Click="IncrementNeededAmountOfAmmunitionButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding AmmunitionId}" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                        <GridViewColumn Header="AvailableAmount" Width="100">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto" />
-                                            <ColumnDefinition Width="*" />
-                                            <ColumnDefinition Width="Auto" />
-                                        </Grid.ColumnDefinitions>
+                            <GridViewColumn Header="AvailableAmount" Width="100">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="Auto" />
+                                            </Grid.ColumnDefinitions>
 
-                                        <Button Grid.Column="0" Content="-" Click="DecrementAvailableAmountOfAmmunitionButton_Click" CommandParameter="{Binding AmmunitionId}" />
-                                        <TextBlock Grid.Column="1" Text="{Binding AvailableAmount}" />
-                                        <Button Grid.Column="2" Content="+" Click="IncrementAvailableAmountOfAmmunitionButton_Click" CommandParameter="{Binding AmmunitionId}" />
+                                            <Button Grid.Column="0" Content="-" Click="DecrementAvailableAmountOfAmmunitionButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding AmmunitionId}" />
+                                            <TextBlock Grid.Column="1" Text="{Binding AvailableAmount}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                            <Button Grid.Column="2" Content="+" Click="IncrementAvailableAmountOfAmmunitionButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding AmmunitionId}" />
+                                        </Grid>
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                                    </Grid>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                            <GridViewColumn Header="Delete">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Delete" Click="DeleteAmmunitionButton_Click" CommandParameter="{Binding AmmunitionId}" Style="{StaticResource DeleteButtonStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                        <GridViewColumn Header="Delete">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Button Content="Delete" Click="DeleteAmmunitionButton_Click" CommandParameter="{Binding AmmunitionId}" Style="{StaticResource DeleteButtonStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                            <GridViewColumn Header="Edit">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Edit" Click="EditAmmunitionButton_Click" CommandParameter="{Binding AmmunitionId}" Style="{StaticResource EditButtonStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                        <GridViewColumn Header="Edit">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Button Content="Edit" Click="EditAmmunitionButton_Click" CommandParameter="{Binding AmmunitionId}" Style="{StaticResource EditButtonStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-
-                    </GridView>
-                </ListView.View>
-            </ListView>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
         </Border>
 
         <Border x:Name="SoldierBorder" Background="#FCFBFB" Visibility="Collapsed" CornerRadius="15 0 0 15" Width="970" Height="530" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 15 0 0" >
@@ -467,66 +470,53 @@
                 <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
             </Border.Effect>
 
-            <ListView Name="SoldierListView" Margin="10,10,10,70" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
 
-                <!--<ListView.ItemContainerStyle>
-                    <Style TargetType="ListViewItem">
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate TargetType="ListViewItem">
-                                    <Border x:Name="border" Background="Transparent">
-                                        <ContentPresenter />
-                                    </Border>
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <Setter TargetName="border" Property="Background" Value="#231123" />
-                                        </Trigger>
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </ListView.ItemContainerStyle>-->
-                <ListView.View>
-                    <GridView>
-                        <!--<GridViewColumn Header="Callsign" DisplayMemberBinding="{Binding Callsign}" Width="150" />
-                        <GridViewColumn Header="UserId" DisplayMemberBinding="{Binding UserId}" Width="150" />-->
-                        
-                        <GridViewColumn Header="Callsign" Width="150">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Callsign}" Style="{StaticResource GridViewColumnTextStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                <TextBlock Height="30" FontSize="25" TextAlignment="Center" Margin="326,10,326,10" Text="Soldiers" Grid.Row="0" />
 
-                        <GridViewColumn Header="UserId" Width="150">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding UserId}" Style="{StaticResource GridViewColumnTextStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                <ListView Name="SoldierListView" Margin="10,10,10,70" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Callsign" Width="150">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Callsign}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                        <GridViewColumn Header="Delete">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Button Content="Delete" Click="DeleteSoldierButton_Click" CommandParameter="{Binding SoldierAttrbId}" Style="{StaticResource DeleteButtonStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                            <GridViewColumn Header="UserId" Width="150">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding UserId}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                        <GridViewColumn Header="Edit">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Button Content="Edit" Click="EditSoldierButton_Click" CommandParameter="{Binding SoldierAttrbId}" Style="{StaticResource EditButtonStyle}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                            <GridViewColumn Header="Delete">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Delete" Click="DeleteSoldierButton_Click" CommandParameter="{Binding SoldierAttrbId}" Style="{StaticResource DeleteButtonStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
 
-                    </GridView>
-                </ListView.View>
-            </ListView>
+                            <GridViewColumn Header="Edit">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Edit" Click="EditSoldierButton_Click" CommandParameter="{Binding SoldierAttrbId}" Style="{StaticResource EditButtonStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </Grid>
         </Border>
 
 

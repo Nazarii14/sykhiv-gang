@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -48,10 +49,6 @@ namespace Presentation
 
         private void WeaponButton_Click(object sender, RoutedEventArgs e)
         {
-            WeaponButton.Background = Brushes.LightGray;
-            AmmunitionButton.Background = Brushes.Transparent;
-            SoldiersButton.Background = Brushes.Transparent;
-
             WeaponBorder.Visibility = Visibility.Visible;
             AmmunitionBorder.Visibility = Visibility.Collapsed; 
             SoldierBorder.Visibility = Visibility.Collapsed;
@@ -61,10 +58,6 @@ namespace Presentation
 
         private void AmmunitionButton_Click(object sender, RoutedEventArgs e)
         {
-            WeaponButton.Background = Brushes.Transparent;
-            AmmunitionButton.Background = Brushes.LightGray;
-            SoldiersButton.Background = Brushes.Transparent;
-
             WeaponBorder.Visibility = Visibility.Collapsed;
             AmmunitionBorder.Visibility = Visibility.Visible;
             SoldierBorder.Visibility = Visibility.Collapsed;
@@ -74,10 +67,6 @@ namespace Presentation
 
         private void SoldierButton_Click(object sender, RoutedEventArgs e)
         {
-            WeaponButton.Background = Brushes.Transparent;
-            AmmunitionButton.Background = Brushes.Transparent;
-            SoldiersButton.Background = Brushes.LightGray;
-
             WeaponBorder.Visibility = Visibility.Collapsed;
             AmmunitionBorder.Visibility = Visibility.Collapsed;
             SoldierBorder.Visibility = Visibility.Visible;

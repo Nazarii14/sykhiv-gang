@@ -29,7 +29,7 @@ namespace Presentation
         {
             using (sykhivgangContext context = new sykhivgangContext())
             {
-                Bll userService = new Bll(context);
+                Bll userService = new(context);
                 userService.AddSoldier(CallsignBox.Text, int.Parse(UserIdBox.Text));
             }
 
