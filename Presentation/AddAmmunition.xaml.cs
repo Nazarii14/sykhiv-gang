@@ -39,5 +39,9 @@ namespace Presentation
 
             this.Close();
         }
+        private void Cancel_AddAmmunitionButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
