@@ -474,7 +474,7 @@ namespace UnitTests
             this.context.Setup(c => c.Set<Weapon>()).Returns(MockDbSet(weapons));
 
             // Act
-            var result = this.bll.GetWeapons();
+            var result = bll.GetWeapons();
 
             // Assert
             Assert.IsNotNull(result);

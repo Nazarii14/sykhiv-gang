@@ -120,7 +120,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
+        
     </Window.Resources>
 
     <Grid>
@@ -330,6 +330,22 @@
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
 
+                            <!--<GridViewColumn Header="Percentage" Width="auto">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Ratio}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn Header="Money needed" Width="auto">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding AdditionalPrice}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>-->
+
                             <GridViewColumn Header="Delete">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
@@ -367,7 +383,7 @@
                 <ListView Name="AmmunitionListView" Margin="10,10,10,70" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Type" Width="150">
+                            <GridViewColumn Header="Type" Width="auto">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <TextBlock Text="{Binding Type}" Style="{StaticResource GridViewColumnTextStyle}" />
@@ -375,7 +391,7 @@
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
 
-                            <GridViewColumn Header="Name" Width="150">
+                            <GridViewColumn Header="Name" Width="auto">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <TextBlock Text="{Binding Name}" Style="{StaticResource GridViewColumnTextStyle}" />
@@ -383,7 +399,7 @@
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
 
-                            <GridViewColumn Header="Price" Width="50">
+                            <GridViewColumn Header="Price" Width="auto">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <TextBlock Text="{Binding Price}" Style="{StaticResource GridViewColumnTextStyle}" />
@@ -391,7 +407,7 @@
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
 
-                            <GridViewColumn Header="Size" Width="25">
+                            <GridViewColumn Header="Size" Width="auto">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <TextBlock Text="{Binding Size}" Style="{StaticResource GridViewColumnTextStyle}" />
@@ -399,7 +415,7 @@
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
 
-                            <GridViewColumn Header="Gender" Width="50">
+                            <GridViewColumn Header="Gender" Width="auto">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <TextBlock Text="{Binding UsersGender}" Style="{StaticResource GridViewColumnTextStyle}" />
@@ -407,7 +423,7 @@
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
 
-                            <GridViewColumn Header="NeededAmount" Width="100">
+                            <GridViewColumn Header="NeededAmount" Width="auto">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <Grid>
@@ -425,7 +441,7 @@
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
 
-                            <GridViewColumn Header="AvailableAmount" Width="100">
+                            <GridViewColumn Header="AvailableAmount" Width="auto">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <Grid>

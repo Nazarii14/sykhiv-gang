@@ -201,10 +201,25 @@ namespace Presentation
                 Button button = (Button)sender;
                 var itemId = (int)button.CommandParameter;
 
-                userService.DecrementNeededAmountOfWeaponById(itemId);
+                if (button.CommandParameter != null)
+                {
+                    var itemId_ = (int)button.CommandParameter;
 
-                this.WeaponListView.ItemsSource = null;
-                this.WeaponListView.ItemsSource = userService.GetWeapons();
+                    userService.DecrementNeededAmountOfWeaponById(itemId_);
+
+                    this.WeaponListView.ItemsSource = null;
+                    this.WeaponListView.ItemsSource = userService.GetWeapons();
+                }
+                else
+                {
+                    // Log or handle the case where CommandParameter is null
+                    Console.WriteLine("CommandParameter is null.");
+                }
+
+                //userService.DecrementNeededAmountOfWeaponById(itemId);
+
+                //this.WeaponListView.ItemsSource = null;
+                //this.WeaponListView.ItemsSource = userService.GetWeapons();
             }
         }
 

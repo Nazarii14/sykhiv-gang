@@ -46,6 +46,5 @@ namespace Presentation
             this.Close();
             loginwindow.Show();
         }
-
     }
 }

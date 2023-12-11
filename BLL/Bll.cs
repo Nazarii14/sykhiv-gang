@@ -538,6 +538,42 @@ namespace BLL
             }
         }
 
+        //public List<dynamic> GetWeapons()
+        //{
+        //    try
+        //    {
+        //        var weapons = this.context.Set<Weapon>()
+        //                        .OrderBy(e => e.Name)
+        //                        .ToList();
+
+        //        var modifiedWeapons = weapons.Select(w =>
+        //        {
+        //            var ratio = w.AvailableAmount / w.NeededAmount;
+        //            var additionalPrice = w.Price * (w.NeededAmount - w.AvailableAmount);
+
+        //            dynamic dynamicObj = new System.Dynamic.ExpandoObject();
+
+        //            dynamicObj.Name = w.Name;
+        //            dynamicObj.AvailableAmount = w.AvailableAmount;
+        //            dynamicObj.NeededAmount = w.NeededAmount;
+        //            dynamicObj.Price = w.Price;
+
+        //            dynamicObj.Ratio = ratio;
+        //            dynamicObj.AdditionalPrice = additionalPrice;
+
+        //            return dynamicObj;
+        //        }).ToList<dynamic>();
+
+        //        return modifiedWeapons;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine($"Error getting modified weapons: {ex.Message}");
+        //        return new List<dynamic>();
+        //    }
+        //}
+
+
         public List<Ammunition>? GetAmmunitions()
         {
             try
