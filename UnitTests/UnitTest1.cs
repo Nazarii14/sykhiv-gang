@@ -7,7 +7,6 @@ namespace UnitTests
     using System.Collections.Generic;
     using BLL;
     using DAL;
-    using DAL.Models;
     using Microsoft.EntityFrameworkCore;
     using Moq;
 
@@ -474,7 +473,7 @@ namespace UnitTests
             this.context.Setup(c => c.Set<Weapon>()).Returns(MockDbSet(weapons));
 
             // Act
-            var result = bll.GetWeapons();
+            var result = this.bll.GetWeapons();
 
             // Assert
             Assert.IsNotNull(result);

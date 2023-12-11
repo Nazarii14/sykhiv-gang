@@ -1,23 +1,10 @@
-﻿// <copyright file="Ammunition.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
+﻿using System;
+using System.Collections.Generic;
 
-namespace DAL.Models
+namespace DAL
 {
-    using System;
-    using System.Collections.Generic;
-
-#pragma warning disable SA1601 // Partial elements should be documented
     public partial class Ammunition
-#pragma warning restore SA1601 // Partial elements should be documented
     {
-        public Ammunition()
-        {
-            this.InventoryAmmunitions = new HashSet<InventoryAmmunition>();
-            this.Requests = new HashSet<Request>();
-            this.Routes = new HashSet<Route>();
-        }
-
         public int AmmunitionId { get; set; }
 
         public string Type { get; set; } = null!;
@@ -36,12 +23,16 @@ namespace DAL.Models
 
         public int? AvailableAmount { get; set; }
 
+        public decimal Moneyneeded { get; set; }
+
+        public decimal Percentage { get; set; }
+
+        public virtual ICollection<InventoryAmmunition> InventoryAmmunitions { get; } = new List<InventoryAmmunition>();
+
+        public virtual ICollection<Request> Requests { get; } = new List<Request>();
+
+        public virtual ICollection<Route> Routes { get; } = new List<Route>();
+
         public virtual User? User { get; set; }
-
-        public virtual ICollection<InventoryAmmunition> InventoryAmmunitions { get; set; }
-
-        public virtual ICollection<Request> Requests { get; set; }
-
-        public virtual ICollection<Route> Routes { get; set; }
     }
 }

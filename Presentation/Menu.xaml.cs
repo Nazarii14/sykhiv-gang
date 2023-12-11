@@ -12,7 +12,6 @@ namespace Presentation
     using System.Windows.Media;
     using BLL;
     using DAL;
-    using DAL.Models;
 
     /// <summary>
     /// Interaction logic for Menu.xaml.
@@ -43,6 +42,8 @@ namespace Presentation
             this.WeaponBorder.Visibility = Visibility.Visible;
             this.AmmunitionBorder.Visibility = Visibility.Collapsed;
             this.SoldierBorder.Visibility = Visibility.Collapsed;
+            this.AnalyticsBorder.Visibility = Visibility.Collapsed;
+
             this.WeaponListView.ItemsSource = null;
             this.Weapon_Loaded();
         }
@@ -52,6 +53,7 @@ namespace Presentation
             this.WeaponBorder.Visibility = Visibility.Collapsed;
             this.AmmunitionBorder.Visibility = Visibility.Visible;
             this.SoldierBorder.Visibility = Visibility.Collapsed;
+            this.AnalyticsBorder.Visibility = Visibility.Collapsed;
             this.AmmunitionListView.ItemsSource = null;
             this.Ammunition_Loaded();
         }
@@ -61,8 +63,19 @@ namespace Presentation
             this.WeaponBorder.Visibility = Visibility.Collapsed;
             this.AmmunitionBorder.Visibility = Visibility.Collapsed;
             this.SoldierBorder.Visibility = Visibility.Visible;
+            this.AnalyticsBorder.Visibility = Visibility.Collapsed;
             this.SoldierListView.ItemsSource = null;
             this.Soldiers_Loaded();
+        }
+
+        private void AnalyticsButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.WeaponBorder.Visibility = Visibility.Collapsed;
+            this.AmmunitionBorder.Visibility = Visibility.Collapsed;
+            this.SoldierBorder.Visibility = Visibility.Collapsed;
+            this.AnalyticsBorder.Visibility = Visibility.Visible;
+
+            this.Analytics_Loaded();
         }
 
         private void DeleteWeaponButton_Click(object sender, RoutedEventArgs e)
@@ -215,11 +228,6 @@ namespace Presentation
                     // Log or handle the case where CommandParameter is null
                     Console.WriteLine("CommandParameter is null.");
                 }
-
-                //userService.DecrementNeededAmountOfWeaponById(itemId);
-
-                //this.WeaponListView.ItemsSource = null;
-                //this.WeaponListView.ItemsSource = userService.GetWeapons();
             }
         }
 
@@ -340,7 +348,6 @@ namespace Presentation
             using SykhivgangContext context = new();
             Bll bll = new(context);
             List<Weapon> weapons = bll.GetWeapons();
-
             this.WeaponListView.ItemsSource = weapons;
         }
 
@@ -360,6 +367,19 @@ namespace Presentation
             List<SoldierAttrb> soldiers = bll.GetSoldiers();
 
             this.SoldierListView.ItemsSource = soldiers;
+        }
+
+        private void Analytics_Loaded()
+        {
+            using SykhivgangContext context = new();
+            Bll bll = new(context);
+
+            WeaponGeneralPercentage.Text = bll.GetWeaponGeneralPercentage().ToString();
+            WeaponTotalMoneyNeeded.Text = bll.GetWeaponTotalMoneyNeeded().ToString();
+
+            AmmunitionGeneralPercentage.Text = bll.GetAmmunitionGeneralPercentage().ToString();
+            AmmunitionTotalMoneyNeeded.Text = bll.GetAmmunitionTotalMoneyNeeded().ToString();
+
         }
 
         private void AddWeaponButton_Click(object sender, RoutedEventArgs e)

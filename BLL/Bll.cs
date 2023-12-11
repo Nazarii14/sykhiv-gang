@@ -7,7 +7,6 @@ namespace BLL
     using System.Data;
     using System.Text.RegularExpressions;
     using DAL;
-    using DAL.Models;
 
     public class Bll
     {
@@ -529,7 +528,23 @@ namespace BLL
         {
             try
             {
-                return this.context.Set<Weapon>().OrderBy(e => e.Name).ToList();
+                return this.context.Set<Weapon>()
+                        .OrderBy(e => e.Name)
+                        .ToList()
+                        .Select(w => new Weapon
+                        {
+                            Type = w.Type,
+                            WeaponId = w.WeaponId,
+                            Name = w.Name,
+                            Price = w.Price,
+                            Weight = w.Weight,
+                            NeededAmount = w.NeededAmount,
+                            AvailableAmount = w.AvailableAmount,
+                            UserId = w.UserId,
+                            Percentage = Math.Round(w.Percentage > 100 ? 100 : w.Percentage, 2),
+                            Moneyneeded = w.Percentage > 100 ? 0 : Math.Round(w.Moneyneeded, 2),
+                        })
+                        .ToList();
             }
             catch (Exception ex)
             {
@@ -538,47 +553,28 @@ namespace BLL
             }
         }
 
-        //public List<dynamic> GetWeapons()
-        //{
-        //    try
-        //    {
-        //        var weapons = this.context.Set<Weapon>()
-        //                        .OrderBy(e => e.Name)
-        //                        .ToList();
-
-        //        var modifiedWeapons = weapons.Select(w =>
-        //        {
-        //            var ratio = w.AvailableAmount / w.NeededAmount;
-        //            var additionalPrice = w.Price * (w.NeededAmount - w.AvailableAmount);
-
-        //            dynamic dynamicObj = new System.Dynamic.ExpandoObject();
-
-        //            dynamicObj.Name = w.Name;
-        //            dynamicObj.AvailableAmount = w.AvailableAmount;
-        //            dynamicObj.NeededAmount = w.NeededAmount;
-        //            dynamicObj.Price = w.Price;
-
-        //            dynamicObj.Ratio = ratio;
-        //            dynamicObj.AdditionalPrice = additionalPrice;
-
-        //            return dynamicObj;
-        //        }).ToList<dynamic>();
-
-        //        return modifiedWeapons;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Console.WriteLine($"Error getting modified weapons: {ex.Message}");
-        //        return new List<dynamic>();
-        //    }
-        //}
-
-
         public List<Ammunition>? GetAmmunitions()
         {
             try
             {
-                return this.context.Set<Ammunition>().OrderBy(e => e.Name).ToList();
+                return this.context.Set<Ammunition>()
+                        .OrderBy(e => e.Name)
+                        .ToList()
+                        .Select(w => new Ammunition
+                        {
+                            Type = w.Type,
+                            AmmunitionId = w.AmmunitionId,
+                            Name = w.Name,
+                            Price = w.Price,
+                            Size = w.Size,
+                            UsersGender = w.UsersGender,
+                            NeededAmount = w.NeededAmount,
+                            AvailableAmount = w.AvailableAmount,
+                            UserId = w.UserId,
+                            Percentage = Math.Round(w.Percentage > 100 ? 100 : w.Percentage, 2),
+                            Moneyneeded = w.Percentage > 100 ? 0 : Math.Round(w.Moneyneeded, 2),
+                        })
+                        .ToList();
             }
             catch (Exception ex)
             {
@@ -597,6 +593,63 @@ namespace BLL
             {
                 Console.WriteLine($"Error getting soldiers: {ex.Message}");
                 return null;
+            }
+        }
+
+        public decimal GetWeaponGeneralPercentage()
+        {
+            try
+            {
+                var weapons = GetWeapons();
+                var count = weapons.Count();
+                return Math.Round(weapons.Sum(w => w.Percentage) / count, 2);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting weapon general percentage: {ex.Message}");
+                return 0;
+            }
+        }
+
+        public decimal GetWeaponTotalMoneyNeeded()
+        {
+            try
+            {
+                var weapons = GetWeapons();
+                return weapons.Sum(w => w.Moneyneeded);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting weapon total money needed: {ex.Message}");
+                return 0;
+            }
+        }
+
+        public decimal GetAmmunitionGeneralPercentage()
+        {
+            try
+            {
+                var ammo = GetAmmunitions();
+                var count = ammo.Count();
+                return Math.Round(ammo.Sum(w => w.Percentage) / count, 2);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting ammunition general percentage: {ex.Message}");
+                return 0;
+            }
+        }
+
+        public decimal GetAmmunitionTotalMoneyNeeded()
+        {
+            try
+            {
+                return GetAmmunitions().Sum(w => w.Moneyneeded);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error getting ammunition total money needed: {ex.Message}");
+                return 0;
             }
         }
 

@@ -5,10 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Presentation"
         mc:Ignorable="d"
-        Title="Menu" Height="720" Width="1280">
+        Title="Menu" Height="720" Width="1480">
 
     <!--Cтилі для кнопок на меню -->
     <Window.Resources>
+        <Style x:Key="CustomTextBlockStyle" TargetType="TextBlock">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="14"/>
+        </Style>
+        
         <Style x:Key="GridViewColumnTextStyle" TargetType="TextBlock">
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="Margin" Value="5"/>
@@ -154,7 +159,7 @@
         </Border>
 
         <!-- Бічне меню -->
-        <Border Background="#FCFBFB" CornerRadius="0 15 15 0" Width="260" Height="530" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0 15 0 0">
+        <Border Background="#FCFBFB" CornerRadius="0 15 15 0" Width="260" Height="560" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0 15 0 0">
 
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
@@ -166,7 +171,7 @@
                 <!-- Кнопка зброя -->
                 <Button x:Name="WeaponButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 30 0 0" Click="WeaponButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                        <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\weapon.png" Width="23" Height="23" Margin="8" />
+                        <Image Source="Icons\weapon.png" Width="23" Height="23" Margin="8" />
                         <TextBlock Text="Weapon" VerticalAlignment="Center" FontSize="14" RenderTransformOrigin="6.088,-0.143" />
                     </StackPanel>
                 </Button>
@@ -174,7 +179,7 @@
                 <!-- Кнопка додавання зброї -->
                 <Button x:Name="AddWeaponButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0" Click="AddWeaponButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                        <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\add.png" Width="23" Height="23" Margin="6"/>
+                        <Image Source="Icons\add.png" Width="23" Height="23" Margin="6"/>
                         <TextBlock Text="Add Weapon" VerticalAlignment="Center" FontSize="14"/>
                     </StackPanel>
                 </Button>
@@ -183,7 +188,7 @@
                 <!-- Кнопка Aмуніція -->
                 <Button x:Name="AmmunitionButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0" Click="AmmunitionButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                        <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\ammunition.png" Width="23" Height="23" Margin="6"/>
+                        <Image Source="Icons\ammunition.png" Width="23" Height="23" Margin="6"/>
                         <TextBlock Text="Ammunition" VerticalAlignment="Center" FontSize="14"/>
                     </StackPanel>
                 </Button>
@@ -192,7 +197,7 @@
                 <!-- Кнопка додавання Aмуніції -->
                 <Button x:Name="AddAmmunitionButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0" Click="AddAmmunitionButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                        <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\add.png" Width="23" Height="23" Margin="6"/>
+                        <Image Source="\Icons\add.png" Width="23" Height="23" Margin="6"/>
                         <TextBlock Text="Add Ammunition" VerticalAlignment="Center" FontSize="14"/>
                     </StackPanel>
                 </Button>
@@ -201,7 +206,7 @@
                 <!-- Кнопка Cолдати -->
                 <Button x:Name="SoldiersButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0" Click="SoldierButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                        <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\soldiers.png" Width="28" Height="28" Margin="5"/>
+                        <Image Source="\Icons\soldiers.png" Width="28" Height="28" Margin="5"/>
                         <TextBlock Text="Soldiers" VerticalAlignment="Center" FontSize="14"/>
                     </StackPanel>
                 </Button>
@@ -210,7 +215,7 @@
                 <!-- Кнопка додавання солдата -->
                 <Button x:Name="AddSoldiersButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0" Click="AddSoldierButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                        <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\addSoldier.png" Width="28" Height="28" Margin="5"/>
+                        <Image Source="Icons/addSoldier.png" Width="28" Height="28" Margin="5"/>
                         <TextBlock Text="Add Soldier" VerticalAlignment="Center" FontSize="14"/>
                     </StackPanel>
                 </Button>
@@ -221,15 +226,15 @@
                 <!-- Кнопка шляхи  -->
                 <Button x:Name="RoutesButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 20 0 0" Click="RoutesButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                        <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\routes.png" Width="23" Height="23" Margin="5"/>
+                        <Image Source="Icons/routes.png" Width="23" Height="23" Margin="5"/>
                         <TextBlock Text="Routes" VerticalAlignment="Center" FontSize="14"/>
                     </StackPanel>
                 </Button>
 
                 <!-- Кнопка аналітика -->
-                <Button x:Name="AnalyticsButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 0 0 0">
+                <Button x:Name="AnalyticsButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 0 0 0" Click="AnalyticsButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
-                        <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\analytics.png" Width="23" Height="23" Margin="5"/>
+                        <Image Source="Icons/analytics.png" Width="23" Height="23" Margin="5"/>
                         <TextBlock Text="Analytics" VerticalAlignment="Center" FontSize="14"/>
                     </StackPanel>
                 </Button>
@@ -238,7 +243,7 @@
                 <Button x:Name="OutButton" Style="{StaticResource SideMenuButtonStyle}" Margin="0 35 0 0" Click="LogoutButton_Click">
                     <StackPanel Orientation="Horizontal" Margin="140 0 0 0">
                         <TextBlock Text="Log out" VerticalAlignment="Center" FontSize="17"/>
-                        <Image x:Name="logoutImage" Width="42" Height="42" Margin="5"/>
+                        <Image Source="Icons/logOut.png" x:Name="logoutImage" Width="42" Height="42" Margin="5"/>
                     </StackPanel>
                 </Button>
 
@@ -246,7 +251,7 @@
         </Border>
 
         <!-- Загальне відображення об'єктів -->
-        <Border x:Name="WeaponBorder" Background="#FCFBFB" CornerRadius="15 0 0 15" Visibility="Visible" Width="970" Height="530" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 15 0 0" >
+        <Border x:Name="WeaponBorder" Background="#FCFBFB" CornerRadius="15 0 0 15" Visibility="Visible" Width="1170" Height="560" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 15 0 0" >
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
             </Border.Effect>
@@ -259,7 +264,7 @@
 
                 <TextBlock x:Name="Header" Height="30" FontSize="25" TextAlignment="Center" Margin="326,10,326,10" Text="Weapon" Grid.Row="0" />
 
-                <ListView Name="WeaponListView" Margin="10,10,10,70" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
+                <ListView Name="WeaponListView" Margin="10,10,10,10" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Header="Type" Width="150">
@@ -278,7 +283,7 @@
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
 
-                            <GridViewColumn Header="Price" Width="50">
+                            <GridViewColumn Header="Price" Width="75">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <TextBlock Text="{Binding Price}" Style="{StaticResource GridViewColumnTextStyle}" />
@@ -286,7 +291,7 @@
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
 
-                            <GridViewColumn Header="Weight" Width="50">
+                            <GridViewColumn Header="Weight" Width="auto">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <TextBlock Text="{Binding Weight}" Style="{StaticResource GridViewColumnTextStyle}" />
@@ -294,7 +299,23 @@
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
 
-                            <GridViewColumn Header="NeededAmount" Width="100">
+                            <GridViewColumn Header="Percentage" Width="auto">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Percentage, StringFormat={}{0:F2}%}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn Header="Money needed" Width="100">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Moneyneeded}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn Header="Needed amount" Width="100">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <Grid>
@@ -304,15 +325,25 @@
                                                 <ColumnDefinition Width="Auto" />
                                             </Grid.ColumnDefinitions>
 
-                                            <Button Grid.Column="0" Content="-" Click="DecrementNeededAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />
+                                            <Button Grid.Column="0" Style="{StaticResource SideMenuButtonStyle}" CommandParameter="{Binding WeaponId}" Click="DecrementNeededAmountOfWeaponButton_Click" HorizontalAlignment="Right" VerticalAlignment="Top" Width="20" Height="20"  >
+                                                    <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\remove.png" Width="15" Height="15" />
+                                            </Button>
+                                            
+                                            
+                                            <!--<Button Grid.Column="0" Content="-" Click="DecrementNeededAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />-->
                                             <TextBlock Grid.Column="1" Text="{Binding NeededAmount}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                            <Button Grid.Column="2" Content="+" Click="IncrementNeededAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />
+
+                                            <Button Grid.Column="2" Style="{StaticResource SideMenuButtonStyle}" CommandParameter="{Binding WeaponId}" Click="IncrementNeededAmountOfWeaponButton_Click" HorizontalAlignment="Right" VerticalAlignment="Top" Width="20" Height="20"  >
+                                                <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\Subtract.png" Width="15" Height="15" />
+                                            </Button>
+
+                                            <!--<Button Grid.Column="2" Content="+" Click="IncrementNeededAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />-->
                                         </Grid>
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
 
-                            <GridViewColumn Header="AvailableAmount" Width="100">
+                            <GridViewColumn Header="Available amount" Width="100">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
                                         <Grid>
@@ -322,29 +353,20 @@
                                                 <ColumnDefinition Width="Auto" />
                                             </Grid.ColumnDefinitions>
 
-                                            <Button Grid.Column="0" Content="-" Click="DecrementAvailableAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />
+                                            <Button Grid.Column="0" Style="{StaticResource SideMenuButtonStyle}" CommandParameter="{Binding WeaponId}" Click="DecrementAvailableAmountOfWeaponButton_Click" HorizontalAlignment="Right" VerticalAlignment="Top" Width="20" Height="20"  >
+                                                <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\remove.png" Width="15" Height="15" />
+                                            </Button>
+
+
                                             <TextBlock Grid.Column="1" Text="{Binding AvailableAmount}" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                            <Button Grid.Column="2" Content="+" Click="IncrementAvailableAmountOfWeaponButton_Click" Style="{StaticResource NumberButtonStyle}" CommandParameter="{Binding WeaponId}" />
+
+                                            <Button Grid.Column="2" Style="{StaticResource SideMenuButtonStyle}" CommandParameter="{Binding WeaponId}" Click="IncrementAvailableAmountOfWeaponButton_Click" HorizontalAlignment="Right" VerticalAlignment="Top" Width="20" Height="20"  >
+                                                <Image Source="H:\GitHub\sykhiv-gang\Presentation\Icons\Subtract.png" Width="15" Height="15" />
+                                            </Button>
                                         </Grid>
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
-
-                            <!--<GridViewColumn Header="Percentage" Width="auto">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <TextBlock Text="{Binding Ratio}" Style="{StaticResource GridViewColumnTextStyle}" />
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>
-
-                            <GridViewColumn Header="Money needed" Width="auto">
-                                <GridViewColumn.CellTemplate>
-                                    <DataTemplate>
-                                        <TextBlock Text="{Binding AdditionalPrice}" Style="{StaticResource GridViewColumnTextStyle}" />
-                                    </DataTemplate>
-                                </GridViewColumn.CellTemplate>
-                            </GridViewColumn>-->
 
                             <GridViewColumn Header="Delete">
                                 <GridViewColumn.CellTemplate>
@@ -367,7 +389,7 @@
             </Grid>
         </Border>
 
-        <Border x:Name="AmmunitionBorder" Background="#FCFBFB" CornerRadius="15 0 0 15" Visibility="Collapsed" Width="970" Height="530" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 15 0 0" >
+        <Border x:Name="AmmunitionBorder" Background="#FCFBFB" CornerRadius="15 0 0 15" Visibility="Collapsed" Width="1170" Height="560" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 15 0 0" >
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
             </Border.Effect>
@@ -380,7 +402,7 @@
 
                 <TextBlock Height="30" FontSize="25" TextAlignment="Center" Margin="326,10,326,10" Text="Ammunition" Grid.Row="0" />
 
-                <ListView Name="AmmunitionListView" Margin="10,10,10,70" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
+                <ListView Name="AmmunitionListView" Margin="10,10,10,10" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Header="Type" Width="auto">
@@ -459,6 +481,22 @@
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
 
+                            <GridViewColumn Header="Percentage" Width="75">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Percentage, StringFormat={}{0:F2}%}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn Header="Money needed" Width="100">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Moneyneeded}" Style="{StaticResource GridViewColumnTextStyle}" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
                             <GridViewColumn Header="Delete">
                                 <GridViewColumn.CellTemplate>
                                     <DataTemplate>
@@ -474,14 +512,13 @@
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
-
                         </GridView>
                     </ListView.View>
                 </ListView>
             </Grid>
         </Border>
 
-        <Border x:Name="SoldierBorder" Background="#FCFBFB" Visibility="Collapsed" CornerRadius="15 0 0 15" Width="970" Height="530" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 15 0 0" >
+        <Border x:Name="SoldierBorder" Background="#FCFBFB" Visibility="Collapsed" CornerRadius="15 0 0 15" Width="1170" Height="560" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 15 0 0" >
             <Border.Effect>
                 <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
             </Border.Effect>
@@ -494,7 +531,7 @@
 
                 <TextBlock Height="30" FontSize="25" TextAlignment="Center" Margin="326,10,326,10" Text="Soldiers" Grid.Row="0" />
 
-                <ListView Name="SoldierListView" Margin="10,10,10,70" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
+                <ListView Name="SoldierListView" Margin="10,10,10,10" Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=5}">
                     <ListView.View>
                         <GridView>
                             <GridViewColumn Header="Callsign" Width="150">
@@ -528,10 +565,44 @@
                                     </DataTemplate>
                                 </GridViewColumn.CellTemplate>
                             </GridViewColumn>
-
                         </GridView>
                     </ListView.View>
                 </ListView>
+            </Grid>
+        </Border>
+
+        <Border x:Name="AnalyticsBorder" Background="#FCFBFB" CornerRadius="15 0 0 15" Visibility="Collapsed" Width="1170" Height="560" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0 15 0 0" >
+            <Border.Effect>
+                <DropShadowEffect ShadowDepth="4" Direction="300" Color="#333333" Opacity="0.2" BlurRadius="15"/>
+            </Border.Effect>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
+                        <TextBlock x:Name="WeaponGeneralPercentageLabel" Text="Weapon general percentage: " Style="{StaticResource CustomTextBlockStyle}"/>
+                        <TextBlock x:Name="WeaponGeneralPercentage" Text="" Style="{StaticResource CustomTextBlockStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
+                        <TextBlock x:Name="WeaponTotalMoneyNeededLabel" Text="Total weapon money needed: " Style="{StaticResource CustomTextBlockStyle}"/>
+                        <TextBlock x:Name="WeaponTotalMoneyNeeded" Text="" Style="{StaticResource CustomTextBlockStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
+                        <TextBlock x:Name="AmmunitionGeneralPercentageLabel" Text="Ammunition general percentage: " Style="{StaticResource CustomTextBlockStyle}"/>
+                        <TextBlock x:Name="AmmunitionGeneralPercentage" Text="" Style="{StaticResource CustomTextBlockStyle}"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal" Margin="15 0 0 0">
+                        <TextBlock x:Name="AmmunitionTotalMoneyNeededLabel" Text="Ammunition total money needed: " Style="{StaticResource CustomTextBlockStyle}"/>
+                        <TextBlock x:Name="AmmunitionTotalMoneyNeeded" Text="" Style="{StaticResource CustomTextBlockStyle}"/>
+                    </StackPanel>
+                </StackPanel>
             </Grid>
         </Border>
 

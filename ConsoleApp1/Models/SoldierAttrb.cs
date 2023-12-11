@@ -1,26 +1,17 @@
-﻿// <copyright file="SoldierAttrb.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
+﻿using System;
+using System.Collections.Generic;
 
-namespace DAL.Models
+namespace DAL;
+
+public partial class SoldierAttrb
 {
-#pragma warning disable SA1601 // Partial elements should be documented
-    public partial class SoldierAttrb
-#pragma warning restore SA1601 // Partial elements should be documented
-    {
-        public SoldierAttrb()
-        {
-            this.Requests = new HashSet<Request>();
-        }
+    public int SoldierAttrbId { get; set; }
 
-        public int SoldierAttrbId { get; set; }
+    public string Callsign { get; set; } = null!;
 
-        public string Callsign { get; set; } = null!;
+    public int? UserId { get; set; }
 
-        public int? UserId { get; set; }
+    public virtual ICollection<Request> Requests { get; } = new List<Request>();
 
-        public virtual User? User { get; set; }
-
-        public virtual ICollection<Request> Requests { get; set; }
-    }
+    public virtual User? User { get; set; }
 }
