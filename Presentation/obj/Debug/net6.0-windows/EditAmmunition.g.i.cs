@@ -117,7 +117,7 @@ namespace Presentation {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Presentation;component/editammunition.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Presentation;V1.0.0.0;component/editammunition.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\EditAmmunition.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

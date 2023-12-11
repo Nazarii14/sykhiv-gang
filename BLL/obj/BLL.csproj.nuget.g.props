@@ -17,6 +17,6 @@
     <Import Project="$(NuGetPackageRoot)microsoft.entityframeworkcore.design\6.0.25\build\net6.0\Microsoft.EntityFrameworkCore.Design.props" Condition="Exists('$(NuGetPackageRoot)microsoft.entityframeworkcore.design\6.0.25\build\net6.0\Microsoft.EntityFrameworkCore.Design.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgStyleCop_Analyzers_Unstable Condition=" '$(PkgStyleCop_Analyzers_Unstable)' == '' ">C:\Users\Admin\.nuget\packages\stylecop.analyzers.unstable\1.2.0.507</PkgStyleCop_Analyzers_Unstable>
+    <PkgStyleCop_Analyzers Condition=" '$(PkgStyleCop_Analyzers)' == '' ">C:\Users\Admin\.nuget\packages\stylecop.analyzers\1.1.118</PkgStyleCop_Analyzers>
   </PropertyGroup>
 </Project>

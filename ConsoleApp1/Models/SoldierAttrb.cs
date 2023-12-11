@@ -1,4 +1,8 @@
-﻿using System;
+﻿// <copyright file="SoldierAttrb.cs" company="SykhivGang">
+// Copyright (c) SykhivGang. All rights reserved.
+// </copyright>
+
+using System;
 using System.Collections.Generic;
 
 namespace DAL.Models

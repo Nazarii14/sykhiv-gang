@@ -1,0 +1,15 @@
+H:\GitHub\sykhiv-gang\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+H:\GitHub\sykhiv-gang\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+H:\GitHub\sykhiv-gang\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+H:\GitHub\sykhiv-gang\UnitTests\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+H:\GitHub\sykhiv-gang\UnitTests\bin\Debug\UnitTests.dll
+H:\GitHub\sykhiv-gang\UnitTests\bin\Debug\UnitTests.pdb
+H:\GitHub\sykhiv-gang\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+H:\GitHub\sykhiv-gang\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+H:\GitHub\sykhiv-gang\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+H:\GitHub\sykhiv-gang\UnitTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+H:\GitHub\sykhiv-gang\UnitTests\obj\Debug\UnitTests.csproj.AssemblyReference.cache
+H:\GitHub\sykhiv-gang\UnitTests\obj\Debug\UnitTests.csproj.CoreCompileInputs.cache
+H:\GitHub\sykhiv-gang\UnitTests\obj\Debug\UnitTests.csproj.CopyComplete
+H:\GitHub\sykhiv-gang\UnitTests\obj\Debug\UnitTests.dll
+H:\GitHub\sykhiv-gang\UnitTests\obj\Debug\UnitTests.pdb

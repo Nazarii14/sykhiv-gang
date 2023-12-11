@@ -407,13 +407,7 @@
           }
         }
       },
-      "StyleCop.Analyzers/1.2.0-beta.507": {
-        "type": "package",
-        "dependencies": {
-          "StyleCop.Analyzers.Unstable": "1.2.0.507"
-        }
-      },
-      "StyleCop.Analyzers.Unstable/1.2.0.507": {
+      "StyleCop.Analyzers/1.1.118": {
         "type": "package"
       },
       "System.Collections.Immutable/6.0.0": {
@@ -1013,23 +1007,10 @@
         "postgresql.png"
       ]
     },
-    "StyleCop.Analyzers/1.2.0-beta.507": {
-      "sha512": "/FtugDT66cKJJ+GGH7rNpG6UDrT4iIWz45M6lrXXHobDUFDHw+q5VgkbiR+6ffTO564ge7w6fQh/eoQhVdJO8Q==",
+    "StyleCop.Analyzers/1.1.118": {
+      "sha512": "Onx6ovGSqXSK07n/0eM3ZusiNdB6cIlJdabQhWGgJp3Vooy9AaLS/tigeybOJAobqbtggTamoWndz72JscZBvw==",
       "type": "package",
-      "path": "stylecop.analyzers/1.2.0-beta.507",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE",
-        "THIRD-PARTY-NOTICES.txt",
-        "stylecop.analyzers.1.2.0-beta.507.nupkg.sha512",
-        "stylecop.analyzers.nuspec"
-      ]
-    },
-    "StyleCop.Analyzers.Unstable/1.2.0.507": {
-      "sha512": "gTY3IQdRqDJ4hbhSA3e/R48oE8b/OiKfvwkt1QdNVfrJK2gMHBV8ldaHJ885jxWZfllK66soa/sdcjh9bX49Tw==",
-      "type": "package",
-      "path": "stylecop.analyzers.unstable/1.2.0.507",
+      "path": "stylecop.analyzers/1.1.118",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -1045,9 +1026,8 @@
         "analyzers/dotnet/cs/pl-PL/StyleCop.Analyzers.resources.dll",
         "analyzers/dotnet/cs/pt-BR/StyleCop.Analyzers.resources.dll",
         "analyzers/dotnet/cs/ru-RU/StyleCop.Analyzers.resources.dll",
-        "rulesets/StyleCopAnalyzersDefault.ruleset",
-        "stylecop.analyzers.unstable.1.2.0.507.nupkg.sha512",
-        "stylecop.analyzers.unstable.nuspec",
+        "stylecop.analyzers.1.1.118.nupkg.sha512",
+        "stylecop.analyzers.nuspec",
         "tools/install.ps1",
         "tools/uninstall.ps1"
       ]
@@ -1216,7 +1196,7 @@
     "net6.0": [
       "DAL >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.25",
-      "StyleCop.Analyzers >= 1.2.0-beta.507"
+      "StyleCop.Analyzers >= 1.1.118"
     ]
   },
   "packageFolders": {
@@ -1270,7 +1250,7 @@
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[1.2.0-beta.507, )"
+            "version": "[1.1.118, )"
           }
         },
         "imports": [
