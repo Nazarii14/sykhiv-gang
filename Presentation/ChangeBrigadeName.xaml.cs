@@ -1,43 +1,36 @@
-﻿using BLL;
-using DAL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿// <copyright file="ChangeBrigadeName.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace Presentation
 {
+    using System.Windows;
+    using BLL;
+    using DAL;
+
     /// <summary>
-    /// Interaction logic for ChangeBrigadeName.xaml
+    /// Interaction logic for ChangeBrigadeName.xaml.
     /// </summary>
     public partial class ChangeBrigadeName : Window
     {
         public ChangeBrigadeName()
         {
             this.InitializeComponent();
-            var ExistingBrigadeAttributes = this.BrigadeAttributesLoaded();
-            var BrName = ExistingBrigadeAttributes[0];
-            var ComName = ExistingBrigadeAttributes[1];
-            var EstDate = ExistingBrigadeAttributes[2];
-            var Location = ExistingBrigadeAttributes[3];
+            var existingBrigadeAttributes = this.BrigadeAttributesLoaded();
+            var brName = existingBrigadeAttributes[0];
+            var comName = existingBrigadeAttributes[1];
+            var estDate = existingBrigadeAttributes[2];
+            var location = existingBrigadeAttributes[3];
 
-            this.BrigadeNameBox.Text = BrName;
-            this.CommanderNameBox.Text = ComName;
-            this.EstablishedDateBox.Text = EstDate;
-            this.LocationBox.Text = Location;
+            this.BrigadeNameBox.Text = brName;
+            this.CommanderNameBox.Text = comName;
+            this.EstablishedDateBox.Text = estDate;
+            this.LocationBox.Text = location;
         }
+
         private string[] BrigadeAttributesLoaded()
         {
-            using (sykhivgangContext context = new sykhivgangContext())
+            using (SykhivgangContext context = new SykhivgangContext())
             {
                 Bll userService = new Bll(context);
                 return userService.GetBrigadeInfo();
@@ -46,7 +39,7 @@ namespace Presentation
 
         private void ChangeBrigadeInfoButton_Click(object sender, RoutedEventArgs e)
         {
-            using (sykhivgangContext context = new sykhivgangContext())
+            using (SykhivgangContext context = new SykhivgangContext())
             {
                 Bll userService = new Bll(context);
                 userService.ChangeBrigadeInfo(this.BrigadeNameBox.Text, this.CommanderNameBox.Text, this.EstablishedDateBox.Text, this.LocationBox.Text);
@@ -54,7 +47,7 @@ namespace Presentation
 
             Menu menu = new Menu();
             menu.Show();
-            
+
             this.Close();
         }
 

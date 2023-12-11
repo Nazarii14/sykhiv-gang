@@ -11,9 +11,9 @@ namespace BLL
 
     public class Bll
     {
-        private readonly sykhivgangContext context;
+        private readonly SykhivgangContext context;
 
-        public Bll(sykhivgangContext context)
+        public Bll(SykhivgangContext context)
         {
             this.context = context;
         }
@@ -56,6 +56,7 @@ namespace BLL
         /// Authenticates a user.
         /// </summary>
         /// <param name="name">The name of the user.</param>
+        /// <param name="surname">The surname of the user.</param>
         /// <param name="password">The password of the user.</param>
         /// <returns>True if the user is authenticated, false otherwise.</returns>
         public bool AuthenticateUser(string name, string surname, string password)
@@ -68,15 +69,17 @@ namespace BLL
         /// Registers a new user.
         /// </summary>
         /// <param name="name">The name of the user.</param>
-        /// <param name="username">The username of user.</param>
+        /// <param name="surname">The username of user.</param>
+        /// <param name="role">The role of user.</param>
         /// <param name="password">The password of user.</param>
-        /// <param name="message">A message indicating the result of the registration.</param>
-        /// <returns>True if the user is registered successfully, false otherwise.</returns>
+        /// <param name="confirmPassword">Confirm password.</param>
+        /// <returns></returns>
         public bool RegisterUser(string name, string surname, string role, string password, string confirmPassword)
         {
             string path = Directory.GetCurrentDirectory() + "\\logs.txt";
 
-            if (this.UserExists(name, surname)) {
+            if (this.UserExists(name, surname))
+            {
                 this.LogToFile(path, "User with that name and surname exists!");
                 return false;
             }
@@ -87,7 +90,8 @@ namespace BLL
                 return false;
             }
 
-            if (!IsValidPassword(password)) {
+            if (!IsValidPassword(password))
+            {
                 this.LogToFile(path, "Invalid password!");
                 return false;
             }
@@ -116,7 +120,7 @@ namespace BLL
         /// Adds a new User.
         /// </summary>
         /// <param name="firstName">The firstname of user.</param>
-        /// <param name="lastname">The lastname of user.</param>
+        /// <param name="lastName">The lastname of user.</param>
         /// <param name="password">The password of user.</param>
         /// <param name="role">The role of user.</param>
         public void AddUser(string firstName, string lastName, string password, string role)
@@ -128,7 +132,7 @@ namespace BLL
                     UserName = firstName,
                     UserSurname = lastName,
                     Password = password,
-                    Role = role
+                    Role = role,
                 };
 
                 this.context.Set<User>().Add(newUser);
@@ -138,11 +142,6 @@ namespace BLL
             {
                 Console.WriteLine($"Error adding user: {ex.Message}");
             }
-        }
-
-        private bool UserExists(string name, string surname)
-        {
-            return this.context.Set<User>().Any(u => u.UserName == name && u.UserSurname == surname);
         }
 
         public void AddAmmunition(string type, string name,
@@ -175,11 +174,7 @@ namespace BLL
             }
         }
 
-#pragma warning disable SA1600 // Elements should be documented
-        public void AddWeapon(string type, string name,
-#pragma warning restore SA1600 // Elements should be documented
-            decimal price, decimal weight, int neededAmount, int availableAmount,
-            int user_id)
+        public void AddWeapon(string type, string name, decimal price, decimal weight, int neededAmount, int availableAmount, int user_id)
         {
             try
             {
@@ -191,7 +186,7 @@ namespace BLL
                     Weight = weight,
                     NeededAmount = neededAmount,
                     AvailableAmount = availableAmount,
-                    UserId = user_id
+                    UserId = user_id,
                 };
 
                 this.context.Set<Weapon>().Add(newWeapon);
@@ -210,7 +205,7 @@ namespace BLL
                 SoldierAttrb newSoldier = new SoldierAttrb
                 {
                     Callsign = callsign,
-                    UserId = user_id
+                    UserId = user_id,
                 };
 
                 this.context.Set<SoldierAttrb>().Add(newSoldier);
@@ -276,7 +271,7 @@ namespace BLL
             }
         }
 
-        public Weapon GetWeaponById(int id)
+        public Weapon? GetWeaponById(int id)
         {
             try
             {
@@ -289,7 +284,7 @@ namespace BLL
             }
         }
 
-        public Ammunition GetAmmunitionById(int id)
+        public Ammunition? GetAmmunitionById(int id)
         {
             try
             {
@@ -302,7 +297,7 @@ namespace BLL
             }
         }
 
-        public SoldierAttrb GetSoldierById(int id)
+        public SoldierAttrb? GetSoldierById(int id)
         {
             try
             {
@@ -315,10 +310,7 @@ namespace BLL
             }
         }
 
-        public void EditWeapon(int weaponId, string type, 
-            string name, decimal price, 
-            decimal weight, int neededAmount, 
-            int availableAmount, int userId)
+        public void EditWeapon(int weaponId, string type, string name, decimal price, decimal weight, int neededAmount, int availableAmount, int userId)
         {
             try
             {
@@ -343,10 +335,7 @@ namespace BLL
             }
         }
 
-        public void EditAmmunition(int ammunitionId, string type, 
-            string name, decimal price, 
-            string size, string usersGender, int userId, 
-            int neededAmount, int availableAmount) 
+        public void EditAmmunition(int ammunitionId, string type, string name, decimal price, string size, string usersGender, int userId, int neededAmount, int availableAmount)
         {
             try
             {
@@ -464,8 +453,6 @@ namespace BLL
             }
         }
 
-
-
         public void DecrementNeededAmountOfAmmunitionById(int ammunitionId)
         {
             try
@@ -538,9 +525,7 @@ namespace BLL
             }
         }
 
-
-
-        public List<Weapon> GetWeapons()
+        public List<Weapon>? GetWeapons()
         {
             try
             {
@@ -553,7 +538,7 @@ namespace BLL
             }
         }
 
-        public List<Ammunition> GetAmmunitions()
+        public List<Ammunition>? GetAmmunitions()
         {
             try
             {
@@ -566,7 +551,7 @@ namespace BLL
             }
         }
 
-        public List<SoldierAttrb> GetSoldiers()
+        public List<SoldierAttrb>? GetSoldiers()
         {
             try
             {
@@ -601,7 +586,7 @@ namespace BLL
             }
         }
 
-        public string GetBrigadeName()
+        public string? GetBrigadeName()
         {
             try
             {
@@ -613,10 +598,9 @@ namespace BLL
                 Console.WriteLine($"Error getting brigade name: {ex.Message}");
                 return null;
             }
-
         }
 
-        public string[] GetBrigadeInfo()
+        public string[]? GetBrigadeInfo()
         {
             try
             {
@@ -628,7 +612,7 @@ namespace BLL
                 Console.WriteLine($"Error getting brigade attributes: {ex.Message}");
                 return null;
             }
-        }   
+        }
 
         public void LogToFile(string path, string message)
         {
@@ -636,6 +620,11 @@ namespace BLL
             {
                 writer.WriteLine($"{DateTime.Now} - {message}");
             }
+        }
+
+        private bool UserExists(string name, string surname)
+        {
+            return this.context.Set<User>().Any(u => u.UserName == name && u.UserSurname == surname);
         }
     }
 }

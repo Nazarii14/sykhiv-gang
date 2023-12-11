@@ -1,53 +1,39 @@
-﻿using BLL;
-using DAL;
-using Microsoft.EntityFrameworkCore.Query.Internal;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿// <copyright file="EditWeapon.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace Presentation
 {
+    using System.Windows;
+    using BLL;
+    using DAL;
+
     /// <summary>
-    /// Interaction logic for EditWeapon.xaml
+    /// Interaction logic for EditWeapon.xaml.
     /// </summary>
     public partial class EditWeapon : Window
     {
         private int itemId;
-        
+
+        public EditWeapon(int itemId)
+        {
+            this.InitializeComponent();
+            this.EditInfo_Loaded(itemId);
+            this.ItemId = itemId;
+        }
+
         public int ItemId
         {
             get { return this.itemId; }
             set { this.itemId = value; }
         }
 
-        public EditWeapon(int itemId)
-        {
-            this.InitializeComponent();
-            this.EditInfo_Loaded(itemId);
-            this.ItemId = itemId;    
-        }
-
         private void EditWeaponButton_Click(object sender, RoutedEventArgs e)
         {
-            using (sykhivgangContext context = new sykhivgangContext())
+            using (SykhivgangContext context = new SykhivgangContext())
             {
                 Bll userService = new Bll(context);
-                userService.EditWeapon(this.ItemId, this.TypeBox.Text, this.NameBox.Text,
-                                       decimal.Parse(this.PriceBox.Text), 
-                                       decimal.Parse(this.WeightBox.Text), 
-                                       int.Parse(this.NeededAmountBox.Text),
-                                       int.Parse(this.AvailableAmountBox.Text),
-                                       int.Parse(this.UserIdBox.Text));
+                userService.EditWeapon(this.ItemId, this.TypeBox.Text, this.NameBox.Text, decimal.Parse(this.PriceBox.Text), decimal.Parse(this.WeightBox.Text), int.Parse(this.NeededAmountBox.Text), int.Parse(this.AvailableAmountBox.Text), int.Parse(this.UserIdBox.Text));
             }
 
             this.Close();
@@ -55,7 +41,7 @@ namespace Presentation
 
         private void EditInfo_Loaded(int itemId)
         {
-            using (sykhivgangContext context = new sykhivgangContext())
+            using (SykhivgangContext context = new SykhivgangContext())
             {
                 Bll userService = new Bll(context);
 

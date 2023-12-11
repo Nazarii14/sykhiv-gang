@@ -1,25 +1,16 @@
-﻿using BLL;
-using DAL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Xml.Linq;
-using System.IO;
+﻿// <copyright file="Сhoose.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace Presentation
 {
+    using System.IO;
+    using System.Windows;
+    using BLL;
+    using DAL;
+
     /// <summary>
-    /// Interaction logic for Сhoose.xaml
+    /// Interaction logic for Сhoose.xaml.
     /// </summary>
     public partial class Сhoose : Window
     {
@@ -30,7 +21,7 @@ namespace Presentation
 
         private void CommanderButton_Click(object sender, RoutedEventArgs e)
         {
-            using (sykhivgangContext context = new sykhivgangContext())
+            using (SykhivgangContext context = new SykhivgangContext())
             {
                 Bll userService = new Bll(context);
                 string path = Directory.GetCurrentDirectory() + "\\logs.txt";
@@ -41,9 +32,10 @@ namespace Presentation
             this.Close();
             loginwindow.Show();
         }
+
         private void SoldierButton_Click(object sender, RoutedEventArgs e)
         {
-            using (sykhivgangContext context = new sykhivgangContext())
+            using (SykhivgangContext context = new SykhivgangContext())
             {
                 Bll userService = new Bll(context);
                 string path = Directory.GetCurrentDirectory() + "\\logs.txt";

@@ -1,33 +1,20 @@
-﻿using BLL;
-using DAL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using Xceed.Wpf.Toolkit.PropertyGrid.Attributes;
+﻿// <copyright file="EditSoldier.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace Presentation
 {
+    using System.Windows;
+    using BLL;
+    using DAL;
+
     /// <summary>
-    /// Interaction logic for EditSoldier.xaml
+    /// Interaction logic for EditSoldier.xaml.
     /// </summary>
     public partial class EditSoldier : Window
     {
         private int itemId;
-        public int ItemId
-        {
-            get { return this.itemId; }
-            set { this.itemId = value; }
-        }
+
         public EditSoldier(int itemId)
         {
             this.InitializeComponent();
@@ -35,9 +22,15 @@ namespace Presentation
             this.ItemId = itemId;
         }
 
+        public int ItemId
+        {
+            get { return this.itemId; }
+            set { this.itemId = value; }
+        }
+
         private void EditSoldierButton_Click(object sender, RoutedEventArgs e)
         {
-            using (sykhivgangContext context = new sykhivgangContext())
+            using (SykhivgangContext context = new SykhivgangContext())
             {
                 Bll userService = new Bll(context);
                 userService.EditSoldier(this.itemId, this.CallSignBox.Text, int.Parse(this.UserIdBox.Text));
@@ -48,7 +41,7 @@ namespace Presentation
 
         private void EditInfo_Loaded(int itemId)
         {
-            using (sykhivgangContext context = new sykhivgangContext())
+            using (SykhivgangContext context = new SykhivgangContext())
             {
                 Bll userService = new Bll(context);
 

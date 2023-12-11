@@ -1,23 +1,20 @@
-﻿// <copyright file="Login.xaml.cs" company="SykhivGang">
-// Copyright (c) SykhivGang. All rights reserved.
+﻿// <copyright file="Login.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
 namespace Presentation
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
     using System.Text;
     using System.Windows;
-    using DAL;
-    using DAL.Models;
     using BLL;
-    using Microsoft.Extensions.Logging;
-    using System.IO;
     using DAL;
 
     /// <summary>
-    /// Interaction logic for Login.xaml
+    /// Interaction logic for Login.xaml.
     /// </summary>
     public partial class Login : Window
     {
@@ -32,7 +29,7 @@ namespace Presentation
             string surname = this.SurnameTextBox.Text;
             string password = this.PasswordBox.Password;
 
-            using (sykhivgangContext context = new sykhivgangContext())
+            using (SykhivgangContext context = new SykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -53,7 +50,8 @@ namespace Presentation
                 }
             }
         }
-        private void Hyperlink_Click (object sender, RoutedEventArgs e)
+
+        private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
             Register registerwindow = new Register();
             registerwindow.Show();

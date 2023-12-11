@@ -1,5 +1,5 @@
-// <copyright file="AssemblyInfo.cs" company="Sykhivgang">
-// Copyright (c) Sykhivgang. All rights reserved.
+// <copyright file="AssemblyInfo.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
 using System.Windows;

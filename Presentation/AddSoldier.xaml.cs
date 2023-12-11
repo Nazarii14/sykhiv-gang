@@ -1,23 +1,15 @@
-﻿using BLL;
-using DAL;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿// <copyright file="AddSoldier.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace Presentation
 {
+    using System.Windows;
+    using BLL;
+    using DAL;
+
     /// <summary>
-    /// Interaction logic for AddSoldier.xaml
+    /// Interaction logic for AddSoldier.xaml.
     /// </summary>
     public partial class AddSoldier : Window
     {
@@ -25,9 +17,10 @@ namespace Presentation
         {
             this.InitializeComponent();
         }
+
         private void AddSoldierButton_Click(object sender, RoutedEventArgs e)
         {
-            using (sykhivgangContext context = new sykhivgangContext())
+            using (SykhivgangContext context = new SykhivgangContext())
             {
                 Bll userService = new(context);
                 userService.AddSoldier(this.CallsignBox.Text, int.Parse(this.UserIdBox.Text));

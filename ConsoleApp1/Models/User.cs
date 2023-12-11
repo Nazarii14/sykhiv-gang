@@ -1,13 +1,12 @@
-﻿// <copyright file="User.cs" company="SykhivGang">
-// Copyright (c) SykhivGang. All rights reserved.
+﻿// <copyright file="User.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
-
-using System;
-using System.Collections.Generic;
 
 namespace DAL.Models
 {
+#pragma warning disable SA1601 // Partial elements should be documented
     public partial class User
+#pragma warning restore SA1601 // Partial elements should be documented
     {
         public User()
         {

@@ -1,5 +1,5 @@
-﻿// <copyright file="sykhivgangContext.cs" company="SykhivGang">
-// Copyright (c) SykhivGang. All rights reserved.
+﻿// <copyright file="sykhivgangContext.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
 namespace DAL
@@ -10,26 +10,37 @@ namespace DAL
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata;
 
-    public partial class sykhivgangContext : DbContext
+#pragma warning disable SA1601 // Partial elements should be documented
+    public partial class SykhivgangContext : DbContext
+#pragma warning restore SA1601 // Partial elements should be documented
     {
-        public sykhivgangContext()
+        public SykhivgangContext()
         {
         }
 
-        public sykhivgangContext(DbContextOptions<sykhivgangContext> options)
+        public SykhivgangContext(DbContextOptions<SykhivgangContext> options)
             : base(options)
         {
         }
 
         public virtual DbSet<Ammunition> Ammunitions { get; set; } = null!;
+
         public virtual DbSet<Brigade> Brigades { get; set; } = null!;
+
         public virtual DbSet<InventoryAmmunition> InventoryAmmunitions { get; set; } = null!;
+
         public virtual DbSet<InventoryWeapon> InventoryWeapons { get; set; } = null!;
+
         public virtual DbSet<Request> Requests { get; set; } = null!;
+
         public virtual DbSet<Route> Routes { get; set; } = null!;
+
         public virtual DbSet<SoldierAttrb> SoldierAttrbs { get; set; } = null!;
+
         public virtual DbSet<User> Users { get; set; } = null!;
+
         public virtual DbSet<VolunteerAttrb> VolunteerAttrbs { get; set; } = null!;
+
         public virtual DbSet<Weapon> Weapons { get; set; } = null!;
 
         /// <inheritdoc/>
@@ -37,7 +48,6 @@ namespace DAL
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseNpgsql("Host=localhost;Database=sykhivgang;Username=postgres;Password=rosaka1429;");
             }
         }

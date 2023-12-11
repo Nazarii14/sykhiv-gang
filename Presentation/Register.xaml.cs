@@ -1,24 +1,17 @@
-﻿using BLL;
-using DAL;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿// <copyright file="Register.xaml.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace Presentation
 {
+    using System.IO;
+    using System.Windows;
+    using System.Windows.Controls;
+    using BLL;
+    using DAL;
+
     /// <summary>
-    /// Interaction logic for Register.xaml
+    /// Interaction logic for Register.xaml.
     /// </summary>
     public partial class Register : Window
     {
@@ -27,10 +20,6 @@ namespace Presentation
             this.InitializeComponent();
         }
 
-        private void NameTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string name = this.NameTextBox.Text;
@@ -39,7 +28,7 @@ namespace Presentation
             string password = this.SignUpPasswordBox.Password;
             string confirmPassword = this.ConfirmPasswordBox.Password;
 
-            using (sykhivgangContext context = new sykhivgangContext())
+            using (SykhivgangContext context = new SykhivgangContext())
             {
                 Bll userService = new Bll(context);
 
@@ -60,6 +49,7 @@ namespace Presentation
                 }
             }
         }
+
         private void Hyperlink_Click(object sender, RoutedEventArgs e)
         {
             Login loginwindow = new Login();
