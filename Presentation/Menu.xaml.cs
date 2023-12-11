@@ -29,11 +29,11 @@ namespace Presentation
     {
         public Menu()
         {
-            InitializeComponent();
-            Weapon_Loaded();
-            WeaponButton.Background = Brushes.LightGray;
+            this.InitializeComponent();
+            this.Weapon_Loaded();
+            this.WeaponButton.Background = Brushes.LightGray;
 
-            BrigadeName.Text = BrigadeName_Loaded();
+            this.BrigadeName.Text = this.BrigadeName_Loaded();
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string presentationFolderPath = System.IO.Path.Combine(baseDirectory, "Presentation");
 
@@ -49,29 +49,29 @@ namespace Presentation
 
         private void WeaponButton_Click(object sender, RoutedEventArgs e)
         {
-            WeaponBorder.Visibility = Visibility.Visible;
-            AmmunitionBorder.Visibility = Visibility.Collapsed; 
-            SoldierBorder.Visibility = Visibility.Collapsed;
-            WeaponListView.ItemsSource = null;
-            Weapon_Loaded();
+            this.WeaponBorder.Visibility = Visibility.Visible;
+            this.AmmunitionBorder.Visibility = Visibility.Collapsed; 
+            this.SoldierBorder.Visibility = Visibility.Collapsed;
+            this.WeaponListView.ItemsSource = null;
+            this.Weapon_Loaded();
         }
 
         private void AmmunitionButton_Click(object sender, RoutedEventArgs e)
         {
-            WeaponBorder.Visibility = Visibility.Collapsed;
-            AmmunitionBorder.Visibility = Visibility.Visible;
-            SoldierBorder.Visibility = Visibility.Collapsed;
-            AmmunitionListView.ItemsSource = null;
-            Ammunition_Loaded();
+            this.WeaponBorder.Visibility = Visibility.Collapsed;
+            this.AmmunitionBorder.Visibility = Visibility.Visible;
+            this.SoldierBorder.Visibility = Visibility.Collapsed;
+            this.AmmunitionListView.ItemsSource = null;
+            this.Ammunition_Loaded();
         }
 
         private void SoldierButton_Click(object sender, RoutedEventArgs e)
         {
-            WeaponBorder.Visibility = Visibility.Collapsed;
-            AmmunitionBorder.Visibility = Visibility.Collapsed;
-            SoldierBorder.Visibility = Visibility.Visible;
-            SoldierListView.ItemsSource = null;
-            Soldiers_Loaded();
+            this.WeaponBorder.Visibility = Visibility.Collapsed;
+            this.AmmunitionBorder.Visibility = Visibility.Collapsed;
+            this.SoldierBorder.Visibility = Visibility.Visible;
+            this.SoldierListView.ItemsSource = null;
+            this.Soldiers_Loaded();
         }
 
         private void DeleteWeaponButton_Click(object sender, RoutedEventArgs e)
@@ -85,8 +85,8 @@ namespace Presentation
 
                 userService.DeleteWeapon(itemId);
 
-                WeaponListView.ItemsSource = null;
-                WeaponListView.ItemsSource = userService.GetWeapons();
+                this.WeaponListView.ItemsSource = null;
+                this.WeaponListView.ItemsSource = userService.GetWeapons();
             }
         }
 
@@ -101,8 +101,8 @@ namespace Presentation
 
                 userService.DeleteSoldier(itemId);
 
-                SoldierListView.ItemsSource = null;
-                SoldierListView.ItemsSource = userService.GetSoldiers();
+                this.SoldierListView.ItemsSource = null;
+                this.SoldierListView.ItemsSource = userService.GetSoldiers();
             }
         }
 
@@ -119,8 +119,8 @@ namespace Presentation
 
                 editWeapon.Closed += (s, args) =>
                 {
-                    WeaponListView.ItemsSource = null;
-                    WeaponListView.ItemsSource = userService.GetWeapons();
+                    this.WeaponListView.ItemsSource = null;
+                    this.WeaponListView.ItemsSource = userService.GetWeapons();
                 };
 
                 editWeapon.Show();
@@ -142,8 +142,8 @@ namespace Presentation
 
                 editAmmunition.Closed += (s, args) =>
                 {
-                    AmmunitionListView.ItemsSource = null;
-                    AmmunitionListView.ItemsSource = userService.GetAmmunitions();
+                    this.AmmunitionListView.ItemsSource = null;
+                    this.AmmunitionListView.ItemsSource = userService.GetAmmunitions();
                 };
             }
         }
@@ -161,8 +161,8 @@ namespace Presentation
 
                 editSoldier.Closed += (s, args) =>
                 {
-                    SoldierListView.ItemsSource = null;
-                    SoldierListView.ItemsSource = userService.GetSoldiers();
+                    this.SoldierListView.ItemsSource = null;
+                    this.SoldierListView.ItemsSource = userService.GetSoldiers();
                 };
 
                 editSoldier.Show();
@@ -180,8 +180,8 @@ namespace Presentation
 
                 userService.DeleteAmmunition(itemId);
 
-                AmmunitionListView.ItemsSource = null;
-                AmmunitionListView.ItemsSource = userService.GetAmmunitions();
+                this.AmmunitionListView.ItemsSource = null;
+                this.AmmunitionListView.ItemsSource = userService.GetAmmunitions();
             }
         }
 
@@ -198,7 +198,7 @@ namespace Presentation
         {
             ChangeBrigadeName changeBrigadeName = new ChangeBrigadeName();
             changeBrigadeName.Show();
-            Close();
+            this.Close();
         }
 
 
@@ -214,8 +214,8 @@ namespace Presentation
 
                 userService.DecrementNeededAmountOfWeaponById(itemId);
 
-                WeaponListView.ItemsSource = null;
-                WeaponListView.ItemsSource = userService.GetWeapons();
+                this.WeaponListView.ItemsSource = null;
+                this.WeaponListView.ItemsSource = userService.GetWeapons();
             }
         }
 
@@ -230,8 +230,8 @@ namespace Presentation
 
                 userService.IncrementNeededAmountOfWeaponById(itemId);
 
-                WeaponListView.ItemsSource = null;
-                WeaponListView.ItemsSource = userService.GetWeapons();
+                this.WeaponListView.ItemsSource = null;
+                this.WeaponListView.ItemsSource = userService.GetWeapons();
             }
         }
 
@@ -246,8 +246,8 @@ namespace Presentation
 
                 userService.DecrementAvailableAmountOfWeaponById(itemId);
 
-                WeaponListView.ItemsSource = null;
-                WeaponListView.ItemsSource = userService.GetWeapons();
+                this.WeaponListView.ItemsSource = null;
+                this.WeaponListView.ItemsSource = userService.GetWeapons();
             }
         }
 
@@ -262,8 +262,8 @@ namespace Presentation
 
                 userService.IncrementAvailableAmountOfWeaponById(itemId);
 
-                WeaponListView.ItemsSource = null;
-                WeaponListView.ItemsSource = userService.GetWeapons();
+                this.WeaponListView.ItemsSource = null;
+                this.WeaponListView.ItemsSource = userService.GetWeapons();
             }
         }
 
@@ -280,8 +280,8 @@ namespace Presentation
 
                 userService.DecrementNeededAmountOfAmmunitionById(itemId);
 
-                AmmunitionListView.ItemsSource = null;
-                AmmunitionListView.ItemsSource = userService.GetAmmunitions();
+                this.AmmunitionListView.ItemsSource = null;
+                this.AmmunitionListView.ItemsSource = userService.GetAmmunitions();
             }
         }
 
@@ -296,8 +296,8 @@ namespace Presentation
 
                 userService.IncrementNeededAmountOfAmmunitionById(itemId);
 
-                AmmunitionListView.ItemsSource = null;
-                AmmunitionListView.ItemsSource = userService.GetAmmunitions();
+                this.AmmunitionListView.ItemsSource = null;
+                this.AmmunitionListView.ItemsSource = userService.GetAmmunitions();
             }
         }
 
@@ -312,8 +312,8 @@ namespace Presentation
 
                 userService.DecrementAvailableAmountOfAmmunitionById(itemId);
 
-                AmmunitionListView.ItemsSource = null;
-                AmmunitionListView.ItemsSource = userService.GetAmmunitions();
+                this.AmmunitionListView.ItemsSource = null;
+                this.AmmunitionListView.ItemsSource = userService.GetAmmunitions();
             }
         }
 
@@ -328,8 +328,8 @@ namespace Presentation
 
                 userService.IncrementAvailableAmountOfAmmunitionById(itemId);
 
-                AmmunitionListView.ItemsSource = null;
-                AmmunitionListView.ItemsSource = userService.GetAmmunitions();
+                this.AmmunitionListView.ItemsSource = null;
+                this.AmmunitionListView.ItemsSource = userService.GetAmmunitions();
             }
         }
 

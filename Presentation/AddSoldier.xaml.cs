@@ -23,14 +23,14 @@ namespace Presentation
     {
         public AddSoldier()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
         private void AddSoldierButton_Click(object sender, RoutedEventArgs e)
         {
             using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new(context);
-                userService.AddSoldier(CallsignBox.Text, int.Parse(UserIdBox.Text));
+                userService.AddSoldier(this.CallsignBox.Text, int.Parse(this.UserIdBox.Text));
             }
 
             this.Close();

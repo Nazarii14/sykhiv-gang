@@ -11,7 +11,7 @@ namespace DAL.Models
     {
         public VolunteerAttrb()
         {
-            Routes = new HashSet<Route>();
+            this.Routes = new HashSet<Route>();
         }
 
         public int VolunteerAttrbId { get; set; }

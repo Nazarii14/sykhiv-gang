@@ -24,7 +24,7 @@ namespace Presentation
     {
         public Register()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void NameTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -64,7 +64,7 @@ namespace Presentation
         {
             Login loginwindow = new Login();
             loginwindow.Show();
-            Close();
+            this.Close();
         }
     }
 }

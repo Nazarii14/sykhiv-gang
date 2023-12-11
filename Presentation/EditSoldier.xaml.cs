@@ -25,14 +25,14 @@ namespace Presentation
         private int itemId;
         public int ItemId
         {
-            get { return itemId; }
-            set { itemId = value; }
+            get { return this.itemId; }
+            set { this.itemId = value; }
         }
         public EditSoldier(int itemId)
         {
-            InitializeComponent();
-            EditInfo_Loaded(itemId);
-            ItemId = itemId;
+            this.InitializeComponent();
+            this.EditInfo_Loaded(itemId);
+            this.ItemId = itemId;
         }
 
         private void EditSoldierButton_Click(object sender, RoutedEventArgs e)
@@ -40,7 +40,7 @@ namespace Presentation
             using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
-                userService.EditSoldier(itemId, CallSignBox.Text, int.Parse(UserIdBox.Text));
+                userService.EditSoldier(this.itemId, this.CallSignBox.Text, int.Parse(this.UserIdBox.Text));
             }
 
             this.Close();
@@ -54,8 +54,8 @@ namespace Presentation
 
                 var soldier = userService.GetSoldierById(itemId);
 
-                CallSignBox.Text = soldier.Callsign;
-                UserIdBox.Text = soldier.UserId.ToString();
+                this.CallSignBox.Text = soldier.Callsign;
+                this.UserIdBox.Text = soldier.UserId.ToString();
             }
         }
 

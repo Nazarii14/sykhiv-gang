@@ -23,17 +23,17 @@ namespace Presentation
     {
         public ChangeBrigadeName()
         {
-            InitializeComponent();
-            var ExistingBrigadeAttributes = BrigadeAttributesLoaded();
+            this.InitializeComponent();
+            var ExistingBrigadeAttributes = this.BrigadeAttributesLoaded();
             var BrName = ExistingBrigadeAttributes[0];
             var ComName = ExistingBrigadeAttributes[1];
             var EstDate = ExistingBrigadeAttributes[2];
             var Location = ExistingBrigadeAttributes[3];
 
-            BrigadeNameBox.Text = BrName;
-            CommanderNameBox.Text = ComName;
-            EstablishedDateBox.Text = EstDate;
-            LocationBox.Text = Location;
+            this.BrigadeNameBox.Text = BrName;
+            this.CommanderNameBox.Text = ComName;
+            this.EstablishedDateBox.Text = EstDate;
+            this.LocationBox.Text = Location;
         }
         private string[] BrigadeAttributesLoaded()
         {
@@ -49,13 +49,13 @@ namespace Presentation
             using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
-                userService.ChangeBrigadeInfo(BrigadeNameBox.Text, CommanderNameBox.Text, EstablishedDateBox.Text, LocationBox.Text);
+                userService.ChangeBrigadeInfo(this.BrigadeNameBox.Text, this.CommanderNameBox.Text, this.EstablishedDateBox.Text, this.LocationBox.Text);
             }
 
             Menu menu = new Menu();
             menu.Show();
             
-            Close();
+            this.Close();
         }
 
         private void Cancel_ChangeBrigadeInfoButton_Click(object sender, RoutedEventArgs e)
@@ -63,7 +63,7 @@ namespace Presentation
             Menu menu = new Menu();
             menu.Show();
 
-            Close();
+            this.Close();
         }
     }
 }

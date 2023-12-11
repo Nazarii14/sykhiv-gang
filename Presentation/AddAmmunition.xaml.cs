@@ -23,7 +23,7 @@ namespace Presentation
     {
         public AddAmmunition()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void AddAmmunitionButton_Click(object sender, RoutedEventArgs e)
@@ -31,10 +31,10 @@ namespace Presentation
             using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
-                userService.AddAmmunition(TypeBox.Text, NameBox.Text, 
-                    decimal.Parse(PriceBox.Text), SizeBox.Text,
-                    int.Parse(NeededAmountBox.Text), int.Parse(AvailableAmountBox.Text),
-                    UserGenderBox.Text, int.Parse(UserIdBox.Text));
+                userService.AddAmmunition(this.TypeBox.Text, this.NameBox.Text, 
+                    decimal.Parse(this.PriceBox.Text), this.SizeBox.Text,
+                    int.Parse(this.NeededAmountBox.Text), int.Parse(this.AvailableAmountBox.Text),
+                    this.UserGenderBox.Text, int.Parse(this.UserIdBox.Text));
             }
 
             this.Close();

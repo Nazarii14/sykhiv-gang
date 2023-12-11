@@ -331,7 +331,7 @@ namespace DAL
                     .HasConstraintName("weapon_user_id_fkey");
             });
 
-            OnModelCreatingPartial(modelBuilder);
+            this.OnModelCreatingPartial(modelBuilder);
         }
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);

@@ -11,9 +11,9 @@ namespace DAL.Models
     {
         public Weapon()
         {
-            InventoryWeapons = new HashSet<InventoryWeapon>();
-            Requests = new HashSet<Request>();
-            Routes = new HashSet<Route>();
+            this.InventoryWeapons = new HashSet<InventoryWeapon>();
+            this.Requests = new HashSet<Request>();
+            this.Routes = new HashSet<Route>();
         }
 
         public int WeaponId { get; set; }

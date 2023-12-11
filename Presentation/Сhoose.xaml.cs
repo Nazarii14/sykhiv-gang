@@ -25,7 +25,7 @@ namespace Presentation
     {
         public Сhoose()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void CommanderButton_Click(object sender, RoutedEventArgs e)

@@ -26,15 +26,15 @@ namespace Presentation
         
         public int ItemId
         {
-            get { return itemId; }
-            set { itemId = value; }
+            get { return this.itemId; }
+            set { this.itemId = value; }
         }
 
         public EditWeapon(int itemId)
         {
-            InitializeComponent();
-            EditInfo_Loaded(itemId);
-            ItemId = itemId;    
+            this.InitializeComponent();
+            this.EditInfo_Loaded(itemId);
+            this.ItemId = itemId;    
         }
 
         private void EditWeaponButton_Click(object sender, RoutedEventArgs e)
@@ -42,12 +42,12 @@ namespace Presentation
             using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
-                userService.EditWeapon(ItemId, TypeBox.Text, NameBox.Text,
-                                       decimal.Parse(PriceBox.Text), 
-                                       decimal.Parse(WeightBox.Text), 
-                                       int.Parse(NeededAmountBox.Text),
-                                       int.Parse(AvailableAmountBox.Text),
-                                       int.Parse(UserIdBox.Text));
+                userService.EditWeapon(this.ItemId, this.TypeBox.Text, this.NameBox.Text,
+                                       decimal.Parse(this.PriceBox.Text), 
+                                       decimal.Parse(this.WeightBox.Text), 
+                                       int.Parse(this.NeededAmountBox.Text),
+                                       int.Parse(this.AvailableAmountBox.Text),
+                                       int.Parse(this.UserIdBox.Text));
             }
 
             this.Close();
@@ -61,13 +61,13 @@ namespace Presentation
 
                 var weapon = userService.GetWeaponById(itemId);
 
-                TypeBox.Text = weapon.Type;
-                NameBox.Text = weapon.Name;
-                PriceBox.Text = weapon.Price.ToString();
-                WeightBox.Text = weapon.Weight.ToString();
-                NeededAmountBox.Text = weapon.NeededAmount.ToString();
-                AvailableAmountBox.Text = weapon.AvailableAmount.ToString();
-                UserIdBox.Text = weapon.UserId.ToString();
+                this.TypeBox.Text = weapon.Type;
+                this.NameBox.Text = weapon.Name;
+                this.PriceBox.Text = weapon.Price.ToString();
+                this.WeightBox.Text = weapon.Weight.ToString();
+                this.NeededAmountBox.Text = weapon.NeededAmount.ToString();
+                this.AvailableAmountBox.Text = weapon.AvailableAmount.ToString();
+                this.UserIdBox.Text = weapon.UserId.ToString();
             }
         }
 

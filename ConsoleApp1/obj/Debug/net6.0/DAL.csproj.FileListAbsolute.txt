@@ -25,8 +25,6 @@ H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.Options.
 H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Npgsql.dll
 H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
-H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\System.Runtime.CompilerServices.Unsafe.dll
 H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\System.Text.Json.dll
 H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
@@ -84,3 +82,6 @@ C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\refint\DA
 C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.pdb
 C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\DAL.genruntimeconfig.cache
 C:\Users\User\Command Project\sykhiv-gang\ConsoleApp1\obj\Debug\net6.0\ref\DAL.dll
+H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\Mono.TextTemplating.dll
+H:\GitHub\sykhiv-gang\ConsoleApp1\bin\Debug\net6.0\System.CodeDom.dll

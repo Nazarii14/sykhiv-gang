@@ -23,17 +23,17 @@ namespace Presentation
     {
         public AddWeapon()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
         private void AddWeaponButton_Click(object sender, RoutedEventArgs e)
         {
             using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
-                userService.AddWeapon(TypeBox.Text, NameBox.Text, 
-                                       decimal.Parse(PriceBox.Text), decimal.Parse(WeightBox.Text), 
-                                       int.Parse(NeededAmountBox.Text), int.Parse(AvailableAmountBox.Text),
-                                       int.Parse(UserIdBox.Text));
+                userService.AddWeapon(this.TypeBox.Text, this.NameBox.Text, 
+                                       decimal.Parse(this.PriceBox.Text), decimal.Parse(this.WeightBox.Text), 
+                                       int.Parse(this.NeededAmountBox.Text), int.Parse(this.AvailableAmountBox.Text),
+                                       int.Parse(this.UserIdBox.Text));
             }
 
             this.Close();

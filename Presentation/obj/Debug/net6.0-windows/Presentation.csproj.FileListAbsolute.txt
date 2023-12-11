@@ -41,7 +41,6 @@ H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Microsoft.Extensions.Primitives.dll
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Npgsql.dll
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\System.Diagnostics.DiagnosticSource.dll
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\System.Runtime.CompilerServices.Unsafe.dll
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
 H:\GitHub\sykhiv-gang\Presentation\bin\Debug\net6.0-windows\System.Text.Json.dll

@@ -11,7 +11,7 @@ namespace DAL.Models
     {
         public SoldierAttrb()
         {
-            Requests = new HashSet<Request>();
+            this.Requests = new HashSet<Request>();
         }
 
         public int SoldierAttrbId { get; set; }

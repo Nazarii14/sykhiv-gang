@@ -24,14 +24,14 @@ namespace Presentation
         private int itemId;
         public int ItemId
         {
-            get { return itemId; }
-            set { itemId = value; }
+            get { return this.itemId; }
+            set { this.itemId = value; }
         }
         public EditAmmunition(int itemId)
         {
-            InitializeComponent();
-            EditInfo_Loaded(itemId);
-            ItemId = itemId;
+            this.InitializeComponent();
+            this.EditInfo_Loaded(itemId);
+            this.ItemId = itemId;
         }
 
         private void EditAmmunitionButton_Click(object sender, RoutedEventArgs e)
@@ -39,10 +39,10 @@ namespace Presentation
             using (sykhivgangContext context = new sykhivgangContext())
             {
                 Bll userService = new Bll(context);
-                userService.EditAmmunition(itemId, TypeBox.Text, NameBox.Text, 
-                    decimal.Parse(PriceBox.Text), SizeBox.Text,
-                    UsersGenderBox.Text, int.Parse(UserIdBox.Text), 
-                    int.Parse(NeededAmountBox.Text), int.Parse(AvailableAmountBox.Text));
+                userService.EditAmmunition(this.itemId, this.TypeBox.Text, this.NameBox.Text, 
+                    decimal.Parse(this.PriceBox.Text), this.SizeBox.Text,
+                    this.UsersGenderBox.Text, int.Parse(this.UserIdBox.Text), 
+                    int.Parse(this.NeededAmountBox.Text), int.Parse(this.AvailableAmountBox.Text));
             }
 
             this.Close();
@@ -56,14 +56,14 @@ namespace Presentation
 
                 var ammunition = userService.GetAmmunitionById(itemId);
 
-                TypeBox.Text = ammunition.Type;
-                NameBox.Text = ammunition.Name;
-                PriceBox.Text = ammunition.Price.ToString();
-                SizeBox.Text = ammunition.Size;
-                NeededAmountBox.Text = ammunition.NeededAmount.ToString();
-                AvailableAmountBox.Text = ammunition.AvailableAmount.ToString();
-                UsersGenderBox.Text = ammunition.UsersGender;
-                UserIdBox.Text = ammunition.UserId.ToString();
+                this.TypeBox.Text = ammunition.Type;
+                this.NameBox.Text = ammunition.Name;
+                this.PriceBox.Text = ammunition.Price.ToString();
+                this.SizeBox.Text = ammunition.Size;
+                this.NeededAmountBox.Text = ammunition.NeededAmount.ToString();
+                this.AvailableAmountBox.Text = ammunition.AvailableAmount.ToString();
+                this.UsersGenderBox.Text = ammunition.UsersGender;
+                this.UserIdBox.Text = ammunition.UserId.ToString();
             }
         }
 
